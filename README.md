@@ -1,4 +1,6 @@
-This is an Xplorers website project. Any contributions are welcome!
+# Xplorers Website
+
+This is an Xplorers website project. It will be first place stop for everyone to understand who Xplorers are and what we do as a group of friends in this community. We will include our events, blogs, informational contents, pictures of our past collaborations and outgoings, any many more. So, hit ⭐ and stay updated! 🥳
 
 ## Getting Started
 
@@ -14,25 +16,25 @@ Run the development server:
 pnpm dev
 ```
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Library: React
+- Framework: Next.js
+- CSS: Tailwind
+- Component library: Shadcn/ui
+- Design link: [Figma](https://www.figma.com/design/fQssgttgmTJNUu8mIzlxcO/Xplorers?node-id=0-1&m=dev)
+- Project management: [Github Project](https://github.com/orgs/xplorer-io/projects/5) or checkout [issues](https://github.com/xplorer-io/website/issues)
 
-## Learn More
+## Contribution
 
-To learn more about Next.js, take a look at the following resources:
+The project is in development status. Any contributions are welcome! Feel free to submit pull request or create the issue.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+If you like the project, please feel free to ⭐ this repository, It motivates us to build such cool projects.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The project is under MIT license.
