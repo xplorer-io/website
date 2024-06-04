@@ -1,17 +1,13 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config = {
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       backgroundImage: {},
     },
   },
-  plugins: [],
-};
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
 
 export default config;
