@@ -10,6 +10,9 @@
     "format": "prettier --check --ignore-path .prettierignore .",
     "format:fix": "prettier --write --ignore-path .prettierignore ."
   },
+  "engines": {
+    "node": "^18.20.3"
+  },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
