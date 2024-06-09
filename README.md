@@ -27,11 +27,29 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Design link: [Figma](https://www.figma.com/design/fQssgttgmTJNUu8mIzlxcO/Xplorers?node-id=0-1&m=dev)
 - Project management: [Github Project](https://github.com/orgs/xplorer-io/projects/5) or checkout [issues](https://github.com/xplorer-io/website/issues)
 
+## Design System
+
+### Typography
+
+- Open Sans is used for body text
+- Work Sans is used for headings
+- Fonts can be easily configured from `fonts.ts` file
+- Nextjs font is used to generate two variables `--font-body` and `--font-heading` which is used in both global css and Tailwind config
+- Default font size is defined for headings in `globals.css`
+
+### Colour
+
+- Custom colors, `primary` and `secondary`, is added in Tailwind config
+- Both custom colors can be used like a Tailwind utility class
+- For ease of use, a default shade as `primary` and `secondary`, can also be used which is the same as the shade `500`. Eg: `text-primary`, `text-secondary`.
+
+Note: Please review the Tailwind config file and the `globals.css` file to get acquainted with the custom classes and styles implemented in the project.
+
 ## Using Shadcn/ui
 
 We will be using shadcn/ui for our reusable ui components. It's not a component library, but helps to build our own component library with our own styles. It's built with radix-ui and tailwindcss.
 
-The reason we are using this is it's very easy to customize, highly flexbile and at the same time provides accessible components that are ready in terms of functionality. Moreover, you don't have to install the whole library as compared to others like mui, chakra, ant, etc. You can either use cli or manually copy paste to use individual component.
+The reason we are using this is it's very easy to customize, highly flexible and at the same time provides accessible components that are ready in terms of functionality. Moreover, you don't have to install the whole library as compared to others like mui, chakra, ant, etc. You can either use cli or manually copy paste to use individual component.
 
 ## [App structure](https://ui.shadcn.com/docs/installation/next#app-structure)
 
