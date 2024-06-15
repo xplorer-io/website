@@ -18,6 +18,7 @@ export const Header = () => {
         <nav className="flex gap-4 sm:gap-10">
           {menus.map(({ name, href }) => (
             <Link
+              key={name}
               href={href}
               className={clsx({
                 "border-b-2 border-black": pathname === href,
