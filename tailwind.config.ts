@@ -1,8 +1,9 @@
-import type { Config } from "tailwindcss";
+import { Config } from "tailwindcss";
+import plugin from 'tailwindcss/plugin';
+import defaultTheme from "tailwindcss/defaultTheme";
+import tailwindcssAnimate from "tailwindcss-animate";
 
-const defaultTheme = require("tailwindcss/defaultTheme");
-
-const config = {
+const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
@@ -43,7 +44,40 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+  plugins: [
+    tailwindcssAnimate,
+    plugin(function ({ addUtilities, theme, e }) {
+      const newUtilities = {};
+      const colors = theme("colors");
+
+      const mergedColors = {
+        ...colors,
+        ...defaultTheme.colors,
+      };
+
+      Object.keys(mergedColors).forEach((colorName) => {
+        const value = mergedColors[colorName];
+        if (typeof value === 'string') {
+          const name = `.customshadow-${e(colorName)}`;
+          newUtilities[name] = {
+            "--tw-shadow-color": value,
+            "box-shadow": `6px 5px 0px 0px var(--tw-shadow-color)`,
+          };
+        } else {
+          Object.keys(value).forEach((shade) => {
+            const shadeValue = value[shade];
+            const name = `.customshadow-${e(colorName)}-${shade}`;
+            newUtilities[name] = {
+              "--tw-shadow-color": shadeValue,
+              "box-shadow": `6px 5px 0px 0px var(--tw-shadow-color)`,
+            };
+          });
+        }
+      });
+
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    }),
+  ],
+};
 
 export default config;
