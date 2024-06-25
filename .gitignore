@@ -15,12 +15,12 @@
 
 # production
 /build
-.env 
+.env
 
 # misc
 .DS_Store
 *.pem
-
+.idea
 # debug
 npm-debug.log*
 yarn-debug.log*
