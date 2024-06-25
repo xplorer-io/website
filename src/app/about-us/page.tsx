@@ -1,4 +1,4 @@
-import OurMission from "@/components/about-us/our-mission/OurMission";
+import { OurMission } from "@/modules/about-us/OurMission";
 
 export default function AboutUs() {
   return (
