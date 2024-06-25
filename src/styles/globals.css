@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 /* Default body font family */
-html {
-  font-family: var(--font-body);
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 /* Default heading font family */
 h1,
