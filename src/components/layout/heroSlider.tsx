@@ -1,0 +1,66 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+import Image from "next/image";
+
+const HeroSlider = () => {
+  return (
+    <div className="relative h-[65vh] md:h-[calc(100vh-146px)]">
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={1}
+        pagination={{ clickable: true }}
+        className="hero-slider h-full"
+        autoplay={{ delay: 5000 }}
+      >
+        <SwiperSlide>
+          <Image
+            src="/images/hero-image.jpg"
+            fill
+            className="object-cover"
+            alt="group image"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/hero-image.jpg"
+            fill
+            className="object-cover"
+            alt="group image"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/hero-image.jpg"
+            fill
+            className="object-cover"
+            alt="group image"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src="/images/hero-image.jpg"
+            fill
+            className="object-cover"
+            alt="group image"
+          />
+        </SwiperSlide>
+
+        {/* Hero section bottom overlay */}
+        <div className="absolute bottom-0 left-0 z-[1] flex w-[150%] translate-x-[-22%] skew-x-[50deg] items-end sm:translate-x-[-15%] ">
+          <div className="h-44 w-[60%] bg-primary/60 sm:w-[50%]"></div>
+          <div className="h-32 w-[50%] bg-secondary/60"></div>
+        </div>
+      </Swiper>
+    </div>
+  );
+};
+export default HeroSlider;

@@ -35,3 +35,28 @@ h5 {
 h6 {
   @apply text-lg;
 }
+
+/* Swiper slider style */
+.hero-slider .swiper-pagination-bullet {
+  transition: width 0.3s ease-out;
+  border-radius: 4px;
+  opacity: 0.7;
+  background-color: #fff;
+}
+.hero-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 20px;
+  opacity: 1;
+}
+
+/* Homepage marquee */
+.marquee {
+  animation: scroll 18s linear infinite;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2.5rem));
+  }
+}
