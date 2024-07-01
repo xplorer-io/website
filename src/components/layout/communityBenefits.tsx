@@ -13,7 +13,7 @@ export const CommunityBenefits = () => {
   return (
     <>
       <section className="flex flex-col justify-center gap-16 md:flex-col lg:mx-64">
-        <h1 className=" text-left text-2xl font-bold">
+        <h1 className=" text-left text-2xl font-bold ">
           Our Community Benefits
         </h1>
         <section className="flex flex-col justify-between gap-24 lg:flex-row">
