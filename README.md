@@ -51,10 +51,26 @@ We will be using shadcn/ui for our reusable ui components. It's not a component 
 
 The reason we are using this is it's very easy to customize, highly flexible and at the same time provides accessible components that are ready in terms of functionality. Moreover, you don't have to install the whole library as compared to others like mui, chakra, ant, etc. You can either use cli or manually copy paste to use individual component.
 
-## [App structure](https://ui.shadcn.com/docs/installation/next#app-structure)
+## [Project structure](https://ui.shadcn.com/docs/installation/next#app-structure)
 
 - Place the UI components such as button, input, modal, card etc. in the `components/ui` folder.
-- The rest of the components such as `<PageHeader />` and `<MainNav />` should be placed in the `components` folder. If there are multiple components related to each other create a folder for it.
+- Modules: Added `modules` folder where each page is a module e.g. `modules/about-us`. Create components inside the module.
+
+  E.g. `about-us/OurMission`
+    ```
+    modules
+      about-us
+        OurMission
+    ```
+- The rest of the common components such as `<PageHeader />` and `<MainNav />` should be placed in the `components` folder. If there are multiple components related to each other create a folder for it.
+
+    E.g. `Card/CardHeader`
+    ```
+    Card
+        CardHeader
+        CardTitle
+        CardFooter
+    ```
 - The `lib` folder contains all the utility functions.
 - The styles folder contains the global CSS.
 

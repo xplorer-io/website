@@ -4,8 +4,20 @@ export const menus = [
 ];
 
 export const communityBenefitsList = [
-  { name: "Community Engagement", imageurl: "./assets/images/communityBenefits/communityEngagement.svg" },
-  { name: "Learn and Share", imageurl: "./assets/images/communityBenefits/learnandshare.svg" },
-  { name: "Networking Hub", imageurl: "./assets/images/communityBenefits/networkingHub.svg" },
-  { name: "Holistic Growth", imageurl: "./assets/images/communityBenefits/growth.svg" }
+  {
+    name: "Community Engagement",
+    imageurl: "./images/illustrations/group.svg",
+  },
+  {
+    name: "Learn and Share",
+    imageurl: "./images/illustrations/share.svg",
+  },
+  {
+    name: "Networking Hub",
+    imageurl: "./images/illustrations/networking.svg",
+  },
+  {
+    name: "Holistic Growth",
+    imageurl: "./images/illustrations/helping.svg",
+  },
 ];

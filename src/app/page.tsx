@@ -1,3 +1,5 @@
+import { CommunityBenefits } from "@/components/layout/communityBenefits";
+
 export default function Home() {
   return (
     <main className="grid h-screen place-items-center">
@@ -13,6 +15,7 @@ export default function Home() {
           modi praesentium at placeat.
         </p>
       </div>
+      <CommunityBenefits />
     </main>
   );
 }
