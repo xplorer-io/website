@@ -10,6 +10,13 @@ import {
 } from "swiper/modules";
 import Image from "next/image";
 
+const heroImages = [
+  { id: 1, imageSrc: "/images/hero-image.jpg", imageAlt: "group image 1" },
+  { id: 2, imageSrc: "/images/hero-image.jpg", imageAlt: "group image 2" },
+  { id: 3, imageSrc: "/images/hero-image.jpg", imageAlt: "group image 3" },
+  { id: 4, imageSrc: "/images/hero-image.jpg", imageAlt: "group image 4" },
+];
+
 const HeroSlider = () => {
   return (
     <div className="relative h-[65vh] md:h-[calc(100vh-146px)]">
@@ -21,38 +28,16 @@ const HeroSlider = () => {
         className="hero-slider h-full"
         autoplay={{ delay: 5000 }}
       >
-        <SwiperSlide>
-          <Image
-            src="/images/hero-image.jpg"
-            fill
-            className="object-cover"
-            alt="group image"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/hero-image.jpg"
-            fill
-            className="object-cover"
-            alt="group image"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/hero-image.jpg"
-            fill
-            className="object-cover"
-            alt="group image"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image
-            src="/images/hero-image.jpg"
-            fill
-            className="object-cover"
-            alt="group image"
-          />
-        </SwiperSlide>
+        {heroImages.map((heroImage) => (
+          <SwiperSlide key={heroImage.id}>
+            <Image
+              src={heroImage.imageSrc}
+              fill
+              className="object-cover"
+              alt={heroImage.imageAlt}
+            />
+          </SwiperSlide>
+        ))}
 
         {/* Hero section bottom overlay */}
         <div className="absolute bottom-0 left-0 z-[1] flex w-[150%] translate-x-[-22%] skew-x-[50deg] items-end sm:translate-x-[-15%] ">

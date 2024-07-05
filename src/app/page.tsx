@@ -1,6 +1,6 @@
-import HeroSlider from "@/components/layout/heroSlider";
-import MarqueeBanner from "@/components/layout/marqueeBanner";
-import JoinXplorers from "@/components/layout/joinXplorers";
+import HeroSlider from "@/modules/home/heroSlider";
+import MarqueeBanner from "@/modules/home/marqueeBanner";
+import JoinXplorers from "@/modules/home/joinXplorers";
 import "swiper/css/bundle";
 
 export default function Home() {
