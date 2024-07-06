@@ -1,4 +1,5 @@
 import React from 'react';
+import Tag from "@/components/ui/Tag";
 
 interface BlogMetaProps {
     date: string;
@@ -19,9 +20,7 @@ const BlogMeta: React.FC<BlogMetaProps> = ({ date, tags }) => (
         </dl>
         <div className="mt-4 flex flex-wrap gap-1">
             {tags.map((tag) => (
-                <span key={tag} className="whitespace-nowrap rounded-full bg-red-100 px-2.5 py-0.5 text-xs text-red-600">
-          {tag}
-        </span>
+                <Tag key={tag} tag={tag} />
             ))}
         </div>
     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from "next/image";
 
 interface BlogHeaderProps {
     title: string;
@@ -13,7 +14,7 @@ const BlogHeader: React.FC<BlogHeaderProps> = ({ title, authorName, authorImage 
             <p className="mt-1 text-xs font-medium text-gray-600">By {authorName}</p>
         </div>
         <div className="hidden sm:block sm:shrink-0">
-            <img alt="author image" src={authorImage} className="size-16 rounded-lg object-cover shadow-sm" />
+            <Image alt="author image" src={authorImage} width={64} height={64} className="size-16 rounded-lg object-cover shadow-sm" />
         </div>
     </div>
 );
