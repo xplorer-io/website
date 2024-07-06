@@ -1,4 +1,4 @@
-import { CommunityBenefits } from "@/components/layout/communityBenefits";
+import { CommunityBenefits } from "@/modules/home/communityBenefits";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
           modi praesentium at placeat.
         </p>
       </div>
-      <CommunityBenefits />
+      <CommunityBenefits/>
     </main>
   );
 }
