@@ -1,12 +1,12 @@
 import React from 'react';
-import Tag from "@/components/ui/Tag";
+import Tag from "@/components/ui/tag";
 
-interface BlogMetaProps {
+type BlogMetaProps = {
     date: string;
     tags: string[];
 }
 
-const BlogMeta: React.FC<BlogMetaProps> = ({ date, tags }) => (
+const BlogMeta = ({ date, tags }:BlogMetaProps) => (
     <div>
         <dl className="mt-6 flex gap-4 sm:gap-6">
             <div className="flex flex-col-reverse">

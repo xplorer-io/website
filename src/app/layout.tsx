@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import { font_body, font_heading } from "./fonts";
-import { Header } from "@/components/layout/header";
+import Header  from "@/components/layout/header";
 import React, {Suspense} from "react";
 import {Providers} from "@/app/providers";
+import Spinner from "@/app/loading";
 
 export const metadata: Metadata = {
   title: "Xplorers - Learn share and grow",
@@ -22,8 +23,7 @@ export default function RootLayout({
     >
       <body>
       <Providers>
-         {/*TODO custom Spinner needed*/}
-        <Suspense fallback={<p>Loading ....</p>}>
+        <Suspense fallback={<Spinner/>}>
           <Header />
           {children}
         </Suspense>

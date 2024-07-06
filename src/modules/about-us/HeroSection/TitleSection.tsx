@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonLink from "@/components/ui/ButtonLink";
+import ButtonLink from "@/components/ui/buttons/ButtonLink";
 
 const TitleSection = () => {
     return (

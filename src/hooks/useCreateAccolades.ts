@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useUser } from "@clerk/nextjs";
+import {CheckedState} from "@radix-ui/react-checkbox";
 
-interface FormData {
+type FormData = {
     fullName: string;
     message: string;
     isAnonymous: boolean;
@@ -28,14 +29,10 @@ export const useCreateAccolades = () => {
             message,
             isAnonymous,
         };
-        console.log(formData);
     };
 
-    const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setIsAnonymous(e.target.checked);
-        if (e.target.checked) {
-            setFullName("");
-        }
+    const handleCheckboxChange = (checked:CheckedState) => {
+        setIsAnonymous(!checked);
     };
 
     return {
