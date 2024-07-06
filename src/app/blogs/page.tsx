@@ -12,7 +12,7 @@ const BlogPage: React.FC = () => (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {blogPosts.map((post, index) => (
                 <BlogCard
-                    key={post.id}
+                    key={index}
                     {...post}
                 />
             ))}
