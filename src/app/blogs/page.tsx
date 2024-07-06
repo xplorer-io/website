@@ -4,7 +4,7 @@ import TitleHeader from "@/components/ui/TitleHeader";
 import PagesWrapper from "@/components/layout/PagesWrapper";
 import BlogCard from "@/modules/blogs/BlogCard";
 
-const BlogPage: React.FC = () => (
+const BlogPage = () => (
     <PagesWrapper>
         <TitleHeader
             title={'Blogs'}

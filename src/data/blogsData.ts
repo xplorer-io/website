@@ -1,4 +1,4 @@
-interface BlogPost {
+type BlogPost = {
     id: string;
     date: string;
     tags: string[];

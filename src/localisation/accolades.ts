@@ -1,4 +1,4 @@
-
+// TODO Needed fix when we localize the text
 export const formTitle = 'Write Your Message';
 
 export const accoladesTitle = 'Accolades';

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { AuthHeader } from "@/components/auth/AuthHeader";
+import AuthHeader from "@/components/auth/AuthHeader";
 import logo from "@public/images/logos/xplorer_logo.svg";
 import { menus } from "./helper";
 import clsx from "clsx";
@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/buttons/button";
 import navMobileIcon from "@public/images/illustrations/navMobileIcon.svg";
 
-export const Header = () => {
+const Header = () => {
   return (
     <section className="container mx-auto px-4">
       <header className="bg-white">
@@ -68,3 +68,5 @@ export const Header = () => {
     </section>
   );
 };
+
+export default Header;
