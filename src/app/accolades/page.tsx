@@ -1,4 +1,4 @@
-import Accolades from "@/components/accolades/Accolades";
+import {Accolades} from "@/modules/accolades";
 
 const AccoladesPage = () => {
     return (

@@ -1,12 +1,13 @@
 'use client'
 
-import React from 'react';
-import TitleHeader from '@/components/ui/TitleHeader';
-import PagesWrapper from '@/components/layout/PagesWrapper';
-import { useCreateAccolades } from '@/hooks/useCreateAccolades';
-import * as texts from '@/localisation/accolades';
+import PagesWrapper from "@/components/layout/PagesWrapper";
+import TitleHeader from "@/components/ui/TitleHeader";
+import * as texts from "@/localisation/accolades";
+import React from "react";
+import {useCreateAccolades} from "@/hooks/useCreateAccolades";
+import ButtonLink from "@/components/ui/ButtonLink";
 
-const Accolades = () => {
+const AccoladesFormPage = () => {
     const {
         fullName,
         setFullName,
@@ -73,16 +74,12 @@ const Accolades = () => {
                             aria-label={texts.messageLabel}
                         />
                     </div>
-                    <button
-                        type="submit"
-                        className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    >
+                    <ButtonLink href="#">
                         {texts.submitButtonLabel}
-                    </button>
+                    </ButtonLink>
                 </form>
             </div>
         </PagesWrapper>
-    );
-};
-
-export default Accolades;
+    )
+}
+export default AccoladesFormPage;
