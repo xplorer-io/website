@@ -57,20 +57,24 @@ The reason we are using this is it's very easy to customize, highly flexible and
 - Modules: Added `modules` folder where each page is a module e.g. `modules/about-us`. Create components inside the module.
 
   E.g. `about-us/OurMission`
-    ```
-    modules
-      about-us
-        OurMission
-    ```
+
+  ```
+  modules
+    about-us
+      OurMission
+  ```
+
 - The rest of the common components such as `<PageHeader />` and `<MainNav />` should be placed in the `components` folder. If there are multiple components related to each other create a folder for it.
 
-    E.g. `Card/CardHeader`
-    ```
-    Card
-        CardHeader
-        CardTitle
-        CardFooter
-    ```
+  E.g. `Card/CardHeader`
+
+  ```
+  Card
+      CardHeader
+      CardTitle
+      CardFooter
+  ```
+
 - The `lib` folder contains all the utility functions.
 - The styles folder contains the global CSS.
 
@@ -81,6 +85,19 @@ npx shadcn-ui@latest add button
 ```
 
 Or, you can manually copy paste code of the components and put it into this folder structure src/components/ui/button.tsx
+
+## Branching and Commits strategy
+
+For branching, please follow below style:
+
+```
+feat/issue-1_header
+bug/issue-10_login_auth
+```
+
+i.e. provide relevant information regarding your work and include issue no. if exists
+
+For commits, please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) structure. There's workflow setup which checks commit messages on each commit.
 
 ## Contribution
 
