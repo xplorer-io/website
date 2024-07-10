@@ -1,4 +1,4 @@
-import {Button} from "@/components/ui/buttons/button";
+import { Button } from "@/components/ui/buttons/button";
 
 const JoinXplorers = () => {
   return (
