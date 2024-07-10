@@ -1,9 +1,7 @@
-import {Accolades} from "@/modules/accolades";
+import { Accolades } from "@/modules/accolades";
 
 const AccoladesPage = () => {
-    return (
-        <Accolades/>
-    );
+  return <Accolades />;
 };
 
 export default AccoladesPage;
