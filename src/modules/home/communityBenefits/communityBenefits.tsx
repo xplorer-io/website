@@ -2,7 +2,7 @@
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import arrow from "@public/images/icons/arrow.svg";
-import {communityBenefitsList} from "@/components/layout/helper";
+import {communityBenefitsList} from "./helper";
 
 export const CommunityBenefits = () => {
   return (

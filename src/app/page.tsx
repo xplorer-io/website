@@ -1,4 +1,4 @@
-import { CommunityBenefits } from "@/modules/home/communityBenefits";
+import {CommunityBenefits} from "@/modules/home/communityBenefits/communityBenefits";
 
 export default function Home() {
   return (
