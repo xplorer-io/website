@@ -48,7 +48,7 @@ const Footer = React.memo(() => {
             <h3 style={{ color: "white", fontSize: "35px" }}>Xplorers</h3>
           </div>
           <div style={rightDivStyle}>
-            <p style={{ color: "#FFFFFF", marginBottom: "5px" }}>
+            <p style={{ color: "#FFFFFF", marginBottom: "5px", marginRight: "20px" }}>
               Get in touch
             </p>
             <div
