@@ -8,8 +8,10 @@ import { CommunityBenefitCard } from "./CommunityBenefitCard";
 export const CommunityBenefits = () => {
   return (
     <section className="md:flex-col-2 flex flex-col justify-center gap-16 lg:mx-6">
-      <h1 className="text-left text-2xl font-bold">Our Community Benefits</h1>
-      <section className="grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-12 md:grid-cols-3 md:gap-16 lg:grid-cols-4 lg:gap-24">
+      <h1 className="text-center text-2xl font-bold lg:text-left">
+        Our Community Benefits
+      </h1>
+      <section className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 md:gap-16 lg:grid-cols-4 lg:gap-24">
         {communityBenefitsList.map(({ name, imageurl }) => (
           <CommunityBenefitCard key={name} name={name} imageurl={imageurl} />
         ))}
