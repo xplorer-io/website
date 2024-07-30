@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ourValuesList } from "./helper";
 import { OurValuesCard } from "./valuesCard";
 
