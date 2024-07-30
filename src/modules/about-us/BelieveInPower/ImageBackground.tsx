@@ -1,19 +1,13 @@
 import React from "react";
 import Image from "next/image";
 
-const ImageBackground=()=>{
-    return (
-            <div>
+const ImageBackground=()=>
+            <div className="flex items-center">
             <Image src={"/images/Believe-in-power.png"} 
-width="250" height="100"
-alt="Believe in power"
-style={{opacity:"10%"}}
-className="hidden md:block"
-/>
-        </div>
-       
-
-    );
-}
+                    width="250" height="100"
+                    alt="Believe in power"
+                    className="hidden md:block opacity-10"
+                    />
+            </div>
 
 export default ImageBackground;

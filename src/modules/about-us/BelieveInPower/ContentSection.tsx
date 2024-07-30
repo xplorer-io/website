@@ -1,5 +1,6 @@
 import React from "react";
 import { QuoteIcon } from "@radix-ui/react-icons";
+
 const ContentSection=()=>{
     return (
         <div className="flex flex-row text-gray-600 p-8 md:p-12 lg:px-16 lg:py-24 space-x-5">
