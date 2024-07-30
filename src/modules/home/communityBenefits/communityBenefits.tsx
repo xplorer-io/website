@@ -12,9 +12,9 @@ export const CommunityBenefits = () => {
         Our Community Benefits
       </h1>
       <section className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 md:gap-16 lg:grid-cols-4 lg:gap-24">
-        {communityBenefitsList.map(({ name, imageurl }) => (
-          <CommunityBenefitCard key={name} name={name} imageurl={imageurl} />
-        ))}
+        {communityBenefitsList.map(({ name, imageUrl }) => 
+          <CommunityBenefitCard key={name} name={name} imageUrl={imageUrl} />
+        )}
       </section>
       <Button className="mt-8 flex items-center gap-2 self-center">
         <span>Learn More</span>

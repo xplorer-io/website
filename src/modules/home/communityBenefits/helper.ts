@@ -1,22 +1,22 @@
-type communityProps = {
+export type CommunityBenefitCardProps = {
   name: string;
-  imageurl: string;
+  imageUrl: string;
 };
-export const communityBenefitsList: communityProps[] = [
+export const communityBenefitsList: CommunityBenefitCardProps[] = [
   {
     name: "Community Engagement",
-    imageurl: "./images/illustrations/group.svg",
+    imageUrl: "./images/illustrations/group.svg",
   },
   {
     name: "Learn and Share",
-    imageurl: "./images/illustrations/share.svg",
+    imageUrl: "./images/illustrations/share.svg",
   },
   {
     name: "Networking Hub",
-    imageurl: "./images/illustrations/networking.svg",
+    imageUrl: "./images/illustrations/networking.svg",
   },
   {
     name: "Holistic Growth",
-    imageurl: "./images/illustrations/helping.svg",
+    imageUrl: "./images/illustrations/helping.svg",
   },
 ];
