@@ -1,11 +1,16 @@
+import React from "react";
 import { OurMission } from "@/modules/about-us/OurMission";
 import { OurValues } from "@/modules/about-us/OurValues";
+import { HeroSection } from "@/modules/about-us/HeroSection";
 
-export default function AboutUs() {
+const AboutUs = () => {
   return (
-    <main>
+    <>
+      <HeroSection />
       <OurMission />
       <OurValues />
-    </main>
+    </>
   );
-}
+};
+
+export default AboutUs;

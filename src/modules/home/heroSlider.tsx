@@ -40,7 +40,7 @@ const HeroSlider = () => {
         ))}
 
         {/* Hero section bottom overlay */}
-        <div className="absolute bottom-0 left-0 z-[1] flex w-[150%] translate-x-[-22%] skew-x-[50deg] items-end sm:translate-x-[-15%] ">
+        <div className="absolute bottom-0 left-0 z-[1] flex w-[150%] translate-x-[-22%] skew-x-[50deg] items-end sm:translate-x-[-15%]">
           <div className="h-44 w-[60%] bg-primary/60 sm:w-[50%]"></div>
           <div className="h-32 w-[50%] bg-secondary/60"></div>
         </div>
