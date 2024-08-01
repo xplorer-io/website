@@ -26,7 +26,7 @@ const post = {
 // TODO dummy page (Needs properly formatted page that accepts WYSIWYG)
 const BlogPost = () => {
   return (
-    <div className="mx-auto min-h-screen max-w-4xl p-4">
+    <div className="mx-auto max-w-4xl p-4">
       <div className="mb-4">
         <Image
           src={post.image}

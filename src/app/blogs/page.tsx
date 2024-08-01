@@ -5,7 +5,7 @@ import PagesWrapper from "@/components/layout/PagesWrapper";
 import BlogCard from "@/modules/blogs/BlogCard";
 
 const BlogPage = () => (
-  <div className="flex min-h-screen flex-col">
+  <div className="flex flex-col">
     <PagesWrapper>
       <TitleHeader
         title={"Blogs"}

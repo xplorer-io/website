@@ -6,9 +6,7 @@ import React from "react";
 import { Button } from "@/components/ui/buttons/button";
 
 const AuthHeader = () => {
-  const context = useAppContext();
-  const isLoggedIn = context?.isLoggedIn;
-  const isLoading = context?.isLoading;
+  const { isLoggedIn, isLoading } = useAppContext();
 
   if (isLoading) {
     return <Spinner />;

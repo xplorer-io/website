@@ -21,7 +21,7 @@ const AccoladesFormPage = () => {
   } = useCreateAccolades();
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex flex-col">
       <PagesWrapper>
         <TitleHeader
           title={texts.accoladesTitle}
