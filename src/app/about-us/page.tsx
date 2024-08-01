@@ -1,5 +1,6 @@
 import React from "react";
 import { OurMission } from "@/modules/about-us/OurMission";
+import { OurValues } from "@/modules/about-us/OurValues";
 import { HeroSection } from "@/modules/about-us/HeroSection";
 
 const AboutUs = () => {
@@ -7,6 +8,7 @@ const AboutUs = () => {
     <>
       <HeroSection />
       <OurMission />
+      <OurValues />
     </>
   );
 };
