@@ -1,1 +1,1 @@
-export {default as BelieveInPower} from "./BelieveInPower";
+export { default as BelieveInPower } from "./BelieveInPower";

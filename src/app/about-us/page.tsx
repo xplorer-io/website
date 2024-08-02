@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <>
       <HeroSection />
-      <BelieveInPower/>
+      <BelieveInPower />
       <OurMission />
     </>
   );
