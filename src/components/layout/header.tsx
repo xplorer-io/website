@@ -10,16 +10,35 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/buttons/button";
 import navMobileIcon from "@public/images/illustrations/navMobileIcon.svg";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [navBarSticky, setNavBarSticky] = useState(false);
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
+
+  //sticky nav when user start to scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setNavBarSticky(true);
+      } else {
+        setNavBarSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section className="container mx-auto px-4">
-      <header className="bg-white">
+      <header
+        className={clsx("bg-white transition-all duration-500 ease-in-out", {
+          "fixed inset-x-0 top-0 z-30 px-4": navBarSticky,
+          relative: !navBarSticky,
+        })}
+      >
         <div className="mx-auto">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -62,36 +81,45 @@ const Header = () => {
               </div>
             </div>
           </div>
+
           <div
             className={clsx(
-              "overflow-hidden transition-all duration-150 ease-in-out",
+              "fixed inset-x-0 z-50 mt-[1px] h-auto transform items-center justify-center bg-white shadow-lg transition-transform duration-300 ease-in-out md:hidden",
               {
-                "max-h-0": !isMobileMenuOpen,
-                "max-h-96": isMobileMenuOpen,
+                "translate-y-[-220%]": !isMobileMenuOpen,
+                "translate-y-0": isMobileMenuOpen,
               },
             )}
           >
-            <nav
-              aria-label="Mobile Global"
-              className="bg-white shadow-lg md:hidden"
-            >
-              <ul className="flex flex-col items-start gap-6 p-4 text-sm">
-                {menus.map(({ name, href }) => (
-                  <Link
-                    key={name}
-                    href={href}
-                    className={clsx({
-                      "text-gray-500 transition hover:text-gray-500/75": true,
-                      "border-b-2 border-gray-500/75": pathname === href,
-                    })}
-                    onClick={toggleMobileMenu}
-                  >
-                    {name}
-                  </Link>
+            <nav aria-label="Mobile Global" className="p-2 text-sm">
+              <ul className="flex h-full flex-row items-start justify-center gap-10 p-3">
+                {menus.map(({ name, href }, index) => (
+                  <li key={name} className="flex items-center p-1">
+                    <Link
+                      href={href}
+                      className={clsx({
+                        "text-gray-500 transition hover:text-gray-500/75": true,
+                        "border-b-2 border-gray-500/75": pathname === href,
+                      })}
+                      onClick={toggleMobileMenu}
+                    >
+                      {name}
+                    </Link>
+                    {index < menus.length - 1 && (
+                      <span className="mx-2 -mr-5 text-gray-500">|</span>
+                    )}
+                  </li>
                 ))}
               </ul>
             </nav>
           </div>
+
+          {isMobileMenuOpen && (
+            <div
+              className="fixed inset-0 z-40 bg-black opacity-0"
+              onClick={toggleMobileMenu}
+            ></div>
+          )}
         </div>
       </header>
     </section>
