@@ -41,7 +41,7 @@ const Header = () => {
       >
         <div className="mx-auto">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex-1 md:flex md:items-center md:gap-12">
+            <div className="flex-1 md:flex md:items-center md:gap-10">
               <Link href="/">
                 <Image src={logo} alt="logo" />
               </Link>
