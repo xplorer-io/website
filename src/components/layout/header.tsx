@@ -94,13 +94,6 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-
-          {isMobileMenuOpen && (
-            <button
-              className="fixed inset-0 z-40 bg-black opacity-0"
-              onClick={toggleMobileMenu}
-            />
-          )}
         </div>
       </header>
     </section>
