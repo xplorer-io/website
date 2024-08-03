@@ -10,35 +10,16 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/buttons/button";
 import navMobileIcon from "@public/images/illustrations/navMobileIcon.svg";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Header = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [navBarSticky, setNavBarSticky] = useState(false);
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
-
-  //sticky nav when user start to scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 150) {
-        setNavBarSticky(true);
-      } else {
-        setNavBarSticky(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section className="container mx-auto px-4">
-      <header
-        className={clsx("bg-white transition-all duration-500 ease-in-out", {
-          "fixed inset-x-0 top-0 z-30 px-4": navBarSticky,
-          relative: !navBarSticky,
-        })}
-      >
+      <header className="bg-white">
         <div className="mx-auto">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-10">
@@ -115,10 +96,10 @@ const Header = () => {
           </div>
 
           {isMobileMenuOpen && (
-            <div
+            <button
               className="fixed inset-0 z-40 bg-black opacity-0"
               onClick={toggleMobileMenu}
-            ></div>
+            />
           )}
         </div>
       </header>
