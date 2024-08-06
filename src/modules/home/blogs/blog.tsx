@@ -27,6 +27,7 @@ export const Blogs = () => {
               description={description}
               type={type}
               image={image}
+              key={index}
             />
           ),
         )}
