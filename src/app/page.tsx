@@ -3,6 +3,7 @@ import MarqueeBanner from "@/modules/home/marqueeBanner";
 import JoinXplorers from "@/modules/home/joinXplorers";
 import { CommunityBenefits } from "@/modules/home/communityBenefits/communityBenefits";
 import "swiper/css/bundle";
+import { Blogs } from "@/modules/home/blogs/blog";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <MarqueeBanner />
       <JoinXplorers />
       <CommunityBenefits />
+      <Blogs />
     </main>
   );
 }

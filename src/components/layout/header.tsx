@@ -13,16 +13,15 @@ import navMobileIcon from "@public/images/illustrations/navMobileIcon.svg";
 const Header = () => {
   const pathname = usePathname();
   return (
-    <section className="container mx-auto px-4">
+    <section className="container mx-auto px-4 py-3">
       <header className="bg-white">
         <div className="mx-auto">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex-1 md:flex md:items-center md:gap-12">
+            <div className="flex md:flex md:items-center md:gap-12">
               <Link href="/">
                 <Image src={logo} alt="logo" />
               </Link>
             </div>
-
             <div className="md:flex md:items-center md:gap-12">
               <nav aria-label="Global" className="hidden md:block">
                 <ul className="flex items-center gap-6 text-sm">
@@ -31,8 +30,10 @@ const Header = () => {
                       key={name}
                       href={href}
                       className={clsx({
-                        "text-gray-500 transition hover:text-gray-500/75": true,
-                        "border-b-2 border-gray-500/75": pathname === href,
+                        "uppercase text-gray-600 transition hover:text-gray-500/75":
+                          true,
+                        "border-b-2 border-gray-500/75 uppercase":
+                          pathname === href,
                       })}
                     >
                       {name}
@@ -40,17 +41,16 @@ const Header = () => {
                   ))}
                 </ul>
               </nav>
+            </div>{" "}
+            <div className="flex items-center gap-4">
+              <div className="sm:flex sm:gap-4">
+                <AuthHeader />
+              </div>
 
-              <div className="flex items-center gap-4">
-                <div className="sm:flex sm:gap-4">
-                  <AuthHeader />
-                </div>
-
-                <div className="block md:hidden">
-                  <Button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
-                    <Image src={navMobileIcon} alt={"Mobile Nav Icon"} />
-                  </Button>
-                </div>
+              <div className="block md:hidden">
+                <Button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                  <Image src={navMobileIcon} alt={"Mobile Nav Icon"} />
+                </Button>
               </div>
             </div>
           </div>
