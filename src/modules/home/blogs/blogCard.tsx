@@ -4,7 +4,7 @@ import { BlogCardProps } from "./helper";
 export const Blog = ({
   name,
   date,
-  writer_image,
+  writerImage,
   title,
   description,
   type,
@@ -38,7 +38,7 @@ export const Blog = ({
               alt="Writer Image"
               width={200}
               height={200}
-            />{" "}
+            />
             <p className="text-sm font-semibold text-gray-400">Pras</p>
             <p className="text-xs text-gray-400">{"April 30, 2022"}</p>
             <div className="ml-2"></div>

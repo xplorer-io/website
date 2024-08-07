@@ -10,6 +10,7 @@ import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/buttons/button";
+import { githubLink, linkedinLink, slackLink, youtubeLink } from "./helper";
 
 // SocialLink Component
 const SocialLink = ({
@@ -45,25 +46,25 @@ const Footer = React.memo(() => {
           <p className="mb-1 mr-5 text-white sm:mb-0">Get in touch</p>
           <div className="flex items-center justify-start py-3">
             <SocialLink
-              href="https://github.com/xplorer-io"
+              href={githubLink}
               src={githubIcon}
               alt="Github Icon"
               ariaLabel="Github"
             />
             <SocialLink
-              href="https://www.linkedin.com/company/xplorersgroup"
+              href={linkedinLink}
               src={linkedinIcon}
               alt="Linkedin Icon"
               ariaLabel="Linkedin"
             />
             <SocialLink
-              href="https://xplorers-io.slack.com/"
+              href={slackLink}
               src={slackIcon}
               alt="Slack Icon"
               ariaLabel="Slack"
             />
             <SocialLink
-              href="https://xplorers-io.slack.com/"
+              href={youtubeLink}
               src={youtubeIcon}
               alt="Slack Icon"
               ariaLabel="Slack"

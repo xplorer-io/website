@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import logo from "@public/images/logos/xplorer_logo.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
