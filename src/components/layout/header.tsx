@@ -94,6 +94,7 @@ const Header = () => {
             <div
               className="fixed inset-0 z-40 bg-black opacity-25"
               onClick={toggleMobileMenu}
+              aria-hidden="true"
             />
           )}
         </div>
