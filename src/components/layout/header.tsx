@@ -1,16 +1,15 @@
 "use client";
 
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+
 import Image from "next/image";
 import Link from "next/link";
-import AuthHeader from "@/components/auth/AuthHeader";
-import logo from "@public/images/logos/xplorer_logo.svg";
-import { menus } from "./helper";
-import { clsx } from "clsx";
-import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/buttons/button";
-import navMobileIcon from "@public/images/illustrations/navMobileIcon.svg";
 
-import { useState } from "react";
+import MobileNav from "./MobileNav";
+import DesktopNav from "./DesktopNav";
+
+import logo from "@public/images/logos/xplorer_logo.svg";
 
 const Header = () => {
   const pathname = usePathname();
@@ -27,69 +26,16 @@ const Header = () => {
                 <Image src={logo} alt="logo" />
               </Link>
             </div>
-
-            <div className="md:flex md:items-center md:gap-12">
-              <nav aria-label="Global" className="hidden md:block">
-                <ul className="flex items-center gap-6 text-sm">
-                  {menus.map(({ name, href }) => (
-                    <Link
-                      key={name}
-                      href={href}
-                      className={clsx({
-                        "text-gray-500 transition hover:text-gray-500/75": true,
-                        "border-b-2 border-gray-500/75": pathname === href,
-                      })}
-                    >
-                      {name}
-                    </Link>
-                  ))}
-                </ul>
-              </nav>
-
-              <div className="flex items-center gap-4">
-                <div className="sm:flex sm:gap-4">
-                  <AuthHeader />
-                </div>
-
-                <div className="block md:hidden">
-                  <Button
-                    className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-                    onClick={toggleMobileMenu}
-                  >
-                    <Image src={navMobileIcon} alt={"Mobile Nav Icon"} />
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <DesktopNav
+              pathname={pathname}
+              toggleMobileMenu={toggleMobileMenu}
+            />
           </div>
-          <div
-            className={clsx(
-              "fixed right-0 top-0 z-50 h-full w-72 transform flex-col items-center justify-center bg-white shadow-lg transition-transform duration-300 ease-in-out md:hidden",
-              {
-                "translate-x-full": !isMobileMenuOpen,
-                "translate-x-0": isMobileMenuOpen,
-              },
-            )}
-          >
-            <nav aria-label="Mobile Global" className="mt-10 p-2 text-sm">
-              <ul className="flex h-full w-full flex-col items-center justify-center gap-4 p-3">
-                {menus.map(({ name, href }) => (
-                  <li key={name} className="flex items-center p-1">
-                    <Link
-                      href={href}
-                      className={clsx({
-                        "text-gray-500 transition hover:text-gray-500/75": true,
-                        "border-b-2 border-gray-500/75": pathname === href,
-                      })}
-                      onClick={toggleMobileMenu}
-                    >
-                      {name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
+          <MobileNav
+            pathname={pathname}
+            isMobileMenuOpen={isMobileMenuOpen}
+            toggleMobileMenu={toggleMobileMenu}
+          />
           {isMobileMenuOpen && (
             <div
               className="fixed inset-0 z-40 bg-black opacity-25"
