@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
-import { menus } from "./helper";
-import AuthHeader from "../auth/AuthHeader";
-import { Button } from "../ui/buttons/button";
+import { menus } from "../helper";
+import AuthHeader from "@/components/auth/AuthHeader";
+import { Button } from "@/components/ui/buttons/button";
 import navMobileIcon from "@public/images/illustrations/navMobileIcon.svg";
 
 interface DesktopNavProps {

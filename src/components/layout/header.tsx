@@ -4,8 +4,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import MobileNav from "./MobileNav";
-import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNavigation/MobileNav";
+import DesktopNav from "./DesktopNavigation/DesktopNav";
 import logo from "@public/images/logos/xplorer_logo.svg";
 
 const Header = () => {

@@ -1,14 +1,19 @@
 import React from "react";
 import clsx from "clsx";
-import { menus } from "./helper";
-import NavLinkItem from "./NavLinkItem";
+import { menus } from "../helper";
+import MobileNavLinkItem from "./MobileNavLinkItem";
 
 export interface MobileNavProps {
   isMobileMenuOpen: boolean;
   toggleMobileMenu: () => void;
+  pathname: string;
 }
 
-const MobileNav = ({ toggleMobileMenu, isMobileMenuOpen }: MobileNavProps) => {
+const MobileNav: React.FC<MobileNavProps> = ({
+  toggleMobileMenu,
+  isMobileMenuOpen,
+  pathname,
+}) => {
   return (
     <div
       className={clsx(
@@ -19,14 +24,15 @@ const MobileNav = ({ toggleMobileMenu, isMobileMenuOpen }: MobileNavProps) => {
         },
       )}
     >
-      <nav aria-label="Mobile Global" className="mt-10 p-2 text-sm">
-        <ul className="flex h-full w-full flex-col items-center justify-center gap-4 p-3">
+      <nav aria-label="Mobile Global" className="p-2 text-sm">
+        <ul className="flex h-screen w-full flex-col items-center justify-center gap-4 p-3">
           {menus.map((item) => (
-            <NavLinkItem
-              key={item.name}
-              name={item.name}
+            <MobileNavLinkItem
               href={item.href}
+              name={item.name}
+              key={item.name}
               toggleMobileMenu={toggleMobileMenu}
+              pathname={pathname}
             />
           ))}
         </ul>

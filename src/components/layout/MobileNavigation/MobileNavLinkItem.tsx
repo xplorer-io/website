@@ -1,18 +1,20 @@
-import Link from "next/link";
+import React from "react";
 import clsx from "clsx";
+import Link from "next/link";
 
-interface NavLinkItemProps {
+export interface MobileNavLinkItemProps {
   name: string;
   href: string;
   toggleMobileMenu: () => void;
+  pathname: string;
 }
 
-const NavLinkItem: React.FC<NavLinkItemProps> = ({
+const MobileNavLinkItem: React.FC<MobileNavLinkItemProps> = ({
   name,
   href,
   toggleMobileMenu,
+  pathname,
 }) => {
-  let pathname;
   return (
     <li key={name} className="flex items-center p-1">
       <Link
@@ -29,4 +31,4 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({
   );
 };
 
-export default NavLinkItem;
+export default MobileNavLinkItem;
