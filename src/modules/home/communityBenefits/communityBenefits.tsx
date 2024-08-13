@@ -16,7 +16,7 @@ export const CommunityBenefits = () => {
           <CommunityBenefitCard key={name} name={name} imageUrl={imageUrl} />
         )}
       </section>
-      <Button className="mt-8 flex items-center gap-2 self-center">
+      <Button className="mt-8 mb-8 flex items-center gap-2 self-center dark:hover:bg-blue-500">
         <span>Learn More</span>
         <Image src={arrow} height={1} width={36} alt="arrow" />
       </Button>
