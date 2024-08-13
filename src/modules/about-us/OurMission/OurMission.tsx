@@ -26,9 +26,10 @@ const OurMission = () => {
       </div>
       <div className="flex flex-col gap-10">
         <RightSide
-          title="Community Engagement"
-          description="We give back to the community via collaboration, mentorship and support."
-          imageSrc={group}
+        title="Learn Share and Grow"
+        description="We foster growth through continuous learning and knowledge sharing."
+        imageSrc={share}
+          
         />
         <LeftSide
           title="Networking Hub"
@@ -41,9 +42,14 @@ const OurMission = () => {
           imageSrc={helping}
         />
         <LeftSide
-          title="Learn and Share"
-          description="We foster growth through continuous learning and knowledge sharing."
-          imageSrc={share}
+          title="Community Engagement"
+          description="Giving back to the broader community through collaboration, mentorship, and support."
+          imageSrc={group}
+        />
+         <RightSide
+          title="Impactful Connection"
+          description="To make a meaningful impact on each other's lives, both professionally and presonally."
+          imageSrc={networking}
         />
       </div>
     </section>
