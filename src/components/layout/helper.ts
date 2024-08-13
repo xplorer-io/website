@@ -3,4 +3,5 @@ export const menus = [
   { name: "About Us", href: "/about-us" },
   { name: "Accolades", href: "/accolades" },
   { name: "Blogs", href: "/blogs" },
+  { name: "Events", href: "/events" }
 ];
