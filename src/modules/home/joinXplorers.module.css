@@ -1,0 +1,42 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes seesaw {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg); /* Tilt to the left */
+  }
+  50% {
+    transform: rotate(5deg); /* Tilt to the right */
+  }
+  75% {
+    transform: rotate(-5deg); /* Tilt back to the left */
+  }
+  100% {
+    transform: rotate(0deg); /* Return to the original position */
+  }
+}
+
+#requestToJoinButton {
+  transition: transform 0.5s ease-in-out;
+}
+
+#requestToJoinButton:hover {
+  animation: seesaw 0.5s ease-in-out;
+}
+
+#requestToJoinButton:hover .spinAnimation {
+  animation: spin 0.5s linear 1;
+  animation-fill-mode: forwards;
+}
