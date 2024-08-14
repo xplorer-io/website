@@ -7,14 +7,16 @@ export const OurValuesCard = ({
   description,
 }: OurValuesListProps) => {
   return (
-    <div className="flex flex-col items-center p-2 font-bold">
+    <div className="relative flex flex-col items-center p-2 font-bold">
       <figure className="flex justify-center lg:h-64 lg:w-64">
-        <Image src={imageUrl} width={250} height={120} alt={name} />
+        <Image src={imageUrl} width={250} height={120} alt={name}/>
       </figure>
       <span className="mt-4 text-center text-2xl">{name}</span>
-      <span className="mt-4 text-center text-sm sm:mx-24 lg:mx-10">
+      <span className="mt-4 text-center font-medium text-xs mx-12 lg:mx-10">
         {description}
       </span>
+      {/* <div className="absolute right-0 w-1 h-[350px] bg-gray-300 opacity-20"></div>
+      <div className="absolute bottom-[-5] w-[400px] h-1 bg-gray-300 opacity-20"></div> */}
     </div>
   );
 };

@@ -10,7 +10,7 @@ import RightSide from "./RightSide";
 
 const OurMission = () => {
   return (
-    <section className="my-6">
+    <section className="my-8">
       <div className="relative mx-auto mb-14 flex h-20 w-80 items-center justify-center">
         <Image
           src={left_half_box}
