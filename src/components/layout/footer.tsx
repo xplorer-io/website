@@ -22,7 +22,7 @@ const Footer = React.memo(() => {
           <h3 className="text-white text-3xl">Xplorers</h3>
         </div>
         <div className="mr-0 sm:mr-16 mt-2 sm:mt-0 text-center sm:text-right">
-          <p className="text-white mb-1 sm:mb-0 mr-5">Get in touch</p>
+          <p className="text-white mb-1 mr-5 font-semibold">Get in touch</p>
           <div className="flex justify-center sm:justify-end items-center">
             <SocialLink href="https://github.com/xplorer-io" src={githubIcon} alt="Github Icon" ariaLabel="Github" />
             <SocialLink href="https://www.linkedin.com/company/xplorersgroup" src={linkedinIcon} alt="Linkedin Icon" ariaLabel="Linkedin" />
