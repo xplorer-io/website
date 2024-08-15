@@ -7,7 +7,7 @@ import { CommunityBenefitCard } from "./CommunityBenefitCard";
 
 export const CommunityBenefits = () => {
   return (
-    <section className="md:flex-col-2 flex flex-col justify-center gap-16 lg:mx-6">
+    <section className="md:flex-col-2 flex flex-col justify-center gap-10 lg:gap-12 mx-10 lg:mx-12 lg:mt-8">
       <h1 className="text-center text-2xl font-bold lg:text-left">
         Our Community Benefits
       </h1>
