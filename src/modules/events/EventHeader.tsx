@@ -1,10 +1,9 @@
 import React from "react"
 import Image from "next/image"
+import Event from "./EventType";
 
-type EventHeaderProps = {
-    title: string,
-    image?: string
-}
+type EventHeaderProps = Pick<Event, 'title' | 'image'>;
+
 
 const EventHeader = ({ title, image }: EventHeaderProps) => (
     <div className="relative w-full sm:w-64 h-64 rounded-lg overflow-hidden shadow-sm">

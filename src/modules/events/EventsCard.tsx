@@ -2,15 +2,9 @@ import React from 'react';
 import Link from "next/link";
 import EventHeader from './EventHeader';
 import EventBody from './EventBody';
+import Event from './EventType';
 
-type EventCardProps = {
-    id: string;
-    date: string;
-    title: string;
-    image?: string;
-    organizerName: string;
-    attendeesCount: number;
-};
+type EventCardProps = Event
 
 const EventCard = ({
     id,

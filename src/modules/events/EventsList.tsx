@@ -1,7 +1,6 @@
 import PagesWrapper from "@/components/layout/PagesWrapper";
 import ButtonLink from "@/components/ui/buttons/ButtonLink";
 import TitleHeader from "@/components/ui/TitleHeader";
-import * as texts from "@/localisation/events";
 import EventCard from "@/modules/events/EventsCard";
 import { blogPosts } from "@/data/blogsData";
 

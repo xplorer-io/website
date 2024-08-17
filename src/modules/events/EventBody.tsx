@@ -1,9 +1,6 @@
+import Event from "./EventType";
 
-type EventBodyProps = {
-    organizerName: string;
-    date: string;
-    attendeesCount: number;
-};
+type EventBodyProps = Pick<Event, 'date' | 'organizerName' | 'attendeesCount'>;
 
 const EventBody = ({
     organizerName,
