@@ -1,14 +1,6 @@
 "use client";
 import Image from "next/image";
 import logo from "@public/images/logos/xplorer_logo.svg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
 
 const Divider = () => {
   return (
@@ -37,25 +29,10 @@ const Banner = () => {
 const MarqueeContent = ({ ariaHidden }: { ariaHidden?: boolean }) => {
   return (
     <div
-      className="marquee flex w-full shrink-0 items-center gap-0 text-xl"
+      className="marquee flex w-full shrink-0 items-center justify-evenly gap-6 text-xl"
       aria-hidden={ariaHidden}
     >
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        spaceBetween={50}
-        slidesPerView={1}
-        loop={true}
-        pagination={{ clickable: true }}
-        className="hero-slider h-full"
-        autoplay={{ delay: 5000 }}
-      >
-        <div className="flex items-center gap-4 whitespace-nowrap">
-          <Banner />
-          <Banner />
-          <Banner />
-          <Banner />
-        </div>
-      </Swiper>
+      <Banner />
     </div>
   );
 };

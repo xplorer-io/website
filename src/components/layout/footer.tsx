@@ -4,26 +4,21 @@ import copyrightLogo from "@public/images/icons/copyright.svg";
 import githubIcon from "@public/images/icons/github.svg";
 import linkedinIcon from "@public/images/icons/linkedin.svg";
 import slackIcon from "@public/images/icons/slack.svg";
-import youtubeIcon from "@public/images/icons/youtube.svg";
-
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/buttons/button";
 import { githubLink, linkedinLink, slackLink, youtubeLink } from "./helper";
 
-// SocialLink Component
-const SocialLink = ({
-  href,
-  src,
-  alt,
-  ariaLabel,
-}: {
+export type SocialLinkProps = {
   href: string;
   src: StaticImageData;
   alt: string;
   ariaLabel: string;
-}) => (
+};
+
+// SocialLink Component
+const SocialLink = ({ href, src, alt, ariaLabel }: SocialLinkProps) => (
   <a
     href={href}
     target="_blank"
@@ -42,9 +37,9 @@ const Footer = React.memo(() => {
         <div className="col-span-2 mr-20 mt-2 sm:mt-5">
           <h3 className="text-3xl text-white">Xplorers</h3>
         </div>
-        <div className="mr-0 mt-2 sm:mr-16 sm:mt-0 sm:text-left">
+        <div className="mr-0 mt-2 sm:mr-16 sm:mt-0 sm:text-right">
           <p className="mb-1 mr-5 text-white sm:mb-0">Get in touch</p>
-          <div className="flex items-center justify-start py-3">
+          <div className="flex items-center justify-end py-3">
             <SocialLink
               href={githubLink}
               src={githubIcon}
@@ -63,18 +58,6 @@ const Footer = React.memo(() => {
               alt="Slack Icon"
               ariaLabel="Slack"
             />
-            <SocialLink
-              href={youtubeLink}
-              src={youtubeIcon}
-              alt="Slack Icon"
-              ariaLabel="Slack"
-            />
-          </div>
-          <div className="flex items-center justify-start gap-4">
-            <Input id="fullName" placeholder={"Enter Email Address"} />
-            <Button className="bg-primary-400 text-base hover:bg-primary dark:bg-primary-400 dark:text-white dark:hover:bg-primary">
-              Subscribe
-            </Button>
           </div>
         </div>
       </div>

@@ -12,7 +12,6 @@ export default function Home() {
       <MarqueeBanner />
       <JoinXplorers />
       <CommunityBenefits />
-      <Blogs />
     </main>
   );
 }
