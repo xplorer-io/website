@@ -7,12 +7,12 @@ export const OurValuesCard = ({
   description,
 }: OurValuesListProps) => {
   return (
-    <div className="flex flex-col items-center p-2 font-bold">
-      <figure className="flex justify-center lg:h-64 lg:w-64">
-        <Image src={imageUrl} width={250} height={120} alt={name} />
+    <div className="relative flex flex-col items-center p-2 font-bold">
+      <figure className="relative flex justify-center h-[10rem] w-[10rem] lg:h-48 lg:w-48">
+        <Image src={imageUrl} fill alt={name}/>
       </figure>
       <span className="mt-4 text-center text-2xl">{name}</span>
-      <span className="mt-4 text-center text-sm sm:mx-24 lg:mx-10">
+      <span className="mt-4 text-center font-medium text-xs mx-12 lg:mx-10">
         {description}
       </span>
     </div>

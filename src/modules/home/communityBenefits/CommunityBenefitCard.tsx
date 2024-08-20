@@ -6,12 +6,12 @@ export const CommunityBenefitCard = ({
   imageUrl,
 }: CommunityBenefitCardProps) => {
   return (
-    <div key={name} className="flex flex-col items-center rounded-xl">
-      <div className="flex h-96 w-80 flex-col items-center gap-4 rounded-md border-2 bg-blue-100 p-8 font-semibold text-black shadow-xl md:h-72 md:w-64 lg:h-[305px] lg:w-[256px]">
-        <div className="flex h-64 w-64 justify-center">
-          <Image src={imageUrl} width={125} height={100} alt={name} />
+    <div key={name} className="flex flex-col items-center rounded-xl bg-blue-100 shadow-xl border-2 p-8">
+      <div className="flex flex-col items-center gap-4 font-semibold">
+        <div className="flex md:h-[10rem] md:w-[10rem] h-28 w-28 aspect-w-1 aspect-h-1 justify-center relative">
+          <Image src={imageUrl} fill alt={name} className="object-contain"/>
         </div>
-        <div className="mt-4 text-center">{name}</div>
+        <div className="mt-2 text-center text-lg">{name}</div>
       </div>
     </div>
   );
