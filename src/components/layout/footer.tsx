@@ -17,23 +17,21 @@ const SocialLink = ({ href, src, alt, ariaLabel }: { href: string; src: StaticIm
 const Footer = React.memo(() => {
   return (
     <footer className="bg-[#283E70] p-10 mt-auto">
-      <div className="flex flex-wrap justify-between items-center text-center sm:text-left">
-        <div className="ml-0 sm:ml-16 mt-2 sm:mt-5">
+      <div className="flex flex-wrap justify-center md:justify-between items-center text-center gap-1">
+        <div className="md:ml-16">
           <h3 className="text-white text-3xl">Xplorers</h3>
         </div>
-        <div className="mr-0 sm:mr-16 mt-2 sm:mt-0 text-center sm:text-right">
+        <div className="flex text-white">
+          <Image src={copyrightLogo} alt="Copyright Logo" />
+          <p className="ml-2">2024 Xplorers, All rights reserved</p>
+        </div>
+        <div className="mr-0 md:mr-16 mt-2 sm:mt-0 text-center">
           <p className="text-white mb-1 mr-5 font-semibold">Get in touch</p>
           <div className="flex justify-center sm:justify-end items-center">
             <SocialLink href="https://github.com/xplorer-io" src={githubIcon} alt="Github Icon" ariaLabel="Github" />
             <SocialLink href="https://www.linkedin.com/company/xplorersgroup" src={linkedinIcon} alt="Linkedin Icon" ariaLabel="Linkedin" />
             <SocialLink href="https://xplorers-io.slack.com/" src={slackIcon} alt="Slack Icon" ariaLabel="Slack" />
           </div>
-        </div>
-      </div>
-      <div className="mt-16 text-center">
-        <div className="flex justify-center items-center text-white">
-          <Image src={copyrightLogo} alt="Copyright Logo" />
-          <p className="ml-2">2024 Xplorers, All rights reserved</p>
         </div>
       </div>
     </footer>
