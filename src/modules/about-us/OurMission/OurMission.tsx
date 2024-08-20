@@ -17,7 +17,7 @@ const OurMission = () => {
           alt="left half box"
           className="absolute bottom-0 left-0"
         />
-        <h2>Our Mission</h2>
+        <h2 className="text-center font-bold text-gray-600">Our Mission</h2>
         <Image
           src={right_half_box}
           alt="left half box"
