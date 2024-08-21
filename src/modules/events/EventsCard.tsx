@@ -17,7 +17,7 @@ const EventCard = ({
     <Link href={'#'}>
         <EventHeader
             title={title}
-            image="https://i.imgur.com/cb4V8sz_d.webp?maxwidth=520&shape=thumb&fidelity=high"
+            image={image}
         />
         <EventBody
             organizerName={organizerName}
