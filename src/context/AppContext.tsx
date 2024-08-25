@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { useAuth } from "@clerk/nextjs";
+import {useAuth, useUser} from "@clerk/nextjs";
+import useVerifyActiveUser from "@/hooks/useVerifyActiveUser";
 
 type AppContext = {
   isLoggedIn: boolean;
@@ -14,6 +15,9 @@ export const AppContextProvider = ({
   children: React.ReactNode;
 }) => {
   const { isLoaded, userId } = useAuth();
+  const { user } = useUser();
+  const { data } = useVerifyActiveUser({userEmail: user?.primaryEmailAddress?.emailAddress});
+    console.log({data})
   return (
     <AppContext.Provider
       value={{
