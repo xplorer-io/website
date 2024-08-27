@@ -1,7 +1,7 @@
 import {useQuery} from '@tanstack/react-query';
 import axios from 'axios';
 
-const useSlackUserStatus = (userEmail: string) => {
+const useSlackUserStatus = (userEmail?: string) => {
     return useQuery({
         queryKey: ['slackUserStatus', userEmail],
         queryFn: async () => {
