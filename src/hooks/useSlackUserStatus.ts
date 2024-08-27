@@ -16,7 +16,8 @@ const useSlackUserStatus = (userEmail?: string) => {
             );
             return response.data;
         },
-        enabled: !!userEmail
+        enabled: !!userEmail,
+        retry: false
     });
 };
 
