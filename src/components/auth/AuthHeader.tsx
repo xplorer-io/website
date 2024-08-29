@@ -17,14 +17,14 @@ const AuthHeader = () => {
       {!isLoggedIn ? (
         <div className="flex items-center gap-3 sm:gap-3">
           <Link href="/login">
-            <Button className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-5 py-3 text-gray-500 transition hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring">
+            <Button className="border border-gray-200 bg-primary-400 text-gray-500 transition hover:border-primary-400 hover:text-gray-700 focus:outline-none focus:ring dark:bg-primary-400">
               Login
             </Button>
           </Link>
           <Link href="/register">
             <Button
               variant="secondary"
-              className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-5 py-3 text-gray-500 transition focus:outline-none focus:ring"
+              className="border border-gray-200 text-gray-500 transition focus:outline-none focus:ring"
             >
               Register
             </Button>

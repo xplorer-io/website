@@ -12,8 +12,12 @@ const LeftSide = ({ title, description, imageSrc }: LeftSideProps) => (
       <div className="absolute -left-8 h-full w-full skew-x-[20deg] bg-primary-600"></div>
       <div className="relative h-full px-8">
         <div className="flex h-full flex-col justify-center gap-2 px-8">
-          <h4 className="non-italic text-white text-md leading-tight">{title}</h4>
-          <p className="text-stone-300 text-sm md:text-base leading-tight">{description}</p>
+          <h4 className="non-italic text-md leading-tight text-white">
+            {title}
+          </h4>
+          <p className="text-sm leading-tight text-stone-300 md:text-base">
+            {description}
+          </p>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import ButtonLink from "@/components/ui/buttons/ButtonLink";
 
 const TitleSection = () => {
   return (
-    <div className="mx-auto max-w-xl ltr:text-left rtl:text-right">
+    <div className="max-w-xl ltr:text-left rtl:text-right">
       <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
         Who are Xplorers?
       </h2>
