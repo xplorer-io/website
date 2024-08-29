@@ -26,10 +26,9 @@ const OurMission = () => {
       </div>
       <div className="flex flex-col gap-10">
         <RightSide
-        title="Learn Share and Grow"
-        description="We foster growth through continuous learning and knowledge sharing."
-        imageSrc={share}
-          
+          title="Learn Share and Grow"
+          description="We foster growth through continuous learning and knowledge sharing."
+          imageSrc={share}
         />
         <LeftSide
           title="Networking Hub"
@@ -46,7 +45,7 @@ const OurMission = () => {
           description="Giving back to the broader community through collaboration, mentorship, and support."
           imageSrc={group}
         />
-         <RightSide
+        <RightSide
           title="Impactful Connection"
           description="To make a meaningful impact on each other's lives, both professionally and presonally."
           imageSrc={networking}

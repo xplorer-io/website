@@ -4,9 +4,11 @@ import ImageBackground from "./ImageBackground";
 
 const BelieveInPower = () => {
   return (
-    <div className="flex w-full flex-col justify-between md:flex-row">
-      <ContentSection />
-      <ImageBackground />
+    <div className="container mx-auto">
+      <div className="flex w-full flex-col justify-between md:flex-row">
+        <ContentSection />
+        <ImageBackground />
+      </div>
     </div>
   );
 };
