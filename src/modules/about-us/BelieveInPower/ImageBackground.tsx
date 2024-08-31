@@ -8,7 +8,7 @@ const ImageBackground = () => (
       width="250"
       height="100"
       alt="Believe in power"
-      className="hidden opacity-10 md:block"
+      className="absolute right-0 opacity-10"
     />
   </div>
 );

@@ -14,7 +14,6 @@ interface DesktopNavProps {
 
 const DesktopNav = ({ pathname, toggleMobileMenu }: DesktopNavProps) => {
   return (
-    // <div className="container mx-auto">
     <div className="md:flex md:items-center md:gap-12">
       <nav aria-label="Global" className="hidden md:block">
         <ul className="flex items-center gap-6 text-sm">
@@ -48,7 +47,6 @@ const DesktopNav = ({ pathname, toggleMobileMenu }: DesktopNavProps) => {
         </div>
       </div>
     </div>
-    // </div>
   );
 };
 

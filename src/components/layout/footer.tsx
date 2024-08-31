@@ -1,11 +1,13 @@
 "use client";
 
+import { githubLink, linkedInLink, slackLink } from "@/constants";
 import copyrightLogo from "@public/images/icons/copyright.svg";
 import githubIcon from "@public/images/icons/github.svg";
 import linkedinIcon from "@public/images/icons/linkedin.svg";
 import slackIcon from "@public/images/icons/slack.svg";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
+import { socialLinkList } from "./helper";
 
 // SocialLink Component
 const SocialLink = ({
@@ -15,7 +17,7 @@ const SocialLink = ({
   ariaLabel,
 }: {
   href: string;
-  src: StaticImageData;
+  src: string;
   alt: string;
   ariaLabel: string;
 }) => (
@@ -45,24 +47,9 @@ const Footer = React.memo(() => {
           <div className="mr-0 mt-2 text-center sm:mt-0">
             <p className="mb-1 mr-5 font-semibold text-white">Get in touch</p>
             <div className="flex items-center justify-center sm:justify-end">
-              <SocialLink
-                href="https://github.com/xplorer-io"
-                src={githubIcon}
-                alt="Github Icon"
-                ariaLabel="Github"
-              />
-              <SocialLink
-                href="https://www.linkedin.com/company/xplorersgroup"
-                src={linkedinIcon}
-                alt="Linkedin Icon"
-                ariaLabel="Linkedin"
-              />
-              <SocialLink
-                href="https://xplorers-io.slack.com/"
-                src={slackIcon}
-                alt="Slack Icon"
-                ariaLabel="Slack"
-              />
+              {socialLinkList?.map(({ href, src, alt, ariaLabel }) => (
+                <SocialLink {...{ key: alt, href, src, alt, ariaLabel }} />
+              ))}
             </div>
           </div>
         </div>
