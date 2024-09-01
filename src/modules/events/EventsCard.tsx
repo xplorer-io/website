@@ -2,9 +2,9 @@ import React from 'react';
 import Link from "next/link";
 import EventHeader from './EventHeader';
 import EventBody from './EventBody';
-import Event from './EventType';
+import EventType from './EventType';
 
-type EventCardProps = Event
+type EventCardProps = EventType
 
 const EventCard = ({
     id,
@@ -14,7 +14,7 @@ const EventCard = ({
     organizerName,
     attendeesCount,
 }: EventCardProps) => (
-    <Link href={'#'}>
+    <Link href={`/events/${id}`}>
         <EventHeader
             title={title}
             image={image}

@@ -1,8 +1,8 @@
 import React from "react"
 import Image from "next/image"
-import Event from "./EventType";
+import EventType from "./EventType";
 
-type EventHeaderProps = Pick<Event, 'title' | 'image'>;
+type EventHeaderProps = Pick<EventType, 'title' | 'image'>;
 
 
 const EventHeader = ({ title, image }: EventHeaderProps) => (

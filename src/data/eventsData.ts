@@ -1,6 +1,6 @@
-import Event from "@/modules/events/EventType";
+import EventType from "@/modules/events/EventType";
 
-export const dummyEvents: Event[] = [
+export const dummyEvents: EventType[] = [
     {
         id: "1",
         title: "Xplorers Monthly Catchup",

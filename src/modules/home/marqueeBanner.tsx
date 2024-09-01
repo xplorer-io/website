@@ -28,7 +28,7 @@ const Banner = () => {
 const MarqueeContent = ({ ariaHidden }: { ariaHidden?: boolean }) => {
   return (
     <div
-      className="marquee flex w-full shrink-0 items-center justify-evenly gap-6 text-xl"
+      className="flex w-full shrink-0 items-center justify-evenly gap-6 text-xl"
       aria-hidden={ariaHidden}
     >
       <Banner />
