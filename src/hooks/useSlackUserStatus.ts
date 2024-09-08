@@ -1,23 +1,17 @@
-import {useQuery} from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
 const useSlackUserStatus = (userEmail?: string) => {
     return useQuery({
         queryKey: ['slackUserStatus', userEmail],
         queryFn: async () => {
-            const response = await axios.get(
-                `${process.env.NEXT_PUBLIC_SLACK_API_ROOT_PATH}/slack/user/status`,
-                {
-                    params: {userEmail},
-                    headers: {
-                        'x-api-key': process.env.NEXT_PUBLIC_SLACK_API_TOKEN,
-                    },
-                }
-            );
+            const response = await axios.get(`/api/slack/userStatus`, {
+                params: { userEmail },
+            });
             return response.data;
         },
         enabled: !!userEmail,
-        retry: false
+        retry: false,
     });
 };
 
