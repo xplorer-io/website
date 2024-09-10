@@ -48,7 +48,7 @@ const Footer = React.memo(() => {
             <p className="mb-1 mr-5 font-semibold text-white">Get in touch</p>
             <div className="flex items-center justify-center sm:justify-end">
               {socialLinkList?.map(({ href, src, alt, ariaLabel }) => (
-                <SocialLink {...{ key: alt, href, src, alt, ariaLabel }} />
+                <SocialLink key={alt} {...{ href, src, alt, ariaLabel }} />
               ))}
             </div>
           </div>
