@@ -1,11 +1,7 @@
 "use client";
 
-import { githubLink, linkedInLink, slackLink } from "@/constants";
 import copyrightLogo from "@public/images/icons/copyright.svg";
-import githubIcon from "@public/images/icons/github.svg";
-import linkedinIcon from "@public/images/icons/linkedin.svg";
-import slackIcon from "@public/images/icons/slack.svg";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import { socialLinkList } from "./helper";
 
