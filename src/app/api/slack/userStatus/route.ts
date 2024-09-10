@@ -15,7 +15,7 @@ export async function GET(request: Request) {
                 'x-api-key': process.env.SLACK_API_TOKEN,
             },
         });
-        console.log({response})
+
         return NextResponse.json(response.data, { status: 200 });
     } catch (error) {
         return NextResponse.json({ error: 'Error fetching Slack user status' }, { status: 500 });
