@@ -1,7 +1,7 @@
-import { Events } from "@/modules/events"
+import { Events } from "@/modules/events";
 
 const EventsPage = () => {
-    return <Events />;
+  return <Events />;
 };
 
 export default EventsPage;
