@@ -3,7 +3,7 @@ import { QuoteIcon } from "@radix-ui/react-icons";
 
 const ContentSection = () => {
   return (
-    <div className="flex flex-row space-x-5 p-8 md:p-12 lg:px-16 lg:py-24">
+    <div className="flex flex-row space-x-5 p-8 md:py-12 lg:px-0 lg:py-24">
       <div>
         <QuoteIcon
           style={{ transform: "rotate(180deg)" }}

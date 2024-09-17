@@ -4,11 +4,15 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="overflow bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center">
-      <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-        <TitleSection />
+    <section className="bg-gray-50">
+      <div className="container mx-auto">
+        <div className="overflow sm:grid sm:grid-cols-2 sm:items-center">
+          <div className="p-8 md:p-0 lg:py-24">
+            <TitleSection />
+          </div>
+          <BannerImage />
+        </div>
       </div>
-      <BannerImage />
     </section>
   );
 };
