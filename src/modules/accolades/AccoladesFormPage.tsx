@@ -20,8 +20,6 @@ const AccoladesFormPage = () => {
     handleCheckboxChange,
   } = useCreateAccolades();
 
-
-
   return (
     <div className="flex flex-col">
       <PagesWrapper>
