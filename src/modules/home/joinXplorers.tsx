@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/buttons/button";
-import slackIcon from "@public/images/icons/slack_logo.svg";
+import slackIcon from "@public/icons/slack_logo.svg";
 import Image from "next/image";
 import css from "./joinXplorers.module.css";
 import { joinXplorersGoogleFormUrl } from "@/constants";
