@@ -19,6 +19,7 @@ jobs:
 
       - name: Perform Snyk test
         uses: snyk/actions/node@master
+        id: snyk_test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         continue-on-error: true
