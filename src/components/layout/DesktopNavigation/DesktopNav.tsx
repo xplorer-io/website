@@ -6,6 +6,7 @@ import { menus } from "../helper";
 import AuthHeader from "@/components/auth/AuthHeader";
 import { Button } from "@/components/ui/buttons/button";
 import navMobileIcon from "@public/images/illustrations/navMobileIcon.svg";
+import { useAppContext } from "@/context/AppContext";
 
 interface DesktopNavProps {
   pathname: string;
@@ -13,22 +14,27 @@ interface DesktopNavProps {
 }
 
 const DesktopNav = ({ pathname, toggleMobileMenu }: DesktopNavProps) => {
+  const { isActiveSlackUser = false } = useAppContext();
+
   return (
     <div className="md:flex md:items-center md:gap-12">
       <nav aria-label="Global" className="hidden md:block">
         <ul className="flex items-center gap-6 text-sm">
-          {menus.map(({ name, href }) => (
-            <Link
-              key={name}
-              href={href}
-              className={clsx({
-                "text-gray-500 transition hover:text-gray-500/75": true,
-                "border-b-2 border-gray-500/75": pathname === href,
-              })}
-            >
-              {name}
-            </Link>
-          ))}
+          {menus.map(
+            ({ name, href, isProtected }) =>
+              (!isProtected || isActiveSlackUser) && (
+                <Link
+                  key={name}
+                  href={href}
+                  className={clsx({
+                    "text-gray-500 transition hover:text-gray-500/75": true,
+                    "border-b-2 border-gray-500/75": pathname === href,
+                  })}
+                >
+                  {name}
+                </Link>
+              ),
+          )}
         </ul>
       </nav>
 
