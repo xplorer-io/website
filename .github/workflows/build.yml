@@ -30,9 +30,8 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const fs = require('fs');
-            const snykResults = fs.readFileSync('snyk.sarif', 'utf8');
-            const commentBody = `### Snyk Test Results\n\`\`\`json\n${snykResults}\n\`\`\``;
+            const snykOutput = steps.snyk_test.outputs.stdout;
+            const commentBody = `### Snyk Test Results\n\`\`\`\n${snykOutput}\n\`\`\``;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
