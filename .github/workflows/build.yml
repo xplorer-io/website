@@ -39,7 +39,6 @@ jobs:
               repo: context.repo.repo,
               body: commentBody
             });
-
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
         if: github.ref == 'refs/heads/main'
