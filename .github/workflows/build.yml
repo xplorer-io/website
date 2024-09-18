@@ -25,9 +25,6 @@ jobs:
         with:
           args: --sarif-file-output=snyk.sarif | tee snyk-test.log
 
-      - name: Install strip-ansi
-        run: pnpm install strip-ansi
-
       - name: Comment Snyk test results on PR
         if: ${{ github.event_name == 'pull_request' }}
         uses: actions/github-script@v6
@@ -35,8 +32,7 @@ jobs:
           script: |
             const fs = require('fs');
             const snykOutput = fs.readFileSync('snyk-test.log', 'utf8');
-            const cleanOutput = stripAnsi(snykOutput);
-            const commentBody = `### Snyk Test Results\n\`\`\`\n${cleanOutput}\n\`\`\``;
+            const commentBody = `### Snyk Test Results\n\`\`\`\n${snykOutput}\n\`\`\``;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
