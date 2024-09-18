@@ -32,7 +32,7 @@ jobs:
         with:
           script: |
             const snykOutput = steps.snyk_test.outputs.stdout;
-            const commentBody = `### Snyk Test Results\n\`\`\`\n${snykOutput}\n\`\`\``;
+            const commentBody = `### Snyk Test Results Generated\n\`\`\`\n${snykOutput}\n\`\`\``;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
