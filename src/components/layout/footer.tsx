@@ -1,6 +1,6 @@
 "use client";
 
-import copyrightLogo from "@public/images/icons/copyright.svg";
+import copyrightLogo from "@public/icons/copyright.svg";
 import Image from "next/image";
 import React from "react";
 import { socialLinkList } from "./helper";

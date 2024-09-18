@@ -5,7 +5,7 @@ import Image from "next/image";
 import { menus } from "../helper";
 import AuthHeader from "@/components/auth/AuthHeader";
 import { Button } from "@/components/ui/buttons/button";
-import navMobileIcon from "@public/images/illustrations/navMobileIcon.svg";
+import navMobileIcon from "@public/illustrations/navMobileIcon.svg";
 import { useAppContext } from "@/context/AppContext";
 
 interface DesktopNavProps {

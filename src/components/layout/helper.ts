@@ -1,14 +1,14 @@
 import { githubLink, linkedInLink, slackLink } from "@/constants";
-import githubIcon from "@public/images/icons/github.svg";
-import linkedinIcon from "@public/images/icons/linkedin.svg";
-import slackIcon from "@public/images/icons/slack.svg";
+import githubIcon from "@public/icons/github.svg";
+import linkedinIcon from "@public/icons/linkedin.svg";
+import slackIcon from "@public/icons/slack.svg";
 
 export const menus = [
-  { name: "Home", href: "/" , isProtected: false},
-  { name: "About Us", href: "/about-us" , isProtected: false},
-  { name: "Accolades", href: "/accolades" , isProtected: true},
-  { name: "Blogs", href: "/blogs" , isProtected: false},
-  { name: "Events", href: "/events" , isProtected: false},
+  { name: "Home", href: "/", isProtected: false },
+  { name: "About Us", href: "/about-us", isProtected: false },
+  { name: "Accolades", href: "/accolades", isProtected: true },
+  { name: "Blogs", href: "/blogs", isProtected: false },
+  { name: "Events", href: "/events", isProtected: false },
 ];
 
 export const socialLinkList = [
