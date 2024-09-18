@@ -23,14 +23,15 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         continue-on-error: true
         with:
-          args: --sarif-file-output=snyk.sarif
+          args: --sarif-file-output=snyk.sarif | tee snyk-test.txt
 
       - name: Comment Snyk test results on PR
         if: ${{ github.event_name == 'pull_request' }}
         uses: actions/github-script@v6
         with:
           script: |
-            const snykOutput = steps.snyk_test.outputs.stdout;
+            const fs = require('fs');
+            const snykOutput = fs.readFileSync('snyk_output.txt', 'utf8');
             const commentBody = `### Snyk Test Results\n\`\`\`\n${snykOutput}\n\`\`\``;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
