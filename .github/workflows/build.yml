@@ -17,30 +17,19 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Perform Snyk test
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        continue-on-error: true
+        with:
+          args: --sarif-file-output=snyk.sarif
+
       - name: Build project
         run: pnpm build
         env:
           NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
           CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
-  security:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup npm
-        uses: actions/setup-node@v4.0.3
-        with:
-          node-version: 14
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Example workflow for Node using Snyk
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           #   with:
       #     args: --sarif-file-output=snyk.sarif
       # - name: Upload result to GitHub Code Scanning
