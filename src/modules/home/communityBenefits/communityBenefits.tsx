@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
-import { Button } from "@/components/ui/buttons/button";
-import arrow from "@public/images/icons/arrow.svg";
+
 import { communityBenefitsList } from "./helper";
 import { CommunityBenefitCard } from "./CommunityBenefitCard";
 import ButtonLink from "@/components/ui/buttons/ButtonLink";

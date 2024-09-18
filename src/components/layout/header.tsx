@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./MobileNavigation/MobileNav";
 import DesktopNav from "./DesktopNavigation/DesktopNav";
-import logo from "@public/images/logos/xplorer_logo.svg";
+import logo from "@public/logos/xplorer_logo.svg";
 
 const Header = () => {
   const pathname = usePathname();

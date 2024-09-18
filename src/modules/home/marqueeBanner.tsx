@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@public/images/logos/xplorer_logo.svg";
+import logo from "@public/logos/xplorer_logo.svg";
 
 const Divider = () => {
   return (
