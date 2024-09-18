@@ -24,7 +24,10 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         continue-on-error: true
         with:
-          args: --sarif-file-output=snyk.sarif | tee snyk-test.txt
+          args: --sarif-file-output=snyk.sarif | tee snyk-test.log
+
+      - name: Install strip-ansi
+        run: pnpm install strip-ansi
 
       - name: Comment Snyk test results on PR
         if: ${{ github.event_name == 'pull_request' }}
@@ -32,8 +35,9 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const snykOutput = fs.readFileSync('snyk-test.txt', 'utf8');
-            const commentBody = `### Snyk Test Results\n\`\`\`\n${snykOutput}\n\`\`\``;
+            const snykOutput = fs.readFileSync('snyk-test.log', 'utf8');
+            const cleanOutput = stripAnsi(snykOutput);
+            const commentBody = `### Snyk Test Results\n\`\`\`\n${cleanOutput}\n\`\`\``;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
