@@ -31,7 +31,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const snykOutput = fs.readFileSync('snyk_output.txt', 'utf8');
+            const snykOutput = fs.readFileSync('snyk-test.txt', 'utf8');
             const commentBody = `### Snyk Test Results\n\`\`\`\n${snykOutput}\n\`\`\``;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
