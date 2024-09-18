@@ -1,10 +1,10 @@
 import Image from "next/image";
-import left_half_box from "@public/images/icons/left_half_box.svg";
-import right_half_box from "@public/images/icons/right_half_box.svg";
-import group from "@public/images/illustrations/group.svg";
-import networking from "@public/images/illustrations/networking.svg";
-import helping from "@public/images/illustrations/helping.svg";
-import share from "@public/images/illustrations/share.svg";
+import left_half_box from "@public/icons/left_half_box.svg";
+import right_half_box from "@public/icons/right_half_box.svg";
+import group from "@public/illustrations/group.svg";
+import networking from "@public/illustrations/networking.svg";
+import helping from "@public/illustrations/helping.svg";
+import share from "@public/illustrations/share.svg";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 

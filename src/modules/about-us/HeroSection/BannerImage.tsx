@@ -5,7 +5,7 @@ const BannerImage = () => {
   return (
     <div className="sm:h-[calc(100% - 2rem)] md:h-[calc(100% - 4rem)] relative h-80">
       <Image
-        src={"src/assets/about-us/about-us-banner.webp"}
+        src={"/images/about-us/about-us-banner.webp"}
         alt="Picture of the group"
         layout="fill"
         objectFit="cover"
