@@ -25,18 +25,29 @@ jobs:
         with:
           args: --sarif-file-output=snyk.sarif
 
+      - name: Comment Snyk test results on PR
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const snykResults = fs.readFileSync('snyk.sarif', 'utf8');
+            const commentBody = `### Snyk Test Results\n\`\`\`json\n${snykResults}\n\`\`\``;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commentBody
+            });
+
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
+        if: github.ref == 'refs/heads/main'
         with:
           sarif_file: snyk.sarif
+
       - name: Build project
         run: pnpm build
         env:
           NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }}
           CLERK_SECRET_KEY: ${{ secrets.CLERK_SECRET_KEY }}
-          #   with:
-      #     args: --sarif-file-output=snyk.sarif
-      # - name: Upload result to GitHub Code Scanning
-      #   uses: github/codeql-action/upload-sarif@v2
-      #   with:
-      #     sarif_file: snyk.sarif
