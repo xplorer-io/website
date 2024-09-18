@@ -37,13 +37,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@0.3.0
-        with:
-          args: test
+      - name: Example workflow for Node using Snyk
+        uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      #   with:
+          #   with:
       #     args: --sarif-file-output=snyk.sarif
       # - name: Upload result to GitHub Code Scanning
       #   uses: github/codeql-action/upload-sarif@v2
