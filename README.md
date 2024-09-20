@@ -15,6 +15,12 @@ Run the development server:
 ```bash
 pnpm dev
 ```
+Run a snyk scan localy
+If snyk is configure do a local snyk test
+Setup Instruction: [Here](https://docs.snyk.io/snyk-cli/install-or-update-the-snyk-cli)
+```bash
+snyk test
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
