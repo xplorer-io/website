@@ -15,6 +15,16 @@ Run the development server:
 ```bash
 pnpm dev
 ```
+### Setup Clerk Authentication
+- SignUP with [Clerk](https://clerk.com)
+- Create Application
+- Give It a Name (Optional: Xplorer Test)
+- Leave Email and Gmail On
+- Create Application
+- Copy secrets on Step 2
+- Save it to .env.local
+
+> 💡 Any changes done on Your Clerk Account will not be reflected on Xplorer Production Website.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -26,6 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Component library: Shadcn/ui
 - Design link: [Figma](https://www.figma.com/design/fQssgttgmTJNUu8mIzlxcO/Xplorers?node-id=0-1&m=dev)
 - Project management: [Github Project](https://github.com/orgs/xplorer-io/projects/5) or checkout [issues](https://github.com/xplorer-io/website/issues)
+- Authentication Management [Clerk Auth](https://clerk.com/)
 
 ## Design System
 
