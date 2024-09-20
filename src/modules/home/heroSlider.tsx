@@ -11,10 +11,10 @@ import {
 import Image from "next/image";
 
 const heroImages = [
-  { id: 1, imageSrc: "/images/hero-image.jpg", imageAlt: "group image 1" },
-  { id: 2, imageSrc: "/images/hero-image.jpg", imageAlt: "group image 2" },
-  { id: 3, imageSrc: "/images/hero-image.jpg", imageAlt: "group image 3" },
-  { id: 4, imageSrc: "/images/hero-image.jpg", imageAlt: "group image 4" },
+  { id: 1, imageSrc: "/images/hero-image-1.webp", imageAlt: "group image 1" },
+  { id: 2, imageSrc: "/images/hero-image-2.webp", imageAlt: "group image 2" },
+  { id: 3, imageSrc: "/images/hero-image-3.webp", imageAlt: "group image 3" },
+  { id: 4, imageSrc: "/images/hero-image-4.webp", imageAlt: "group image 4" },
 ];
 
 const HeroSlider = () => {

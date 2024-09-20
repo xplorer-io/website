@@ -4,11 +4,11 @@ import Image from "next/image";
 const ImageBackground = () => (
   <div className="flex items-center">
     <Image
-      src={"/images/illustrations/Believe-in-power.svg"}
+      src={"/illustrations/Believe-in-power.svg"}
       width="250"
       height="100"
       alt="Believe in power"
-      className="hidden opacity-10 md:block"
+      className="absolute right-0 opacity-10"
     />
   </div>
 );

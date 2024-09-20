@@ -1,10 +1,10 @@
 import Image from "next/image";
-import left_half_box from "@public/images/icons/left_half_box.svg";
-import right_half_box from "@public/images/icons/right_half_box.svg";
-import group from "@public/images/illustrations/group.svg";
-import networking from "@public/images/illustrations/networking.svg";
-import helping from "@public/images/illustrations/helping.svg";
-import share from "@public/images/illustrations/share.svg";
+import left_half_box from "@public/icons/left_half_box.svg";
+import right_half_box from "@public/icons/right_half_box.svg";
+import group from "@public/illustrations/group.svg";
+import networking from "@public/illustrations/networking.svg";
+import helping from "@public/illustrations/helping.svg";
+import share from "@public/illustrations/share.svg";
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 
@@ -26,10 +26,9 @@ const OurMission = () => {
       </div>
       <div className="flex flex-col gap-10">
         <RightSide
-        title="Learn Share and Grow"
-        description="We foster growth through continuous learning and knowledge sharing."
-        imageSrc={share}
-          
+          title="Learn Share and Grow"
+          description="We foster growth through continuous learning and knowledge sharing."
+          imageSrc={share}
         />
         <LeftSide
           title="Networking Hub"
@@ -46,7 +45,7 @@ const OurMission = () => {
           description="Giving back to the broader community through collaboration, mentorship, and support."
           imageSrc={group}
         />
-         <RightSide
+        <RightSide
           title="Impactful Connection"
           description="To make a meaningful impact on each other's lives, both professionally and presonally."
           imageSrc={networking}

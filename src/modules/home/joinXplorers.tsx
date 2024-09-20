@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/buttons/button";
-import slackIcon from "@public/images/icons/slack_logo.svg";
+import slackIcon from "@public/icons/slack_logo.svg";
 import Image from "next/image";
 import css from "./joinXplorers.module.css";
 import { joinXplorersGoogleFormUrl } from "@/constants";
@@ -10,7 +10,7 @@ const JoinXplorers = () => {
       <a target="_blank" href={joinXplorersGoogleFormUrl}>
         <Button
           id={css.requestToJoinButton}
-          className="bg-primary-400 text-base hover:bg-primary md:text-xl dark:bg-primary-400 dark:text-white dark:hover:bg-primary"
+          className="bg-primary-800 text-base hover:bg-primary md:text-xl dark:bg-primary-400 dark:text-white dark:hover:bg-primary"
           size={"hero"}
         >
           <span className="mr-3"> Request to join Xplorers</span>
