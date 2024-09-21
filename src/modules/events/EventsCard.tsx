@@ -13,15 +13,20 @@ const EventCard = ({
   image,
   organizerName,
   attendeesCount,
+  location,
+  attending
 }: EventCardProps) => (
-  <Link href={"#"}>
+  <div className="relative block cursor-pointer hover:scale-105 transform transition duration-150 ease-in-out  overflow-hidden bg-blue-100 rounded-lg  shadow-lg border border-gray-100 ">
     <EventHeader title={title} image={image} />
     <EventBody
       organizerName={organizerName}
       date={date}
       attendeesCount={attendeesCount}
+      title={title}
+      location={location}
+      attending={attending}
     />
-  </Link>
+  </div>
 );
 
 export default EventCard;

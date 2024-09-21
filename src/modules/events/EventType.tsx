@@ -5,5 +5,7 @@ type Event = {
   date: string;
   organizerName: string;
   attendeesCount: number;
+  location: string;
+  attending: boolean;
 };
 export default Event;
