@@ -1,11 +1,11 @@
-export type CareerData = {
+export type careerData = {
   id: string;
   title: string;
   image: string;
   bulletPoints: string[];
 };
 
-export const careerSuccessData: CareerData[] = [
+export const careerSuccessData: careerData[] = [
   {
     id: "1",
     title: "Crafting an impressive CV",
@@ -34,7 +34,7 @@ export const careerSuccessData: CareerData[] = [
     bulletPoints: [
       "Profiles of Successful xplorers Alumni",
       "In-Depth Career Journeys",
-      "Key Takeaways and lesson lerned",
+      "Key Takeaways and lesson learned",
     ],
   },
   {
@@ -44,8 +44,8 @@ export const careerSuccessData: CareerData[] = [
     bulletPoints: [
       "Proven Study Methods",
       "Optimizing time management",
-      "Securing Valueable interships",
-      "Leverage certification and career advacement",
+      "Securing Valuable interships",
+      "Leverage certification and career advancement",
     ],
   },
 ];

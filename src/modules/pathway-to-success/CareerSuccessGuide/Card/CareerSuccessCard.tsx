@@ -5,12 +5,12 @@ import {
   CardHeader,
   CardTitle,
   CardFooter,
-} from "../../../../components/ui/card";
-import { CareerData } from "@/data/careerSuccessData";
+} from "@/components/ui/card";
+import { careerData } from "@/data/careerSuccessData";
 import Image from "next/image";
 import ButtonLink from "@/components/ui/buttons/ButtonLink";
 
-type SuccessCardProps = CareerData;
+type SuccessCardProps = careerData;
 
 const CareerSuccessCard = ({
   id,
@@ -35,8 +35,8 @@ const CareerSuccessCard = ({
           <CardTitle>{title}</CardTitle>
         </CardHeader>
         <CardDescription className="flex-grow p-5 text-lg">
-          {bulletPoints.map((point) => (
-            <p>
+          {bulletPoints.map((point, index) => (
+            <p key={index}>
               <span>&#x2022;</span> {point}
             </p>
           ))}
