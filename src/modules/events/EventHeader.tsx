@@ -5,15 +5,15 @@ import Event from "./EventType";
 type EventHeaderProps = Pick<Event, "title" | "image">;
 
 const EventHeader = ({ title, image }: EventHeaderProps) => (
-  <div className="relative w-full h-64 ">
+  <div className="relative h-64 w-full">
     {image && (
       <Image
         alt={`Image for ${title}`}
         src={image}
-        layout="fill" objectFit="cover"
+        layout="fill"
+        objectFit="cover"
       />
     )}
-
   </div>
 );
 

@@ -14,9 +14,9 @@ const EventCard = ({
   organizerName,
   attendeesCount,
   location,
-  attending
+  attending,
 }: EventCardProps) => (
-  <div className="relative block cursor-pointer hover:scale-105 transform transition duration-150 ease-in-out  overflow-hidden bg-blue-100 rounded-lg  shadow-lg border border-gray-100 ">
+  <div className="relative block transform cursor-pointer overflow-hidden rounded-lg border border-gray-100 bg-blue-100 shadow-lg transition duration-150 ease-in-out hover:scale-105">
     <EventHeader title={title} image={image} />
     <EventBody
       organizerName={organizerName}

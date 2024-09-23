@@ -5,9 +5,8 @@ import EventCard from "@/modules/events/EventsCard";
 import { dummyEvents } from "@/data/eventsData";
 import { formatDate } from "@/lib/dateformatter";
 const EventsPage = () => {
-
   return (
-    <div className="flex flex-col" >
+    <div className="flex flex-col">
       <PagesWrapper>
         <TitleHeader
           title="Upcoming Events"
@@ -23,11 +22,10 @@ const EventsPage = () => {
           ))}
         </div>
 
-        <div className=" mt-8 text-center p-y-1 ">
+        <div className="p-y-1 mt-8 text-center">
           <ButtonLink href="#">Add New Event</ButtonLink>
         </div>
       </PagesWrapper>
-
     </div>
   );
 };
