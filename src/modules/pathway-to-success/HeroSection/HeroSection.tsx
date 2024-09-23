@@ -14,7 +14,7 @@ const HeroSection = () => {
         <h2 className="font-bold">Pathway to Success</h2>
         <p className="text-md mx-auto my-4">
           Our comprehensive guide to launching your career covers everything you
-          need to stand out in today's competitive job market.
+          need to stand out in today&apos;s competitive job market.
         </p>
         <ButtonLink href="#">Learn More</ButtonLink>
       </div>
