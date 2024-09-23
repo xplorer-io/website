@@ -17,6 +17,34 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        continue-on-error: true # To make sure that SARIF upload gets called
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --sarif-file-output=snyk.sarif | tee snyk-test.log
+
+      - name: Comment Snyk test results on PR
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const snykOutput = fs.readFileSync('snyk-test.log', 'utf8');
+            const commentBody = `### Snyk Test Results\n\`\`\`\n${snykOutput}\n\`\`\``;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commentBody
+            });
+
+      - name: Upload result to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: snyk.sarif
+
       - name: Build project
         run: pnpm build
         env:
