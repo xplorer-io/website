@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <section className="container mx-auto">
-      <header className="relative bg-white">
+      <header className="relative mx-4 bg-white sm:mx-0">
         <div className="mx-auto">
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-10">

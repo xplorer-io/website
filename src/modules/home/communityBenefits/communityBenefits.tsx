@@ -7,7 +7,7 @@ import ButtonLink from "@/components/ui/buttons/ButtonLink";
 export const CommunityBenefits = () => {
   return (
     <section className="container mx-auto">
-      <div className="md:flex-col-2 flex flex-col justify-center gap-10 lg:mt-8 lg:gap-12">
+      <div className="md:flex-col-2 mx-4 flex flex-col justify-center gap-10 sm:mx-0 lg:mt-8 lg:gap-12">
         <h1 className="text-center text-2xl font-bold lg:text-left">
           Our Community Benefits
         </h1>
@@ -16,7 +16,7 @@ export const CommunityBenefits = () => {
             <CommunityBenefitCard key={name} name={name} imageUrl={imageUrl} />
           ))}
         </div>
-        <div className="mx-auto mt-4 md:my-8">
+        <div className="mx-auto my-8 mt-4">
           <ButtonLink href="#">Learn More</ButtonLink>
         </div>
       </div>
