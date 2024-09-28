@@ -6,7 +6,7 @@ const BannerImage = () => {
     <div className="sm:h-[calc(100% - 2rem)] md:h-[calc(100% - 4rem)] relative h-80">
       <Image
         src={
-          "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-1.jpg?raw=true"
+          "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/about-us/about-us-banner.webp"
         }
         alt="Picture of the group"
         layout="fill"

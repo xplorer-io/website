@@ -14,25 +14,25 @@ const heroImages = [
   {
     id: 1,
     imageSrc:
-      "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-1.jpg?raw=true",
+      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-1.webp",
     imageAlt: "group image 1",
   },
   {
     id: 2,
     imageSrc:
-      "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-2.jpg?raw=true",
+      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-2.webp",
     imageAlt: "group image 2",
   },
   {
     id: 3,
     imageSrc:
-      "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-3.png?raw=true",
+      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-3.webp",
     imageAlt: "group image 3",
   },
   {
     id: 4,
     imageSrc:
-      "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-4.jpg?raw=true",
+      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-4.webp",
     imageAlt: "group image 4",
   },
 ];
