@@ -11,10 +11,30 @@ import {
 import Image from "next/image";
 
 const heroImages = [
-  { id: 1, imageSrc: "/images/hero-image-1.webp", imageAlt: "group image 1" },
-  { id: 2, imageSrc: "/images/hero-image-2.webp", imageAlt: "group image 2" },
-  { id: 3, imageSrc: "/images/hero-image-3.webp", imageAlt: "group image 3" },
-  { id: 4, imageSrc: "/images/hero-image-4.webp", imageAlt: "group image 4" },
+  {
+    id: 1,
+    imageSrc:
+      "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-1.jpg?raw=true",
+    imageAlt: "group image 1",
+  },
+  {
+    id: 2,
+    imageSrc:
+      "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-2.jpg?raw=true",
+    imageAlt: "group image 2",
+  },
+  {
+    id: 3,
+    imageSrc:
+      "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-3.png?raw=true",
+    imageAlt: "group image 3",
+  },
+  {
+    id: 4,
+    imageSrc:
+      "https://github.com/xplorer-io/website-images-cdn/blob/main/xplorers-website-images/homepage/hero-image-4.jpg?raw=true",
+    imageAlt: "group image 4",
+  },
 ];
 
 const HeroSlider = () => {
