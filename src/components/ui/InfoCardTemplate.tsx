@@ -7,6 +7,9 @@ interface CVSectionProps {
   highlightTitle: string;
   description: string;
   passingImage: boolean;
+  src?: string;
+  alt?: string;
+  link: string;
 }
 
 const InfoCardTemplate: React.FC<CVSectionProps> = ({
@@ -15,6 +18,9 @@ const InfoCardTemplate: React.FC<CVSectionProps> = ({
   highlightTitle,
   description,
   passingImage,
+  src,
+  alt,
+  link,
 }) => {
   return (
     <div className="flex min-h-[80vh] w-[80%] flex-col items-center justify-center bg-cv-template-background text-white sm:w-[45%] lg:w-[33%] xl:w-[33%]">
@@ -23,12 +29,13 @@ const InfoCardTemplate: React.FC<CVSectionProps> = ({
           {number}.
         </div>
         <div className="flex w-2/3 justify-between">
-          <div className="whitespace-nowrap text-5xl">{initialTitle}</div>
-          <div className="text-5xl">
+          <div className="flex-1 text-5xl">{initialTitle}</div>
+          <div className="ml-4 min-w-[45px] flex-shrink-0 text-5xl">
             <ImagePass
               display={passingImage}
-              alt="right-arrow"
-              src="./icons/right_pointing_arrow.svg"
+              alt={alt || "imageDesc"}
+              src={src || "/icons/right_pointing_arrow.svg"}
+              link={link || "#"}
             />
           </div>
         </div>
