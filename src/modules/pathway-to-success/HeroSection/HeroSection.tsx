@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section
       className="relative flex h-[60vh] items-center justify-center bg-center"
       style={{
-        backgroundImage: `url('/images/pathway-to-success/pathway-to-success-banner.webp')`,
+        backgroundImage: `url('https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/pathway-to-success/pathway-to-success-banner.webp')`,
       }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
