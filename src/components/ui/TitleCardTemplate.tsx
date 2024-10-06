@@ -5,6 +5,18 @@ interface CVTitleTemplateProps {
   initialTitle: string;
   highlightTitle: string;
 }
+/**
+ * TitleCardTemplate is a reusable React component designed to display a title card
+ * with two title fields and a decorative image at the bottom. This component is typically used
+ * in a CV or portfolio layout, with customizable content and styling provided through TailwindCSS.
+ *
+ * Props:
+ * @param {string} initialTitle - The main title to display at the top of the card.
+ * @param {string} highlightTitle - The emphasized title or subtitle, styled with a custom yellow color for visual distinction.
+ *
+ * The component uses TailwindCSS for layout and styles, along with Next.js's Image component for optimized image handling.
+ * The bottom border of the card is a decorative image.
+ */
 
 const TitleCardTemplate: React.FC<CVTitleTemplateProps> = ({
   initialTitle,
@@ -24,6 +36,7 @@ const TitleCardTemplate: React.FC<CVTitleTemplateProps> = ({
           alt="bottom-border"
           height={100}
           width={100}
+          priority
           className="mt-2 w-2/3 sm:w-2/3 lg:w-2/3"
         />
       </div>
