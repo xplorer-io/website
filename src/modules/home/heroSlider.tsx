@@ -8,31 +8,31 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 const heroImages = [
   {
     id: 1,
     imageSrc:
-      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-1.webp",
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1729571966/homepage/aayttz2ixe1qrx9cjpaa.webp",
     imageAlt: "group image 1",
   },
   {
     id: 2,
     imageSrc:
-      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-2.webp",
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1728290635/Collected_Images_2984_nguvyu.webp",
     imageAlt: "group image 2",
   },
   {
     id: 3,
     imageSrc:
-      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-3.webp",
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1728290634/Collected_Images_2724_xk1mvr.webp",
     imageAlt: "group image 3",
   },
   {
     id: 4,
     imageSrc:
-      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-4.webp",
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1728290634/Collected_Images_6661_m5sfph.webp",
     imageAlt: "group image 4",
   },
 ];
@@ -50,7 +50,7 @@ const HeroSlider = () => {
       >
         {heroImages.map((heroImage) => (
           <SwiperSlide key={heroImage.id}>
-            <Image
+            <CldImage
               src={heroImage.imageSrc}
               fill
               className="object-cover"

@@ -1,6 +1,6 @@
+"use client";
 import { Button } from "@/components/ui/buttons/button";
-import slackIcon from "@public/icons/slack_logo.svg";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import css from "./joinXplorers.module.css";
 import { joinXplorersGoogleFormUrl } from "@/constants";
 
@@ -14,7 +14,14 @@ const JoinXplorers = () => {
           size={"hero"}
         >
           <span className="mr-3"> Request to join Xplorers</span>
-          <Image src={slackIcon} alt="slack icon" width={30} height={30} />
+          <CldImage
+            src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578498/slack_logo_udhx77.svg"
+            alt="slack icon"
+            width={30}
+            height={30}
+            crop="fit"
+            format="svg"
+          />
         </Button>
       </a>
     </div>

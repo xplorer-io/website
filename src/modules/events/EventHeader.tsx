@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
-import Image from "next/image";
 import Event from "./EventType";
+import { CldImage } from "next-cloudinary";
 
 type EventHeaderProps = {
   event: Event;
@@ -12,11 +13,12 @@ const EventHeader = ({ event }: EventHeaderProps) => {
   return (
     <div className="relative h-64 w-full">
       {image && (
-        <Image
-          alt={`Image for ${title}`}
+        <CldImage
           src={image}
-          layout="fill"
-          objectFit="cover"
+          alt={`Image for ${title}`}
+          fill
+          style={{ objectFit: "contain" }}
+          format="svg"
         />
       )}
     </div>

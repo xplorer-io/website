@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 // TODO fix when api is ready
 const post = {

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   Card,
@@ -7,7 +8,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { careerData } from "@/data/careerSuccessData";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import ButtonLink from "@/components/ui/buttons/ButtonLink";
 
 type SuccessCardProps = careerData;
@@ -23,11 +24,12 @@ const CareerSuccessCard = ({
       <Card className="relative flex flex-col border-gray-500">
         <div className="flex items-center justify-center">
           <figure className="relative h-[20rem] w-[10rem] lg:h-48 lg:w-48">
-            <Image
+            <CldImage
               src={image}
-              fill
               alt={title}
+              fill
               style={{ objectFit: "contain" }}
+              format="svg"
             />
           </figure>
         </div>

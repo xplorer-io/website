@@ -1,9 +1,6 @@
+"use client";
 import Event from "./EventType";
-import homeLogo from "@public/icons/home.svg";
-import calenderLogo from "@public/icons/calender.svg";
-import bookmarkLogo from "@public/icons/bookmark.svg";
-import bookmarkSavedLogo from "@public/icons/bookmark-filled.svg";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 type EventBodyProps = {
   event: Event;
@@ -20,22 +17,43 @@ const EventBody = ({ event }: EventBodyProps) => {
         Hosted by: {organizerName}
       </div>
       <div className="flex text-xs text-gray-500">
-        <Image src={calenderLogo} alt="Home Logo text-gray-500"></Image>
+        <CldImage
+          src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578481/calender_rumkyd.svg"
+          alt="Home Logo"
+          width={20}
+          height={10}
+        />
+
         <p className="ml-2 p-1"> {date}</p>
       </div>
       <div className="flex text-xs text-gray-500">
-        <Image src={homeLogo} alt="Copyright Logo text-gray-500" />
+        <CldImage
+          src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578488/home_ded4jk.svg"
+          alt="Home Logo"
+          width={20}
+          height={10}
+        />
         <p className="ml-2 p-1">{location}</p>
       </div>
 
       {attending ? (
         <div className="flex text-xs text-green-600">
-          <Image src={bookmarkSavedLogo} alt="Bookmark Saved Logo"></Image>
+          <CldImage
+            src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578475/bookmark-filled_arguow.svg"
+            alt="Home Logo"
+            width={20}
+            height={10}
+          />
           <p className="ml-2 p-1">Attending</p>
         </div>
       ) : (
         <div className="flex text-xs text-gray-500">
-          <Image src={bookmarkLogo} alt="Bookmark Logo"></Image>
+          <CldImage
+            src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578478/bookmark_lfi0wt.svg"
+            alt="Home Logo"
+            width={20}
+            height={10}
+          />
           <p className="ml-2 p-1 hover:text-primary"> Register Now</p>
         </div>
       )}

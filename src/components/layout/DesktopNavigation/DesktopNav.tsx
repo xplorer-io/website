@@ -1,11 +1,11 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import clsx from "clsx";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { menus } from "../helper";
 import AuthHeader from "@/components/auth/AuthHeader";
 import { Button } from "@/components/ui/buttons/button";
-import navMobileIcon from "@public/illustrations/navMobileIcon.svg";
 import { useAppContext } from "@/context/AppContext";
 
 interface DesktopNavProps {
@@ -48,7 +48,13 @@ const DesktopNav = ({ pathname, toggleMobileMenu }: DesktopNavProps) => {
             className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
             onClick={toggleMobileMenu}
           >
-            <Image src={navMobileIcon} alt={"Mobile Nav Icon"} />
+            <CldImage
+              src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578532/navMobileIcon_yofpzl.svg"
+              height={20}
+              width={20}
+              alt={"Mobile Nav Icon"}
+              format="svg"
+            />
           </Button>
         </div>
       </div>

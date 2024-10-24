@@ -19,20 +19,22 @@ export const menus = [
 export const socialLinkList = [
   {
     href: githubLink,
-    src: githubIcon,
+    src: "https://res.cloudinary.com/dumkkicev/image/upload/q_auto,fl_sanitize/v1729578485/github_jpoeyq.svg",
     alt: "GithubIcon,",
     ariaLabel: "GithubIcon",
   },
   {
     href: linkedInLink,
-    src: linkedinIcon,
+    src: "https://res.cloudinary.com/dumkkicev/image/upload/v1729578493/linkedin_uqfbnv.svg",
     alt: "LinkedIn Icon",
     ariaLabel: "LinkedIn",
   },
   {
     href: slackLink,
-    src: slackIcon,
+    src: "https://res.cloudinary.com/dumkkicev/image/upload/v1729578500/slack_l5moxv.svg",
     alt: "Slack Icon,",
     ariaLabel: "slackIcon",
   },
 ];
+
+// https://res.cloudinary.com/dumkkicev/image/upload/q_auto,f_auto/v1729578485/github_jpoeyq.svg

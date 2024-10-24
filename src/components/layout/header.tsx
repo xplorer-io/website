@@ -1,12 +1,10 @@
 "use client";
-
 import { useState } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import MobileNav from "./MobileNavigation/MobileNav";
 import DesktopNav from "./DesktopNavigation/DesktopNav";
-import logo from "@public/logos/xplorer_logo.svg";
 
 const Header = () => {
   const pathname = usePathname();
@@ -20,7 +18,13 @@ const Header = () => {
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-10">
               <Link href="/">
-                <Image src={logo} alt="logo" />
+                <CldImage
+                  src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578396/xplorer_logo_pjyd96.svg"
+                  height={120}
+                  width={120}
+                  alt="logo"
+                  format="svg"
+                />
               </Link>
             </div>
             <DesktopNav

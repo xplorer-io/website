@@ -9,7 +9,8 @@ export const careerSuccessData: careerData[] = [
   {
     id: "1",
     title: "Crafting an impressive CV",
-    image: "./illustrations/craft-your-resume.svg",
+    image:
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1729578512/craft-your-resume_ajqc8w.svg",
     bulletPoints: [
       "Crafting a standout resume",
       "Writing persuasive cover letters",
@@ -18,19 +19,22 @@ export const careerSuccessData: careerData[] = [
   {
     id: "2",
     title: "Launching your career",
-    image: "./illustrations/launch-your-career.svg",
+    image:
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1729578529/launch-your-career_rxzt94.svg",
     bulletPoints: ["Job Search techniques", "Networking", "Interview Skills"],
   },
   {
     id: "3",
     title: "Personal Branding",
-    image: "./illustrations/personal-branding.svg",
+    image:
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1729578537/personal-branding_alrhi1.svg",
     bulletPoints: ["Blogs", "Portfolio", "Online Presence", "LinkedIn"],
   },
   {
     id: "4",
     title: "Success Stories",
-    image: "./illustrations/success-stories.svg",
+    image:
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1729578547/success-stories_j5iblb.svg",
     bulletPoints: [
       "Profiles of Successful xplorers Alumni",
       "In-Depth Career Journeys",
@@ -40,7 +44,8 @@ export const careerSuccessData: careerData[] = [
   {
     id: "5",
     title: "Excellence for students",
-    image: "./illustrations/excellence-for-success.svg",
+    image:
+      "https://res.cloudinary.com/dumkkicev/image/upload/v1729578519/excellence-for-success_hlb91r.svg",
     bulletPoints: [
       "Proven Study Methods",
       "Optimizing time management",
