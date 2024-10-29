@@ -13,26 +13,22 @@ import { CldImage } from "next-cloudinary";
 const heroImages = [
   {
     id: 1,
-    imageSrc:
-      "https://res.cloudinary.com/dumkkicev/image/upload/v1729571966/homepage/aayttz2ixe1qrx9cjpaa.webp",
+    imageSrc: "homepage/aayttz2ixe1qrx9cjpaa",
     imageAlt: "group image 1",
   },
   {
     id: 2,
-    imageSrc:
-      "https://res.cloudinary.com/dumkkicev/image/upload/v1728290635/Collected_Images_2984_nguvyu.webp",
+    imageSrc: "Collected_Images_2984_nguvyu",
     imageAlt: "group image 2",
   },
   {
     id: 3,
-    imageSrc:
-      "https://res.cloudinary.com/dumkkicev/image/upload/v1728290634/Collected_Images_2724_xk1mvr.webp",
+    imageSrc: "Collected_Images_2724_xk1mvr",
     imageAlt: "group image 3",
   },
   {
     id: 4,
-    imageSrc:
-      "https://res.cloudinary.com/dumkkicev/image/upload/v1728290634/Collected_Images_6661_m5sfph.webp",
+    imageSrc: "Collected_Images_6661_m5sfph",
     imageAlt: "group image 4",
   },
 ];

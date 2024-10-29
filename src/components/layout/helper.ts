@@ -1,7 +1,4 @@
 import { githubLink, linkedInLink, slackLink } from "@/constants";
-import githubIcon from "@public/icons/github.svg";
-import linkedinIcon from "@public/icons/linkedin.svg";
-import slackIcon from "@public/icons/slack.svg";
 
 export const menus = [
   { name: "Home", href: "/", isProtected: false },
@@ -19,22 +16,20 @@ export const menus = [
 export const socialLinkList = [
   {
     href: githubLink,
-    src: "https://res.cloudinary.com/dumkkicev/image/upload/q_auto,fl_sanitize/v1729578485/github_jpoeyq.svg",
+    src: "github_jpoeyq",
     alt: "GithubIcon,",
     ariaLabel: "GithubIcon",
   },
   {
     href: linkedInLink,
-    src: "https://res.cloudinary.com/dumkkicev/image/upload/v1729578493/linkedin_uqfbnv.svg",
+    src: "linkedin_uqfbnv",
     alt: "LinkedIn Icon",
     ariaLabel: "LinkedIn",
   },
   {
     href: slackLink,
-    src: "https://res.cloudinary.com/dumkkicev/image/upload/v1729578500/slack_l5moxv.svg",
+    src: "slack_l5moxv",
     alt: "Slack Icon,",
     ariaLabel: "slackIcon",
   },
 ];
-
-// https://res.cloudinary.com/dumkkicev/image/upload/q_auto,f_auto/v1729578485/github_jpoeyq.svg

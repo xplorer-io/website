@@ -49,7 +49,7 @@ const DesktopNav = ({ pathname, toggleMobileMenu }: DesktopNavProps) => {
             onClick={toggleMobileMenu}
           >
             <CldImage
-              src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578532/navMobileIcon_yofpzl.svg"
+              src="navMobileIcon_yofpzl"
               height={20}
               width={20}
               alt={"Mobile Nav Icon"}

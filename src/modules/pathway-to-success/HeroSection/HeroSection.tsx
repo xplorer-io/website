@@ -9,7 +9,7 @@ const HeroSection = () => {
       {/* Cloudinary image acting as the background */}
       <CldImage
         className="absolute inset-0 z-0 object-cover"
-        src="https://res.cloudinary.com/dumkkicev/image/upload/v1729572873/Golden_Hour_Shore_Jump_qhm1nk.jpg"
+        src="Golden_Hour_Shore_Jump_qhm1nk"
         fill
         alt="Pathway to success"
       />

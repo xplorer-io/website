@@ -42,7 +42,7 @@ const Footer = React.memo(() => {
           <div>
             <Link href="/">
               <CldImage
-                src="https://res.cloudinary.com/dumkkicev/image/upload/v1729741206/xplorer_logo_white_ppbnio.svg"
+                src="xplorer_logo_white_ppbnio"
                 height={140}
                 width={140}
                 alt="xplorers-logo"

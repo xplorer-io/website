@@ -15,7 +15,7 @@ const JoinXplorers = () => {
         >
           <span className="mr-3"> Request to join Xplorers</span>
           <CldImage
-            src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578498/slack_logo_udhx77.svg"
+            src="slack_logo_udhx77"
             alt="slack icon"
             width={30}
             height={30}

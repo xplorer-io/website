@@ -18,7 +18,7 @@ const EventBody = ({ event }: EventBodyProps) => {
       </div>
       <div className="flex text-xs text-gray-500">
         <CldImage
-          src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578481/calender_rumkyd.svg"
+          src="calender_rumkyd"
           alt="Home Logo"
           width={20}
           height={10}
@@ -27,19 +27,14 @@ const EventBody = ({ event }: EventBodyProps) => {
         <p className="ml-2 p-1"> {date}</p>
       </div>
       <div className="flex text-xs text-gray-500">
-        <CldImage
-          src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578488/home_ded4jk.svg"
-          alt="Home Logo"
-          width={20}
-          height={10}
-        />
+        <CldImage src="home_ded4jk" alt="Home Logo" width={20} height={10} />
         <p className="ml-2 p-1">{location}</p>
       </div>
 
       {attending ? (
         <div className="flex text-xs text-green-600">
           <CldImage
-            src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578475/bookmark-filled_arguow.svg"
+            src="bookmark-filled_arguow"
             alt="Home Logo"
             width={20}
             height={10}
@@ -49,7 +44,7 @@ const EventBody = ({ event }: EventBodyProps) => {
       ) : (
         <div className="flex text-xs text-gray-500">
           <CldImage
-            src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578478/bookmark_lfi0wt.svg"
+            src="bookmark_lfi0wt"
             alt="Home Logo"
             width={20}
             height={10}

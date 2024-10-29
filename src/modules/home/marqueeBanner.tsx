@@ -13,12 +13,7 @@ const Divider = () => {
 const Banner = () => {
   return (
     <>
-      <CldImage
-        src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578396/xplorer_logo_pjyd96.svg"
-        alt="logo"
-        width={96}
-        height={96}
-      />
+      <CldImage src="xplorer_logo_pjyd96" alt="logo" width={96} height={96} />
       <Divider />
       <p>Learn</p>
       <Divider />

@@ -19,7 +19,7 @@ const Header = () => {
             <div className="flex-1 md:flex md:items-center md:gap-10">
               <Link href="/">
                 <CldImage
-                  src="https://res.cloudinary.com/dumkkicev/image/upload/v1729578396/xplorer_logo_pjyd96.svg"
+                  src="xplorer_logo_pjyd96"
                   height={120}
                   width={120}
                   alt="logo"

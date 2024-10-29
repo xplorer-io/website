@@ -6,7 +6,7 @@ const BannerImage = () => {
   return (
     <div className="sm:h-[calc(100% - 2rem)] md:h-[calc(100% - 4rem)] relative h-80">
       <CldImage
-        src="https://res.cloudinary.com/dumkkicev/image/upload/v1729572905/Collected_Images_2730_wcoakw.webp"
+        src="Collected_Images_2730_wcoakw"
         alt="Picture of the group"
         fill
         style={{ objectFit: "cover" }}
