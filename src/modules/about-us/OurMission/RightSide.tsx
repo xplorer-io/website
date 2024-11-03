@@ -18,6 +18,7 @@ const RightSide = ({ title, description, imageSrc }: RightSideProps) => (
         style={{ objectFit: "contain" }}
         className="h-36 content-center lg:h-48"
         format="svg"
+        loading="lazy"
       />
     </div>
     <div className="relative h-32 overflow-hidden lg:w-3/5">

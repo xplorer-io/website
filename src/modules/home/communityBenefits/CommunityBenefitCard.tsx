@@ -19,6 +19,7 @@ export const CommunityBenefitCard = ({
             alt={name}
             style={{ objectFit: "contain" }}
             format="svg"
+            loading="lazy"
           />
         </div>
         <div className="mt-2 text-center text-lg">{name}</div>

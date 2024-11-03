@@ -30,6 +30,7 @@ const CareerSuccessCard = ({
               fill
               style={{ objectFit: "contain" }}
               format="svg"
+              loading="lazy"
             />
           </figure>
         </div>

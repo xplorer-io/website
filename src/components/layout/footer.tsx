@@ -28,8 +28,8 @@ const SocialLink = ({
       alt={alt}
       width={20}
       height={20}
-      loading="lazy"
       format="svg"
+      loading="lazy"
     />
   </a>
 );
@@ -47,6 +47,7 @@ const Footer = React.memo(() => {
                 width={140}
                 alt="xplorers-logo"
                 format="svg"
+                loading="lazy"
               />
             </Link>
           </div>

@@ -21,6 +21,7 @@ const JoinXplorers = () => {
             height={30}
             crop="fit"
             format="svg"
+            loading="lazy"
           />
         </Button>
       </a>

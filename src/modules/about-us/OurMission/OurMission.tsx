@@ -14,6 +14,7 @@ const OurMission = () => {
           height={40}
           className="absolute bottom-0 left-0"
           format="svg"
+          loading="lazy"
         />
         <h2 className="text-center font-bold text-gray-600">Our Mission</h2>
         <CldImage
@@ -23,6 +24,7 @@ const OurMission = () => {
           height={40}
           className="absolute right-0 top-0"
           format="svg"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-10">

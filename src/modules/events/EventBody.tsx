@@ -22,12 +22,19 @@ const EventBody = ({ event }: EventBodyProps) => {
           alt="Home Logo"
           width={20}
           height={10}
+          loading="lazy"
         />
 
         <p className="ml-2 p-1"> {date}</p>
       </div>
       <div className="flex text-xs text-gray-500">
-        <CldImage src="home_ded4jk" alt="Home Logo" width={20} height={10} />
+        <CldImage
+          src="home_ded4jk"
+          alt="Home Logo"
+          width={20}
+          height={10}
+          loading="lazy"
+        />
         <p className="ml-2 p-1">{location}</p>
       </div>
 
@@ -38,6 +45,7 @@ const EventBody = ({ event }: EventBodyProps) => {
             alt="Home Logo"
             width={20}
             height={10}
+            loading="lazy"
           />
           <p className="ml-2 p-1">Attending</p>
         </div>
@@ -48,6 +56,7 @@ const EventBody = ({ event }: EventBodyProps) => {
             alt="Home Logo"
             width={20}
             height={10}
+            loading="lazy"
           />
           <p className="ml-2 p-1 hover:text-primary"> Register Now</p>
         </div>
