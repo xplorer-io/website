@@ -52,7 +52,6 @@ h6 {
   width: 20px;
   opacity: 1;
 }
-
 /* Homepage marquee */
 .marquee {
   animation: scroll 18s linear infinite;
