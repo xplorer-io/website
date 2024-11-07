@@ -11,10 +11,7 @@ export const ADD_EVENT_TITLE = {
 
 const AddEventPage = () => {
   const {
-    formData,
-    setFormData,
     selectedOption,
-    setSelectedOption,
     handleSubmit,
     handleInputChange,
     handleSelectChange,
