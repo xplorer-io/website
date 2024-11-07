@@ -2,40 +2,24 @@
 import PagesWrapper from "@/components/layout/PagesWrapper";
 import TextEditor from "@/components/ui/textEditor";
 import TitleHeader from "@/components/ui/TitleHeader";
-import { useState } from "react";
+import useCreateEventPage from "@/hooks/useCreateEventPage";
+
 export const ADD_EVENT_TITLE = {
   title: "Add New Event",
   description: "",
 };
 
 const AddEventPage = () => {
-  const [selectedOption, setSelectedOption] = useState("");
-  const [formData, setFormData] = useState({
-    title: "",
-    organizer_name: "",
-    eventType: "",
-    location: "",
-    online_link: "",
-    date: "",
-    time: "",
-    image: null,
-    description: "",
-  });
-  const handleOptionChange = (event: any) => {
-    const { value } = event.target;
-    setSelectedOption(event.target.value);
-    setFormData({ ...formData, eventType: value });
-  };
-  const handleInputChange = (event: any) => {
-    const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleDescriptionChange = (description: any) => {
-    setFormData({ ...formData, description: description });
-  };
-
-  const handleSubmit = (event: any) => {};
+  const {
+    formData,
+    setFormData,
+    selectedOption,
+    setSelectedOption,
+    handleSubmit,
+    handleInputChange,
+    handleSelectChange,
+    handleDescriptionChange,
+  } = useCreateEventPage();
 
   if (typeof window === "undefined") {
     <div>Loading...</div>;
@@ -85,7 +69,7 @@ const AddEventPage = () => {
                 <select
                   id="options"
                   value={selectedOption}
-                  onChange={handleOptionChange}
+                  onChange={handleSelectChange}
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                 >
                   <option value="">--Select an option--</option>
