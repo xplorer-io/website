@@ -19,7 +19,7 @@ const EventsPage = () => {
         </div>
 
         <div className="mt-8 py-1 text-center">
-          <ButtonLink href="events/add-event">Add New Event</ButtonLink>
+          <ButtonLink href="/events/add-event">Add New Event</ButtonLink>
         </div>
       </PagesWrapper>
     </div>

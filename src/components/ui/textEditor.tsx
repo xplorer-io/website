@@ -1,57 +1,65 @@
 "use client";
-import React, { useState } from "react";
+import React, { Children, useState } from "react";
 import dynamic from "next/dynamic";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
+import {
+  formats,
+  modules,
+  EDITOR_PLACEHOLDER,
+} from "@/localisation/textEditor";
 
-const TextEditor = ({ onEditorChange }: any) => {
-  const [editorContent, setEditorContent] = useState("");
+interface TextEditorProps {
+  onEditorChange: (content: string) => void;
+  initialValue?: string;
+  placeholder?: string;
+  className?: string;
+  formats?: string[];
+  modules?: string[];
+}
+const TextEditor: React.FC<TextEditorProps> = ({
+  onEditorChange,
+  initialValue = "",
+}) => {
+  const [editorContent, setEditorContent] = useState<string>(initialValue);
 
-  const handleEditorChange = (content: any) => {
-    setEditorContent(content);
-    onEditorChange(content);
+  const handleEditorChange = React.useCallback(
+    (content: string) => {
+      try {
+        setEditorContent(content);
+        onEditorChange(content);
+      } catch (error) {
+        console.log("Failed to update editor content", error);
+      }
+    },
+    [onEditorChange],
+  );
+
+  const EditorErrorBoundary: React.FC<{ children: React.ReactNode }> = ({
+    children,
+  }) => {
+    const [hasError, setHasError] = React.useState(false);
+    if (hasError) {
+      return (
+        <div role="alert">
+          Something went wrong with the editor. Please try again.
+        </div>
+      );
+    }
+    return children;
   };
-
   return (
-    <div>
-      <ReactQuill
-        value={editorContent}
-        onChange={handleEditorChange}
-        placeholder="Write something here..."
-        modules={TextEditor.modules}
-        formats={TextEditor.formats}
-      />
-    </div>
+    <EditorErrorBoundary>
+      <div role="text-box" aria-label="Rich text editor">
+        <ReactQuill
+          value={editorContent}
+          onChange={handleEditorChange}
+          placeholder={EDITOR_PLACEHOLDER}
+          modules={modules}
+          formats={formats}
+        />
+      </div>
+    </EditorErrorBoundary>
   );
 };
 export default TextEditor;
-TextEditor.formats = [
-  "header",
-  "font",
-  "size",
-  "bold",
-  "italic",
-  "underline",
-  "strike",
-  "blockquote",
-  "list",
-  "bullet",
-  "indent",
-  "link",
-  "image",
-];
-TextEditor.modules = {
-  toolbar: [
-    [{ header: "1" }, { header: "2" }, { font: [] }],
-    [{ size: [] }],
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    ["link", "image"],
-    ["clean"],
-  ],
-};

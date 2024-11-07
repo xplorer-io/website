@@ -103,6 +103,8 @@ const AddEventPage = () => {
                     type="url"
                     name="online_link"
                     id="online_link"
+                    pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
+                    title="Please enter a valid URL starting with http:// or https://"
                     placeholder="Please provide online Link"
                     className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                   />
@@ -120,6 +122,7 @@ const AddEventPage = () => {
                   type="date"
                   name="date"
                   id="date"
+                  min={new Date().toISOString().split("T")[0]}
                   placeholder="Please Select"
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                 />
@@ -152,6 +155,8 @@ const AddEventPage = () => {
                   type="file"
                   name="image"
                   id="image"
+                  accept="/image"
+                  max-size="5242880"
                   placeholder="Please Upload Image"
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                 />
