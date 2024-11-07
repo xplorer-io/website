@@ -18,9 +18,6 @@ const AddEventPage = () => {
     handleDescriptionChange,
   } = useCreateEventPage();
 
-  if (typeof window === "undefined") {
-    <div>Loading...</div>;
-  }
   return (
     <div className="flex flex-col">
       <PagesWrapper>

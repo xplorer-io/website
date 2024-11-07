@@ -11,9 +11,7 @@ const TextEditor = ({ onEditorChange }: any) => {
     setEditorContent(content);
     onEditorChange(content);
   };
-  if (typeof window === "undefined") {
-    <div>Loading...</div>;
-  }
+
   return (
     <div>
       <ReactQuill
