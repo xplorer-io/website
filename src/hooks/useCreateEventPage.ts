@@ -37,7 +37,8 @@ const useCreateEventPage = () => {
     setFormData({ ...formData, description: description });
   };
 
-  const handleSubmit = (event: FormData) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     console.log(formData);
   };
 

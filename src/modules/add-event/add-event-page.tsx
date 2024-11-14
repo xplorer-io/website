@@ -1,5 +1,6 @@
 "use client";
 import PagesWrapper from "@/components/layout/PagesWrapper";
+import InputLabel from "@/components/ui/label";
 import TextEditor from "@/components/ui/textEditor";
 import TitleHeader from "@/components/ui/TitleHeader";
 import useCreateEventPage from "@/hooks/useCreateEventPage";
@@ -23,46 +24,48 @@ const AddEventPage = () => {
       <PagesWrapper>
         <TitleHeader {...ADD_EVENT_TITLE} />
         <div className="mx-auto w-full">
-          <form className="bg-white" action={handleSubmit}>
+          <form className="bg-white" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
               <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="title"
-                >
-                  Event Title
-                </label>
+                <InputLabel html_for="title" name="Title" required={true} />
                 <input
                   onChange={handleInputChange}
                   type="text"
                   name="title"
                   id="title"
+                  required
                   placeholder="Please Enter Event Title"
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                 />
               </div>
               <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="organizer_name"
-                >
-                  Organizer Name
-                </label>
+                <InputLabel
+                  html_for="organizer_name"
+                  name="Organizer Name"
+                  required={true}
+                />
+
                 <input
                   onChange={handleInputChange}
                   type="text"
                   name="organizer_name"
                   id="organizer_name"
+                  required
                   placeholder="Please Enter Organizer Name"
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                 />
               </div>
 
               <div className="mb-4">
-                <label htmlFor="options">Event Type:</label>
+                <InputLabel
+                  html_for="event_type"
+                  name="Event Type"
+                  required={true}
+                />
                 <select
                   id="options"
                   value={selectedOption}
+                  required
                   onChange={handleSelectChange}
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                 >
@@ -74,16 +77,17 @@ const AddEventPage = () => {
               </div>
               {(selectedOption === "on_site" || selectedOption === "both") && (
                 <div className="mb-4">
-                  <label
-                    className="mb-2 block text-sm font-bold text-gray-700"
-                    htmlFor="location"
-                  >
-                    Location
-                  </label>
+                  <InputLabel
+                    html_for="location"
+                    name="Location"
+                    required={true}
+                  />
+
                   <input
                     onChange={handleInputChange}
                     type="text"
                     name="location"
+                    required={true}
                     id="location_physical"
                     placeholder="Please Enter Location"
                     className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
@@ -92,17 +96,18 @@ const AddEventPage = () => {
               )}
               {(selectedOption === "virtual" || selectedOption === "both") && (
                 <div className="mb-4">
-                  <label
-                    className="mb-2 block text-sm font-bold text-gray-700"
-                    htmlFor="online_link"
-                  >
-                    Online Link
-                  </label>
+                  <InputLabel
+                    html_for="online_link"
+                    name="Online Link"
+                    required={true}
+                  />
+
                   <input
                     onChange={handleInputChange}
                     type="url"
                     name="online_link"
                     id="online_link"
+                    required={true}
                     pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
                     title="Please enter a valid URL starting with http:// or https://"
                     placeholder="Please provide online Link"
@@ -111,16 +116,13 @@ const AddEventPage = () => {
                 </div>
               )}
               <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="date"
-                >
-                  Event Date
-                </label>
+                <InputLabel html_for="date" name="Date" required={true} />
+
                 <input
                   onChange={handleInputChange}
                   type="date"
                   name="date"
+                  required={true}
                   id="date"
                   min={new Date().toISOString().split("T")[0]}
                   placeholder="Please Select"
@@ -128,28 +130,19 @@ const AddEventPage = () => {
                 />
               </div>
               <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="time"
-                >
-                  Event Time
-                </label>
+                <InputLabel html_for="time" name="Time" required={true} />
                 <input
                   onChange={handleInputChange}
                   type="time"
                   name="time"
                   id="time"
+                  required={true}
                   placeholder="Please Select Time"
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                 />
               </div>
               <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="image"
-                >
-                  Upload Image
-                </label>
+                <InputLabel html_for="image" name="Image" required={true} />
                 <input
                   onChange={handleInputChange}
                   type="file"
@@ -157,18 +150,18 @@ const AddEventPage = () => {
                   id="image"
                   accept="/image"
                   max-size="5242880"
+                  required={true}
                   placeholder="Please Upload Image"
                   className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
                 />
               </div>
             </div>
             <div className="mb-4">
-              <label
-                className="mb-2 block text-sm font-bold text-gray-700"
-                htmlFor="description"
-              >
-                Description
-              </label>
+              <InputLabel
+                html_for="description"
+                name="Description"
+                required={true}
+              />
               <TextEditor onEditorChange={handleDescriptionChange} />
             </div>
             <button

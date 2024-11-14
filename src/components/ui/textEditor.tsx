@@ -23,43 +23,22 @@ const TextEditor: React.FC<TextEditorProps> = ({
 }) => {
   const [editorContent, setEditorContent] = useState<string>(initialValue);
 
-  const handleEditorChange = React.useCallback(
-    (content: string) => {
-      try {
-        setEditorContent(content);
-        onEditorChange(content);
-      } catch (error) {
-        console.log("Failed to update editor content", error);
-      }
-    },
-    [onEditorChange],
-  );
-
-  const EditorErrorBoundary: React.FC<{ children: React.ReactNode }> = ({
-    children,
-  }) => {
-    const [hasError, setHasError] = React.useState(false);
-    if (hasError) {
-      return (
-        <div role="alert">
-          Something went wrong with the editor. Please try again.
-        </div>
-      );
-    }
-    return children;
+  const handleEditorChange = (content: string) => {
+    setEditorContent(content);
+    onEditorChange(content);
   };
+
   return (
-    <EditorErrorBoundary>
-      <div role="text-box" aria-label="Rich text editor">
-        <ReactQuill
-          value={editorContent}
-          onChange={handleEditorChange}
-          placeholder={EDITOR_PLACEHOLDER}
-          modules={modules}
-          formats={formats}
-        />
-      </div>
-    </EditorErrorBoundary>
+    <div role="text-box" aria-label="Rich text editor">
+      <ReactQuill
+        value={editorContent}
+        onChange={handleEditorChange}
+        placeholder={EDITOR_PLACEHOLDER}
+        modules={modules}
+        formats={formats}
+        className="quill-editor"
+      />
+    </div>
   );
 };
 export default TextEditor;
