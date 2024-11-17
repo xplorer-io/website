@@ -27,7 +27,7 @@ const AddEventPage = () => {
           <form className="bg-white" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
               <div className="mb-4">
-                <InputLabel html_for="title" name="Title" required={true} />
+                <InputLabel htmlFor="title" name="Title" required={true} />
                 <input
                   onChange={handleInputChange}
                   type="text"
@@ -40,7 +40,7 @@ const AddEventPage = () => {
               </div>
               <div className="mb-4">
                 <InputLabel
-                  html_for="organizer_name"
+                  htmlFor="organizer_name"
                   name="Organizer Name"
                   required={true}
                 />
@@ -58,7 +58,7 @@ const AddEventPage = () => {
 
               <div className="mb-4">
                 <InputLabel
-                  html_for="event_type"
+                  htmlFor="event_type"
                   name="Event Type"
                   required={true}
                 />
@@ -78,7 +78,7 @@ const AddEventPage = () => {
               {(selectedOption === "on_site" || selectedOption === "both") && (
                 <div className="mb-4">
                   <InputLabel
-                    html_for="location"
+                    htmlFor="location"
                     name="Location"
                     required={true}
                   />
@@ -97,7 +97,7 @@ const AddEventPage = () => {
               {(selectedOption === "virtual" || selectedOption === "both") && (
                 <div className="mb-4">
                   <InputLabel
-                    html_for="online_link"
+                    htmlFor="online_link"
                     name="Online Link"
                     required={true}
                   />
@@ -116,7 +116,7 @@ const AddEventPage = () => {
                 </div>
               )}
               <div className="mb-4">
-                <InputLabel html_for="date" name="Date" required={true} />
+                <InputLabel htmlFor="date" name="Date" required={true} />
 
                 <input
                   onChange={handleInputChange}
@@ -130,7 +130,7 @@ const AddEventPage = () => {
                 />
               </div>
               <div className="mb-4">
-                <InputLabel html_for="time" name="Time" required={true} />
+                <InputLabel htmlFor="time" name="Time" required={true} />
                 <input
                   onChange={handleInputChange}
                   type="time"
@@ -142,7 +142,7 @@ const AddEventPage = () => {
                 />
               </div>
               <div className="mb-4">
-                <InputLabel html_for="image" name="Image" required={true} />
+                <InputLabel htmlFor="image" name="Image" required={true} />
                 <input
                   onChange={handleInputChange}
                   type="file"
@@ -158,7 +158,7 @@ const AddEventPage = () => {
             </div>
             <div className="mb-4">
               <InputLabel
-                html_for="description"
+                htmlFor="description"
                 name="Description"
                 required={true}
               />
