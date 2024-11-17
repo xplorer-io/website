@@ -1,13 +1,13 @@
 interface InputLabelProps {
   name: string;
   required: boolean;
-  html_for: string;
+  htmlFor: string;
 }
-const InputLabel = ({ name, required, html_for }: InputLabelProps) => {
+const InputLabel = ({ name, required, htmlFor }: InputLabelProps) => {
   return (
     <label
       className="mb-2 block text-sm font-bold text-gray-700"
-      htmlFor={html_for}
+      htmlFor={htmlFor}
     >
       {name}
       {required && <span className="text-red-500"> *</span>}
