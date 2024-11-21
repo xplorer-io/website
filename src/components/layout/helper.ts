@@ -1,4 +1,7 @@
 import { githubLink, linkedInLink, slackLink } from "@/constants";
+import githubIcon from "@public/icons/github.svg";
+import linkedinIcon from "@public/icons/linkedin.svg";
+import slackIcon from "@public/icons/slack.svg";
 
 export const menus = [
   { name: "Home", href: "/", isProtected: false },
@@ -16,19 +19,19 @@ export const menus = [
 export const socialLinkList = [
   {
     href: githubLink,
-    src: "github_jpoeyq",
+    src: githubIcon,
     alt: "GithubIcon,",
     ariaLabel: "GithubIcon",
   },
   {
     href: linkedInLink,
-    src: "linkedin_uqfbnv",
+    src: linkedinIcon,
     alt: "LinkedIn Icon",
     ariaLabel: "LinkedIn",
   },
   {
     href: slackLink,
-    src: "slack_l5moxv",
+    src: slackIcon,
     alt: "Slack Icon,",
     ariaLabel: "slackIcon",
   },

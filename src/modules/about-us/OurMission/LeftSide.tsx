@@ -1,5 +1,4 @@
-"use client";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 type LeftSideProps = {
   title: string;
   description: string;
@@ -22,14 +21,10 @@ const LeftSide = ({ title, description, imageSrc }: LeftSideProps) => (
       </div>
     </div>
     <div className="flex justify-center">
-      <CldImage
+      <Image
         src={imageSrc}
         alt="community engagement"
-        height={192}
-        width={192}
-        style={{ objectFit: "contain" }}
         className="h-36 content-center lg:h-48"
-        format="svg"
       />
     </div>
   </div>

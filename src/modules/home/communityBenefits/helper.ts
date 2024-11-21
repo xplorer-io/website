@@ -5,18 +5,18 @@ export type CommunityBenefitCardProps = {
 export const communityBenefitsList: CommunityBenefitCardProps[] = [
   {
     name: "Community Engagement",
-    imageUrl: "group_qppyol",
+    imageUrl: "./illustrations/group.svg",
   },
   {
     name: "Learn and Share",
-    imageUrl: "share_zjrfuz",
+    imageUrl: "./illustrations/share.svg",
   },
   {
     name: "Networking Hub",
-    imageUrl: "networking_b5fvzy",
+    imageUrl: "./illustrations/networking.svg",
   },
   {
     name: "Holistic Growth",
-    imageUrl: "helping_ooxeir",
+    imageUrl: "./illustrations/helping.svg",
   },
 ];

@@ -1,6 +1,9 @@
-"use client";
 import Event from "./EventType";
-import { CldImage } from "next-cloudinary";
+import homeLogo from "@public/icons/home.svg";
+import calenderLogo from "@public/icons/calender.svg";
+import bookmarkLogo from "@public/icons/bookmark.svg";
+import bookmarkSavedLogo from "@public/icons/bookmark-filled.svg";
+import Image from "next/image";
 
 type EventBodyProps = {
   event: Event;
@@ -17,47 +20,23 @@ const EventBody = ({ event }: EventBodyProps) => {
         Hosted by: {organizerName}
       </div>
       <div className="flex text-xs text-gray-500">
-        <CldImage
-          src="calender_rumkyd"
-          alt="Home Logo"
-          width={20}
-          height={10}
-          loading="lazy"
-        />
+        <Image src={calenderLogo} alt="Home Logo" loading="lazy" />
 
         <p className="ml-2 p-1"> {date}</p>
       </div>
       <div className="flex text-xs text-gray-500">
-        <CldImage
-          src="home_ded4jk"
-          alt="Home Logo"
-          width={20}
-          height={10}
-          loading="lazy"
-        />
+        <Image src={homeLogo} alt="Home Logo" loading="lazy" />
         <p className="ml-2 p-1">{location}</p>
       </div>
 
       {attending ? (
         <div className="flex text-xs text-green-600">
-          <CldImage
-            src="bookmark-filled_arguow"
-            alt="Home Logo"
-            width={20}
-            height={10}
-            loading="lazy"
-          />
+          <Image src={bookmarkSavedLogo} alt="Home Logo" loading="lazy" />
           <p className="ml-2 p-1">Attending</p>
         </div>
       ) : (
         <div className="flex text-xs text-gray-500">
-          <CldImage
-            src="bookmark_lfi0wt"
-            alt="Home Logo"
-            width={20}
-            height={10}
-            loading="lazy"
-          />
+          <Image src={bookmarkLogo} alt="Home Logo" loading="lazy" />
           <p className="ml-2 p-1 hover:text-primary"> Register Now</p>
         </div>
       )}

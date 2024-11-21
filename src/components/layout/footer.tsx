@@ -1,5 +1,5 @@
-"use client";
-import { CldImage } from "next-cloudinary";
+import xplorersLogoWhite from "@public/logos/xplorers-logo-white.svg";
+import Image from "next/image";
 import React from "react";
 import { socialLinkList } from "./helper";
 import Link from "next/link";
@@ -23,14 +23,7 @@ const SocialLink = ({
     className="mr-4"
     aria-label={ariaLabel}
   >
-    <CldImage
-      src={src}
-      alt={alt}
-      width={20}
-      height={20}
-      format="svg"
-      loading="lazy"
-    />
+    <Image src={src} alt={alt} loading={"lazy"} />
   </a>
 );
 
@@ -41,14 +34,7 @@ const Footer = React.memo(() => {
         <div className="flex flex-wrap items-center justify-center gap-1 text-center md:justify-between">
           <div>
             <Link href="/">
-              <CldImage
-                src="xplorer_logo_white_ppbnio"
-                height={140}
-                width={140}
-                alt="xplorers-logo"
-                format="svg"
-                loading="lazy"
-              />
+              <Image src={xplorersLogoWhite} alt="Xplorers Logo white " />
             </Link>
           </div>
           <div className="flex text-white">

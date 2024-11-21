@@ -1,5 +1,5 @@
-"use client";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
+import logo from "@public/logos/xplorer_logo.svg";
 
 const Divider = () => {
   return (
@@ -13,13 +13,7 @@ const Divider = () => {
 const Banner = () => {
   return (
     <>
-      <CldImage
-        src="xplorer_logo_pjyd96"
-        alt="logo"
-        width={96}
-        height={96}
-        loading="lazy"
-      />
+      <Image src={logo} alt="logo" width={96} height={96} loading="lazy" />
       <Divider />
       <p>Learn</p>
       <Divider />

@@ -1,5 +1,4 @@
-"use client";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 import { CommunityBenefitCardProps } from "./helper";
 
 export const CommunityBenefitCard = ({
@@ -13,12 +12,11 @@ export const CommunityBenefitCard = ({
     >
       <div className="flex flex-col items-center gap-4 font-semibold">
         <div className="aspect-w-1 aspect-h-1 relative flex h-28 w-28 justify-center md:h-[10rem] md:w-[10rem]">
-          <CldImage
+          <Image
             src={imageUrl}
             fill
             alt={name}
-            style={{ objectFit: "contain" }}
-            format="svg"
+            className="object-contain"
             loading="lazy"
           />
         </div>

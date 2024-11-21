@@ -1,13 +1,11 @@
-"use client";
 import Image from "next/image";
-import { CldImage } from "next-cloudinary";
 
 // TODO fix when api is ready
 const post = {
   date: "June 10, 2024",
   tags: ["Technology", "Programming"],
   title: "Introduction to React Hooks",
-  image: "https://via.placeholder.com/400x200",
+  image: "/illustrations/blog-sample-1.svg",
   description: `
             <p>React Hooks have revolutionized how we manage state and side effects in React functional components. Introduced in React 16.8, Hooks provide a more direct API for working with component state, context, refs, and more, all without needing to write a class component.</p>
 
@@ -22,7 +20,7 @@ const post = {
             <p>By the end of this tutorial, you'll have a solid understanding of how to leverage React Hooks to build more maintainable, scalable, and efficient React applications. Whether you're new to React or looking to refactor existing class-based components, this guide will equip you with the knowledge and tools to take full advantage of React Hooks in your projects.</p>
         `,
   authorName: "John Doe",
-  authorImage: "https://via.placeholder.com/50",
+  authorImage: "/illustrations/blog-sample-2.svg",
 };
 
 // TODO dummy page (Needs properly formatted page that accepts WYSIWYG)

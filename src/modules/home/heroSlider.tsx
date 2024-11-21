@@ -1,5 +1,3 @@
-"use client";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -8,7 +6,7 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 
 const heroImages = [
   {
@@ -46,11 +44,11 @@ const HeroSlider = () => {
       >
         {heroImages.map((heroImage) => (
           <SwiperSlide key={heroImage.id}>
-            <CldImage
+            <Image
               src={heroImage.imageSrc}
+              alt={heroImage.imageAlt}
               fill
               className="object-cover"
-              alt={heroImage.imageAlt}
             />
           </SwiperSlide>
         ))}

@@ -1,6 +1,5 @@
-"use client";
 import React from "react";
-import { CldImage } from "next-cloudinary";
+import Image from "next/image";
 
 type BlogHeaderProps = {
   title: string;
@@ -15,14 +14,7 @@ const BlogHeader = ({ title, authorName, authorImage }: BlogHeaderProps) => (
       <p className="mt-1 text-xs font-medium text-gray-600">By {authorName}</p>
     </div>
     <div className="hidden sm:block sm:shrink-0">
-      <CldImage
-        src={authorImage}
-        alt="author image"
-        width={64}
-        height={64}
-        format="svg"
-        className="size-16 rounded-lg object-cover shadow-sm"
-      />
+      <Image src={authorImage} alt="author image" width={64} height={64} />
     </div>
   </div>
 );

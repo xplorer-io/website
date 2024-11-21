@@ -9,7 +9,7 @@ export const careerSuccessData: careerData[] = [
   {
     id: "1",
     title: "Crafting an impressive CV",
-    image: "craft-your-resume_ajqc8w",
+    image: "./illustrations/craft-your-resume.svg",
     bulletPoints: [
       "Crafting a standout resume",
       "Writing persuasive cover letters",
@@ -18,19 +18,19 @@ export const careerSuccessData: careerData[] = [
   {
     id: "2",
     title: "Launching your career",
-    image: "launch-your-career_rxzt94",
+    image: "./illustrations/launch-your-career.svg",
     bulletPoints: ["Job Search techniques", "Networking", "Interview Skills"],
   },
   {
     id: "3",
     title: "Personal Branding",
-    image: "personal-branding_alrhi1",
+    image: "./illustrations/personal-branding.svg",
     bulletPoints: ["Blogs", "Portfolio", "Online Presence", "LinkedIn"],
   },
   {
     id: "4",
     title: "Success Stories",
-    image: "success-stories_j5iblb",
+    image: "./illustrations/success-stories.svg",
     bulletPoints: [
       "Profiles of Successful xplorers Alumni",
       "In-Depth Career Journeys",
@@ -40,7 +40,7 @@ export const careerSuccessData: careerData[] = [
   {
     id: "5",
     title: "Excellence for students",
-    image: "excellence-for-success_hlb91r",
+    image: "./illustrations/excellence-for-success.svg",
     bulletPoints: [
       "Proven Study Methods",
       "Optimizing time management",
