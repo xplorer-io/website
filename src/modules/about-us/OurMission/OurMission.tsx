@@ -2,7 +2,7 @@
 import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import left_half_box from "@public/icons/left_half_box.svg";
-import right_halg_box from "@public/icons/right_half_box.svg";
+import right_half_box from "@public/icons/right_half_box.svg";
 import group from "@public/illustrations/group.svg";
 import networking from "@public/illustrations/networking.svg";
 import helping from "@public/illustrations/helping.svg";
@@ -22,7 +22,7 @@ const OurMission = () => {
         />
         <h2 className="text-center font-bold text-gray-600">Our Mission</h2>
         <Image
-          src={right_halg_box}
+          src={right_half_box}
           alt="right half box"
           className="absolute right-0 top-0"
           loading="lazy"
