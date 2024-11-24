@@ -12,7 +12,7 @@ export const menus = [
   {
     name: "Pathway To Success",
     href: "/pathway-to-success",
-    isProtected: false,
+    isProtected: true,
   },
 ];
 

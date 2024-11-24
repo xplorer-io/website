@@ -16,12 +16,14 @@ const OurMission = () => {
           src={left_half_box}
           alt="left half box"
           className="absolute bottom-0 left-0"
+          loading="lazy"
         />
         <h2 className="text-center font-bold text-gray-600">Our Mission</h2>
         <Image
           src={right_half_box}
-          alt="left half box"
+          alt="right half box"
           className="absolute right-0 top-0"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-10">

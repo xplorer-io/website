@@ -20,22 +20,23 @@ const EventBody = ({ event }: EventBodyProps) => {
         Hosted by: {organizerName}
       </div>
       <div className="flex text-xs text-gray-500">
-        <Image src={calenderLogo} alt="Home Logo text-gray-500"></Image>
+        <Image src={calenderLogo} alt="Home Logo" loading="lazy" />
+
         <p className="ml-2 p-1"> {date}</p>
       </div>
       <div className="flex text-xs text-gray-500">
-        <Image src={homeLogo} alt="Copyright Logo text-gray-500" />
+        <Image src={homeLogo} alt="Home Logo" loading="lazy" />
         <p className="ml-2 p-1">{location}</p>
       </div>
 
       {attending ? (
         <div className="flex text-xs text-green-600">
-          <Image src={bookmarkSavedLogo} alt="Bookmark Saved Logo"></Image>
+          <Image src={bookmarkSavedLogo} alt="Home Logo" loading="lazy" />
           <p className="ml-2 p-1">Attending</p>
         </div>
       ) : (
         <div className="flex text-xs text-gray-500">
-          <Image src={bookmarkLogo} alt="Bookmark Logo"></Image>
+          <Image src={bookmarkLogo} alt="Home Logo" loading="lazy" />
           <p className="ml-2 p-1 hover:text-primary"> Register Now</p>
         </div>
       )}
