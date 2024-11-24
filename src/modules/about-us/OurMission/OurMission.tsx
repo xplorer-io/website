@@ -1,5 +1,3 @@
-"use client";
-import { CldImage } from "next-cloudinary";
 import Image from "next/image";
 import left_half_box from "@public/icons/left_half_box.svg";
 import right_half_box from "@public/icons/right_half_box.svg";
