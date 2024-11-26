@@ -52,10 +52,18 @@ h6 {
   width: 20px;
   opacity: 1;
 }
-
 /* Homepage marquee */
 .marquee {
   animation: scroll 18s linear infinite;
+}
+.quill-editor {
+  .ql-container {
+    .ql-editor {
+      min-height: 250px;
+      height: auto;
+      overflow: visible !important;
+    }
+  }
 }
 @keyframes scroll {
   from {
