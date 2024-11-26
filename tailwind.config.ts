@@ -4,6 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 const config = {
   content: ["./src/**/*.{ts,tsx}"],
+  darkMode: "selector",
   theme: {
     extend: {
       backgroundImage: {},
