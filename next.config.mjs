@@ -5,6 +5,7 @@ const nextConfig = {
       "via.placeholder.com",
       "i.imgur.com",
       "raw.githubusercontent.com",
+      "res.cloudinary.com",
     ],
     remotePatterns: [
       {

@@ -1,9 +1,8 @@
-"use client";
-
-import copyrightLogo from "@public/icons/copyright.svg";
+import xplorersLogoWhite from "@public/logos/xplorers-logo-white.svg";
 import Image from "next/image";
 import React from "react";
 import { socialLinkList } from "./helper";
+import Link from "next/link";
 
 // SocialLink Component
 const SocialLink = ({
@@ -24,7 +23,7 @@ const SocialLink = ({
     className="mr-4"
     aria-label={ariaLabel}
   >
-    <Image src={src} alt={alt} loading="lazy" />
+    <Image src={src} alt={alt} loading={"lazy"} />
   </a>
 );
 
@@ -34,10 +33,12 @@ const Footer = React.memo(() => {
       <div className="container mx-auto">
         <div className="flex flex-wrap items-center justify-center gap-1 text-center md:justify-between">
           <div>
-            <h3 className="text-3xl text-white">Xplorers</h3>
+            <Link href="/">
+              <Image src={xplorersLogoWhite} alt="Xplorers Logo white " />
+            </Link>
           </div>
           <div className="flex text-white">
-            <Image src={copyrightLogo} alt="Copyright Logo" />
+            <span>&copy;</span>
             <p className="ml-2">2024 Xplorers, All rights reserved</p>
           </div>
           <div className="mr-0 mt-2 text-center sm:mt-0">

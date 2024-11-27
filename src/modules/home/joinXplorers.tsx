@@ -14,7 +14,13 @@ const JoinXplorers = () => {
           size={"hero"}
         >
           <span className="mr-3"> Request to join Xplorers</span>
-          <Image src={slackIcon} alt="slack icon" width={30} height={30} />
+          <Image
+            src={slackIcon}
+            alt="slack icon"
+            width={30}
+            height={30}
+            loading="lazy"
+          />
         </Button>
       </a>
     </div>

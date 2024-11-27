@@ -25,9 +25,10 @@ const CareerSuccessCard = ({
           <figure className="relative h-[20rem] w-[10rem] lg:h-48 lg:w-48">
             <Image
               src={image}
-              fill
               alt={title}
+              fill
               style={{ objectFit: "contain" }}
+              loading="lazy"
             />
           </figure>
         </div>

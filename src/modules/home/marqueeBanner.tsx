@@ -13,7 +13,7 @@ const Divider = () => {
 const Banner = () => {
   return (
     <>
-      <Image src={logo} alt="logo" className="w-24" />
+      <Image src={logo} alt="logo" width={96} height={96} loading="lazy" />
       <Divider />
       <p>Learn</p>
       <Divider />
