@@ -41,6 +41,8 @@ const config = {
           900: "#5D0A13",
           950: "#4F0910",
         },
+        "custom-yellow": "#FFBD59",
+        "cv-template-background": "#283E70",
       },
     },
   },
