@@ -65,6 +65,31 @@ h6 {
     }
   }
 }
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.typingText {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40) 1s forwards;
+}
+.ai-textarea {
+  overflow: hidden;
+  resize: none;
+  min-height: 40px; /* Adjust based on your design */
+  height: auto;
+}
+.chat-content::-webkit-scrollbar {
+  width: 10px;
+  color: darkgray;
+}
 @keyframes scroll {
   from {
     transform: translateX(0);

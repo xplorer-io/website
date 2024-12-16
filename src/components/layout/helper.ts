@@ -9,6 +9,7 @@ export const menus = [
   { name: "Accolades", href: "/accolades", isProtected: true },
   { name: "Blogs", href: "/blogs", isProtected: false },
   { name: "Events", href: "/events", isProtected: false },
+  { name: "Xplorer's AI", href: "/xplorers-ai" },
   {
     name: "Pathway To Success",
     href: "/pathway-to-success",
