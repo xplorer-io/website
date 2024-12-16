@@ -1,5 +1,4 @@
 "use client";
-
 import { communityBenefitsList } from "./helper";
 import { CommunityBenefitCard } from "./CommunityBenefitCard";
 import ButtonLink from "@/components/ui/buttons/ButtonLink";

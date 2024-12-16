@@ -1,5 +1,6 @@
+"use client";
+import { CldImage } from "next-cloudinary";
 import Image from "next/image";
-
 type RightSideProps = {
   title: string;
   description: string;
@@ -13,6 +14,7 @@ const RightSide = ({ title, description, imageSrc }: RightSideProps) => (
         src={imageSrc}
         alt="community engagement"
         className="h-36 content-center lg:h-48"
+        loading="lazy"
       />
     </div>
     <div className="relative h-32 overflow-hidden lg:w-3/5">

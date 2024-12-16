@@ -9,7 +9,7 @@ export const OurValuesCard = ({
   return (
     <div className="relative flex flex-col items-center p-0 font-bold">
       <figure className="relative flex h-[10rem] w-[10rem] justify-center lg:h-48 lg:w-48">
-        <Image src={imageUrl} fill alt={name} />
+        <Image src={imageUrl} fill alt={name} loading="lazy" />
       </figure>
       <span className="mt-4 text-center text-2xl">{name}</span>
       <span className="mx-12 mt-4 text-center text-sm font-medium lg:mx-10">

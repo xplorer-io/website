@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -20,7 +19,7 @@ const Header = () => {
           <div className="flex h-16 items-center justify-between">
             <div className="flex-1 md:flex md:items-center md:gap-10">
               <Link href="/">
-                <Image src={logo} alt="logo" />
+                <Image src={logo} alt="xplorers-logo" />
               </Link>
             </div>
             <DesktopNav

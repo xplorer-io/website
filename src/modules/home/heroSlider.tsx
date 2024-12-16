@@ -1,5 +1,4 @@
 "use client";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -8,31 +7,27 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 
 const heroImages = [
   {
     id: 1,
-    imageSrc:
-      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-1.webp",
+    imageSrc: "homepage/aayttz2ixe1qrx9cjpaa",
     imageAlt: "group image 1",
   },
   {
     id: 2,
-    imageSrc:
-      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-2.webp",
+    imageSrc: "Collected_Images_2984_nguvyu",
     imageAlt: "group image 2",
   },
   {
     id: 3,
-    imageSrc:
-      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-3.webp",
+    imageSrc: "Collected_Images_2724_xk1mvr",
     imageAlt: "group image 3",
   },
   {
     id: 4,
-    imageSrc:
-      "https://raw.githubusercontent.com/xplorer-io/website-images-cdn/refs/heads/main/xplorers-website-images/homepage/hero-image-4.webp",
+    imageSrc: "Collected_Images_6661_m5sfph",
     imageAlt: "group image 4",
   },
 ];
@@ -50,11 +45,11 @@ const HeroSlider = () => {
       >
         {heroImages.map((heroImage) => (
           <SwiperSlide key={heroImage.id}>
-            <Image
+            <CldImage
               src={heroImage.imageSrc}
+              alt={heroImage.imageAlt}
               fill
               className="object-cover"
-              alt={heroImage.imageAlt}
             />
           </SwiperSlide>
         ))}
