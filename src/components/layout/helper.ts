@@ -1,4 +1,4 @@
-import { githubLink, linkedInLink, slackLink } from "@/constants";
+import { githubLink, linkedInLink, slackLink } from "@/constants/links";
 import githubIcon from "@public/icons/github.svg";
 import linkedinIcon from "@public/icons/linkedin.svg";
 import slackIcon from "@public/icons/slack.svg";

@@ -9,14 +9,15 @@ import {
 import { careerData } from "@/data/careerSuccessData";
 import Image from "next/image";
 import ButtonLink from "@/components/ui/buttons/ButtonLink";
+import { PathwayToSuccessRoutes } from "@/constants/routes";
 
 type SuccessCardProps = careerData;
 
 const CareerSuccessCard = ({
-  id,
   image,
   title,
   bulletPoints,
+  url,
 }: SuccessCardProps) => {
   return (
     <>
@@ -43,7 +44,9 @@ const CareerSuccessCard = ({
           ))}
         </CardDescription>
         <CardFooter className="mt-auto flex justify-center">
-          <ButtonLink href="#">Learn More</ButtonLink>
+          <ButtonLink href={`${PathwayToSuccessRoutes.base}${url}`}>
+            Learn More
+          </ButtonLink>
         </CardFooter>
       </Card>
     </>
