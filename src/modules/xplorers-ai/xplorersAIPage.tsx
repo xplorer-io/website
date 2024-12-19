@@ -18,6 +18,7 @@ const XplorersAIPage = () => {
       </div>
       <div className="relative z-10 flex-grow">
         <PagesWrapper>
+          <XplorersAIHero />
           <XplorersAIBody />
         </PagesWrapper>
       </div>
