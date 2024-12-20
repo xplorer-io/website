@@ -23,13 +23,18 @@ export const callAzureOpenAI = async (messages: any) => {
       max_tokens: 1000,
       stream: true,
     });
+
     for await (const chunk of response) {
       chunk?.choices?.forEach((choice) => {
-        fullResponse += choice?.delta?.content;
+        if (choice.delta.content) {
+          fullResponse += choice?.delta?.content;
+        }
       });
     }
   } catch (error) {
     console.error("Error calling Azure OpenAI:", error);
   }
+  console.log(fullResponse);
+
   return fullResponse;
 };

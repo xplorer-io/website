@@ -23,16 +23,18 @@ const XplorersAIBody = () => {
 
   return (
     <div className="pt-8">
-      <h2 className="typingText py-8">
-        Hey there! I'm Xplorers AI—how can I help you today?
+      <h2 className="typing-text py-8">
+        Hey there! I&apos;m Xplorers AI—how can I help you today?
       </h2>
-      {messages.length > 1 && <XplorersAIChatBox messages={messages} />}
-      <XplorersAISearch
-        handleInputChange={handleInputChange}
-        handleSubmit={handleSubmit}
-        handleFileUpload={handleFileUpload}
-        value={value}
-      />
+      <div className="min-h-[70vh] overflow-auto">
+        {messages.length > 1 && <XplorersAIChatBox messages={messages} />}
+        <XplorersAISearch
+          handleInputChange={handleInputChange}
+          handleSubmit={handleSubmit}
+          handleFileUpload={handleFileUpload}
+          value={value}
+        />
+      </div>
     </div>
   );
 };

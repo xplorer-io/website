@@ -18,7 +18,7 @@ const XplorersAISearch: React.FC<SearchProps> = ({
   value,
 }) => {
   return (
-    <div className="relative mt-3 flex items-end">
+    <div className="relative m-3 flex items-end">
       <div className="mr-3 p-1">
         <label htmlFor="file-upload" className="cursor-pointer">
           <Image src={attachmentIcon} alt="Attach" width={24} height={24} />

@@ -75,7 +75,7 @@ h6 {
   }
 }
 
-.typingText {
+.typing-text {
   overflow: hidden;
   white-space: nowrap;
   animation: typing 4s steps(40) 1s forwards;
