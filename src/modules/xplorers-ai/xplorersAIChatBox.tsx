@@ -20,17 +20,20 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
       className="chat-content flex max-h-[60vh] flex-col space-y-4 overflow-auto rounded-xl bg-white bg-opacity-50 p-3 shadow-md"
     >
       <div className="flex flex-col space-y-4">
-        {messages?.map((message: any, index: number) => (
-          <div key={index} className="">
-            {message?.role === "user" && message?.content !== "" ? (
-              <div className="rounded bg-blue-200 p-2">{message?.content}</div>
-            ) : message?.role === "system" && message?.content !== "" ? (
-              <div className="rounded bg-white p-2">{message?.content}</div>
-            ) : (
-              <></>
-            )}
-          </div>
-        ))}
+        {messages &&
+          messages.map((message: ChatMessage, index: number) => (
+            <div key={index} className="">
+              {message?.role === "user" && message?.content !== "" ? (
+                <div className="rounded bg-blue-200 p-2">
+                  {message?.content}
+                </div>
+              ) : message?.role === "system" && message?.content !== "" ? (
+                <div className="rounded bg-white p-2">
+                  {message?.content || "No content provided"}
+                </div>
+              ) : null}
+            </div>
+          ))}
       </div>
     </div>
   );

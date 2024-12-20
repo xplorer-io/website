@@ -1,7 +1,7 @@
 "use client";
 
 import { callAzureOpenAI } from "@/app/api/chat/ai";
-import { useState, useRef, ChangeEvent } from "react";
+import { useState, useRef, ChangeEvent, MouseEvent } from "react";
 export interface FileUploadEvent extends ChangeEvent<HTMLInputElement> {
   target: HTMLInputElement;
 }
@@ -31,8 +31,9 @@ export const useXplorersAI = () => {
       console.log("File uploaded:", file);
     }
   };
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
+  const handleSubmit = async (
+    e: MouseEvent<HTMLButtonElement>,
+  ): Promise<void> => {
     if (value.trim()) {
       if (textareaRef.current) {
         textareaRef.current.style.height = "auto";
