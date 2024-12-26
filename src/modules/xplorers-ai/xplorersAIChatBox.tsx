@@ -17,7 +17,7 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
   return (
     <div
       ref={chatContainerRef}
-      className="chat-content flex max-h-[60vh] flex-col space-y-4 overflow-auto rounded-xl bg-white bg-opacity-50 p-3 shadow-md"
+      className="chat-content flex max-h-[58vh] flex-col space-y-4 overflow-auto rounded-xl bg-white bg-opacity-50 p-3 shadow-md"
     >
       <div className="flex flex-col space-y-4">
         {messages &&
