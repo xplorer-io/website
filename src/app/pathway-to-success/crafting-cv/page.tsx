@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import DOMPurify from "dompurify";
+import DOMPurify from "isomorphic-dompurify";
 
 const CraftingCV = () => {
   const [value, setValue] = useState(persuasiveCoverLetterContents.content);
