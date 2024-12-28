@@ -13,7 +13,7 @@ const Header = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
 
   return (
-    <section className="container mx-auto">
+    <section className="w-full px-16 shadow-md">
       <header className="relative mx-4 bg-white sm:mx-0">
         <div className="mx-auto">
           <div className="flex h-16 items-center justify-between">
