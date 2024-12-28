@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import DOMPurify from "dompurify";
 
 const CraftingCV = () => {
   const [value, setValue] = useState(persuasiveCoverLetterContents.content);
@@ -29,7 +30,7 @@ const CraftingCV = () => {
           </div>
           <div
             dangerouslySetInnerHTML={{
-              __html: impressiveCVContents.content,
+              __html: DOMPurify.sanitize(impressiveCVContents.content),
             }}
           />
         </section>
@@ -40,7 +41,7 @@ const CraftingCV = () => {
           </div>
           <div
             dangerouslySetInnerHTML={{
-              __html: persuasiveCoverLetterContents.content,
+              __html: DOMPurify.sanitize(persuasiveCoverLetterContents.content),
             }}
           />
         </section>
