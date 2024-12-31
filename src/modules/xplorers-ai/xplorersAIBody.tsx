@@ -2,8 +2,9 @@
 
 import XplorersAISearch from "./xplorersAISearch";
 import XplorersAIChatBox from "./xplorersAIChatBox";
-import { useXplorersAI, FileUploadEvent } from "@/hooks/useXplorersAI";
+import { useXplorersAI } from "@/hooks/useXplorersAI";
 import { ChangeEvent } from "react";
+import { FileUploadEvent } from "@/interface";
 
 export interface XplorersAIProps {
   handleFileUpload: (e: FileUploadEvent) => void;
@@ -12,15 +13,15 @@ export interface XplorersAIProps {
 }
 const XplorersAIBody = () => {
   const {
-    handleFileUpload,
-    handleSubmit,
-    handleInputChange,
     getMessages,
     value,
+    loading,
+    handleInputChange,
+    handleSubmit,
+    handleFileUpload,
   } = useXplorersAI();
 
   const messages = getMessages();
-
   return (
     <div className="pt-8">
       <h2 className="typing-text py-8">
@@ -33,6 +34,7 @@ const XplorersAIBody = () => {
           handleSubmit={handleSubmit}
           handleFileUpload={handleFileUpload}
           value={value}
+          loading={loading}
         />
       </div>
     </div>

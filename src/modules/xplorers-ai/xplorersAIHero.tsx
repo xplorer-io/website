@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { XPLORERS_AI_LOGO } from "@/constants";
 
 const XplorersAIHero = () => {
   return (
     <div className="grid grid-cols-2">
       <Image
-        src="https://res.cloudinary.com/dumkkicev/image/upload/v1733812951/xplorers-ai/koo5k69yxpmaxqg21v5m.png"
+        src={XPLORERS_AI_LOGO}
         alt="Xplorers AI Logo"
         width={160}
         height={160}

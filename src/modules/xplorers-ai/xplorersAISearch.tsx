@@ -1,21 +1,20 @@
 "use client";
-
-import React, { ChangeEvent, MouseEvent } from "react";
+import React from "react";
 import Image from "next/image";
 import attachmentIcon from "@public/icons/attachment.svg";
 import searchIcon from "@public/icons/search.svg";
-import { FileUploadEvent } from "@/hooks/useXplorersAI";
-interface SearchProps {
-  handleInputChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
-  handleSubmit: (e: MouseEvent<HTMLButtonElement>) => Promise<void>;
-  handleFileUpload: (e: FileUploadEvent) => void;
-  value: string;
-}
+import spinnerIcon from "@public/icons/spinner.svg";
+import { SearchProps } from "@/interface";
+import { useXplorersAI } from "@/hooks/useXplorersAI";
+import { Button } from "@/components/ui/buttons/button";
+import Spinner from "@/components/ui/Spinner";
+
 const XplorersAISearch: React.FC<SearchProps> = ({
-  handleInputChange,
-  handleSubmit,
   handleFileUpload,
+  handleSubmit,
+  handleInputChange,
   value,
+  loading,
 }) => {
   return (
     <div className="relative m-3 flex items-end">
@@ -37,15 +36,16 @@ const XplorersAISearch: React.FC<SearchProps> = ({
         rows={1}
         value={value}
         className="flex-grow resize-none overflow-hidden rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500"
-        style={{ maxHeight: "40vh" }}
       />
-
-      <button
+      <Button
+        size="sm"
+        variant={loading ? "outline" : "default"}
+        className="ml-2"
         onClick={handleSubmit}
-        className="ml-1 flex items-center justify-center rounded-lg p-1 text-white focus:outline-none"
+        disabled={value.length === 0}
       >
-        <Image src={searchIcon} alt="Send" width={24} height={24} />
-      </button>
+        {loading ? <Spinner /> : "Submit"}
+      </Button>
     </div>
   );
 };

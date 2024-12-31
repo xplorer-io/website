@@ -1,10 +1,9 @@
 import OpenAI, { AzureOpenAI } from "openai";
 export const callAzureOpenAI = async (messages: any) => {
-  // Your Azure OpenAI details
-  const endpoint =
-    "https://xplorersopenai3826747601.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-02-15-preview";
-  const apiKey = "98b145dd396e4d1595e91bd62964592c";
-  const apiVersion = "2024-02-15-preview";
+  const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
+  const apiKey = process.env.AZURE_OPENAI_API_KEY;
+  const apiVersion = process.env.AZURE_OPENAI_VERSION;
+
   const client = new AzureOpenAI({
     endpoint,
     apiKey,
@@ -34,7 +33,6 @@ export const callAzureOpenAI = async (messages: any) => {
   } catch (error) {
     console.error("Error calling Azure OpenAI:", error);
   }
-  console.log(fullResponse);
 
   return fullResponse;
 };

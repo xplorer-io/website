@@ -1,16 +1,12 @@
 "use client";
 
 import { callAzureOpenAI } from "@/app/api/chat/ai";
+import { ChatMessage, FileUploadEvent } from "@/interface";
 import { useState, useRef, ChangeEvent, MouseEvent } from "react";
-export interface FileUploadEvent extends ChangeEvent<HTMLInputElement> {
-  target: HTMLInputElement;
-}
-export interface ChatMessage {
-  role: "user" | "system";
-  content: string;
-}
+
 export const useXplorersAI = () => {
   const [value, setValue] = useState<string>("");
+  const [loading, setLoading] = useState<Boolean>(false);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const [messages, setMessages] = useState<ChatMessage[]>([
     { role: "user", content: "" },
@@ -34,6 +30,7 @@ export const useXplorersAI = () => {
   const handleSubmit = async (
     e: MouseEvent<HTMLButtonElement>,
   ): Promise<void> => {
+    setLoading(true);
     if (value.trim()) {
       if (textareaRef.current) {
         textareaRef.current.style.height = "auto";
@@ -46,15 +43,21 @@ export const useXplorersAI = () => {
     };
     setMessages((prev) => [...prev, userMessage]);
 
-    const res = await callAzureOpenAI(messages);
+    try {
+      const res = await callAzureOpenAI(messages);
 
-    const systemMessage: ChatMessage = {
-      role: "system",
-      content: res,
-    };
+      const systemMessage: ChatMessage = {
+        role: "system",
+        content: res,
+      };
 
-    setMessages((prev) => [...prev, systemMessage]);
-    setValue("");
+      setMessages((prev) => [...prev, systemMessage]);
+      setValue("");
+
+      setLoading(false);
+    } catch (error) {
+      console.log("AI Call Failed", error);
+    }
   };
 
   const getMessages = () => messages;
@@ -65,5 +68,6 @@ export const useXplorersAI = () => {
     handleFileUpload,
     handleSubmit,
     getMessages,
+    loading,
   };
 };
