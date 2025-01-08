@@ -2,20 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import attachmentIcon from "@public/icons/attachment.svg";
-import searchIcon from "@public/icons/search.svg";
-import spinnerIcon from "@public/icons/spinner.svg";
-import { SearchProps } from "@/interface";
-import { useXplorersAI } from "@/hooks/useXplorersAI";
 import { Button } from "@/components/ui/buttons/button";
 import Spinner from "@/components/ui/Spinner";
+import { useXplorersAIContext } from "@/context/XplorersAIContext";
 
-const XplorersAISearch: React.FC<SearchProps> = ({
-  handleFileUpload,
-  handleSubmit,
-  handleInputChange,
-  value,
-  loading,
-}) => {
+const XplorersAISearch: React.FC = () => {
+  const { value, loading, handleInputChange, handleSubmit, handleFileUpload } =
+    useXplorersAIContext();
   return (
     <div className="relative m-3 flex items-end">
       <div className="mr-3 p-1">

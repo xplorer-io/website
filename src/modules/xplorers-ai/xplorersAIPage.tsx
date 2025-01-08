@@ -3,6 +3,7 @@ import XplorersAIBody from "./xplorersAIBody";
 import PagesWrapper from "@/components/layout/PagesWrapper";
 import Image from "next/image";
 import { XPLORERS_AI_BACKGROUND } from "@/constants";
+import { XplorersAIContextProvider } from "@/context/XplorersAIContext";
 
 const XplorersAIPage = () => {
   return (
@@ -19,8 +20,10 @@ const XplorersAIPage = () => {
       </div>
       <div className="relative z-10 flex-grow">
         <PagesWrapper>
-          <XplorersAIHero />
-          <XplorersAIBody />
+          <XplorersAIContextProvider>
+            <XplorersAIHero />
+            <XplorersAIBody />
+          </XplorersAIContextProvider>
         </PagesWrapper>
       </div>
     </div>

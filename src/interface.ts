@@ -1,11 +1,12 @@
 import { ChangeEvent, MouseEvent } from "react";
 
-export interface SearchProps {
+export interface XploresAIType {
   handleInputChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
   handleSubmit: (e: MouseEvent<HTMLButtonElement>) => Promise<void>;
   handleFileUpload: (e: FileUploadEvent) => void;
   value: string;
   loading: Boolean;
+  getMessages: () => ChatMessage[];
 }
 
 export interface XplorersAIChatBoxProps {

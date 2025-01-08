@@ -2,9 +2,9 @@
 
 import XplorersAISearch from "./xplorersAISearch";
 import XplorersAIChatBox from "./xplorersAIChatBox";
-import { useXplorersAI } from "@/hooks/useXplorersAI";
 import { ChangeEvent } from "react";
 import { FileUploadEvent } from "@/interface";
+import { useXplorersAIContext } from "@/context/XplorersAIContext";
 
 export interface XplorersAIProps {
   handleFileUpload: (e: FileUploadEvent) => void;
@@ -12,15 +12,7 @@ export interface XplorersAIProps {
   handleInputChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 }
 const XplorersAIBody = () => {
-  const {
-    getMessages,
-    value,
-    loading,
-    handleInputChange,
-    handleSubmit,
-    handleFileUpload,
-  } = useXplorersAI();
-
+  const { getMessages } = useXplorersAIContext();
   const messages = getMessages();
   return (
     <div className="pt-8">
@@ -29,13 +21,7 @@ const XplorersAIBody = () => {
       </h2>
       <div className="min-h-[70vh] overflow-auto">
         {messages.length > 1 && <XplorersAIChatBox messages={messages} />}
-        <XplorersAISearch
-          handleInputChange={handleInputChange}
-          handleSubmit={handleSubmit}
-          handleFileUpload={handleFileUpload}
-          value={value}
-          loading={loading}
-        />
+        <XplorersAISearch />
       </div>
     </div>
   );
