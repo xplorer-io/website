@@ -1,26 +1,25 @@
 "use client";
-import React, { Children, useState } from "react";
+
+import React, { useState } from "react";
 import dynamic from "next/dynamic";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
-import {
-  formats,
-  modules,
-  EDITOR_PLACEHOLDER,
-} from "@/localisation/textEditor";
+import { formats, modules, EDITOR_PLACEHOLDER } from "@/constants/textEditor";
 
 interface TextEditorProps {
   onEditorChange: (content: string) => void;
   initialValue?: string;
   placeholder?: string;
-  className?: string;
-  formats?: string[];
-  modules?: string[];
+  readOnly?: boolean;
 }
-const TextEditor: React.FC<TextEditorProps> = ({
-  onEditorChange,
-  initialValue = "",
-}) => {
+const TextEditor: React.FC<TextEditorProps> = (props) => {
+  const {
+    onEditorChange,
+    initialValue = "",
+    placeholder = EDITOR_PLACEHOLDER,
+    readOnly = false,
+  } = props;
+
   const [editorContent, setEditorContent] = useState<string>(initialValue);
 
   const handleEditorChange = (content: string) => {
@@ -33,10 +32,11 @@ const TextEditor: React.FC<TextEditorProps> = ({
       <ReactQuill
         value={editorContent}
         onChange={handleEditorChange}
-        placeholder={EDITOR_PLACEHOLDER}
+        placeholder={placeholder}
         modules={modules}
         formats={formats}
         className="quill-editor"
+        readOnly={readOnly}
       />
     </div>
   );
