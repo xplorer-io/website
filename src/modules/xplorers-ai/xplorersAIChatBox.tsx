@@ -22,8 +22,8 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
     >
       <div className="flex flex-col space-y-4">
         {messages?.map((message: ChatMessage, index: number) => (
-          <div key={index} className="">
-            {message?.content && (
+          <div key={index} >
+            {message.content && (
               <div
                 className={`rounded p-2 ${message.role === "user" ? "bg-blue-200" : "bg-white"}`}
               >

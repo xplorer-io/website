@@ -35,7 +35,7 @@ const XplorersAISearch: React.FC = () => {
         variant={loading ? "outline" : "default"}
         className="ml-2"
         onClick={handleSubmit}
-        disabled={value.length === 0}
+        disabled={!value.length}
       >
         {loading ? <Spinner /> : "Submit"}
       </Button>

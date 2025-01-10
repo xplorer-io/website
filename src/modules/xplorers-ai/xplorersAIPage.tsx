@@ -2,8 +2,8 @@ import XplorersAIHero from "./xplorersAIHero";
 import XplorersAIBody from "./xplorersAIBody";
 import PagesWrapper from "@/components/layout/PagesWrapper";
 import Image from "next/image";
-import { XPLORERS_AI_BACKGROUND } from "@/constants";
 import { XplorersAIContextProvider } from "@/context/XplorersAIContext";
+import { XPLORERS_AI_BACKGROUND } from "@/constants/links";
 
 const XplorersAIPage = () => {
   return (

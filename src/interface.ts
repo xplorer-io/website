@@ -5,7 +5,7 @@ export interface XploresAIType {
   handleSubmit: (e: MouseEvent<HTMLButtonElement>) => Promise<void>;
   handleFileUpload: (e: FileUploadEvent) => void;
   value: string;
-  loading: Boolean;
+  loading: boolean;
   getMessages: () => ChatMessage[];
 }
 

@@ -1,5 +1,6 @@
-import OpenAI, { AzureOpenAI } from "openai";
-export const callAzureOpenAI = async (messages: any) => {
+import { ChatMessage } from "@/interface";
+import  { AzureOpenAI } from "openai";
+export const callAzureOpenAI = async (messages: ChatMessage[]) => {
   const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
   const apiKey = process.env.AZURE_OPENAI_API_KEY;
   const apiVersion = process.env.AZURE_OPENAI_VERSION;
@@ -26,7 +27,7 @@ export const callAzureOpenAI = async (messages: any) => {
     for await (const chunk of response) {
       chunk?.choices?.forEach((choice) => {
         if (choice.delta.content) {
-          fullResponse += choice?.delta?.content;
+          fullResponse += choice.delta.content;
         }
       });
     }

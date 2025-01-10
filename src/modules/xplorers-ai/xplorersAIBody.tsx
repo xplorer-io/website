@@ -6,11 +6,6 @@ import { ChangeEvent } from "react";
 import { FileUploadEvent } from "@/interface";
 import { useXplorersAIContext } from "@/context/XplorersAIContext";
 
-export interface XplorersAIProps {
-  handleFileUpload: (e: FileUploadEvent) => void;
-  handleSubmit: (e: any) => Promise<void>;
-  handleInputChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
-}
 const XplorersAIBody = () => {
   const { getMessages } = useXplorersAIContext();
   const messages = getMessages();

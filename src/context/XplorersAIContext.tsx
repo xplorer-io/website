@@ -16,7 +16,7 @@ export const XplorersAIContextProvider: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   const [value, setValue] = useState<string>("");
-  const [loading, setLoading] = useState<Boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const [messages, setMessages] = useState<ChatMessage[]>([
     { role: "user", content: "" },

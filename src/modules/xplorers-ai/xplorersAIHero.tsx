@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { XPLORERS_AI_LOGO } from "@/constants";
+import { XPLORERS_AI_LOGO } from "@/constants/links";
 
 const XplorersAIHero = () => {
   return (
