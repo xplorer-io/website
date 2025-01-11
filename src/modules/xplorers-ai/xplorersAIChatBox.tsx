@@ -2,6 +2,11 @@
 import { ChatMessage, XplorersAIChatBoxProps } from "@/interface";
 import React, { useEffect, useRef } from "react";
 import { marked } from "marked";
+import DOMPurify from "dompurify";
+
+export function sanitizeMarkdown(content: string): string {
+  return marked.parse(content, { async: false }) as string;
+}
 
 const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
   const chatContainerRef = useRef<HTMLDivElement | null>(null);
@@ -22,13 +27,17 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
     >
       <div className="flex flex-col space-y-4">
         {messages?.map((message: ChatMessage, index: number) => (
-          <div key={index} >
+          <div key={index}>
             {message.content && (
               <div
                 className={`rounded p-2 ${message.role === "user" ? "bg-blue-200" : "bg-white"}`}
               >
                 <span
-                  dangerouslySetInnerHTML={{ __html: marked(message.content) }}
+                  dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(
+                      sanitizeMarkdown(message.content),
+                    ),
+                  }}
                 ></span>
               </div>
             )}
