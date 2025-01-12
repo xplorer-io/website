@@ -38,9 +38,9 @@ const CareerSuccessCard = ({
         </CardHeader>
         <CardDescription className="flex-grow p-5 text-lg">
           {bulletPoints.map((point, index) => (
-            <p key={index}>
+            <span key={index} className="block">
               <span>&#x2022;</span> {point}
-            </p>
+            </span>
           ))}
         </CardDescription>
         <CardFooter className="mt-auto flex justify-center">
