@@ -58,7 +58,7 @@ const CraftingCV = () => {
               ),
               (content) => (
                 <Accordion type="single" collapsible key={content.title}>
-                  <AccordionItem value="item-1">
+                  <AccordionItem value={content.title}>
                     <AccordionTrigger className="text-xl font-normal">
                       {content.title}
                     </AccordionTrigger>

@@ -17,7 +17,7 @@ const AuthHeader = () => {
       {!isLoggedIn ? (
         <div className="flex items-center gap-3 sm:gap-3">
           <Link href="/login">
-            <Button className="border border-gray-200 bg-primary-400 text-gray-500 transition hover:border-primary-400 hover:text-gray-700 focus:outline-none focus:ring dark:bg-primary-400">
+            <Button className="border border-gray-200 bg-primary-400 transition focus:outline-none focus:ring dark:bg-primary-400">
               Login
             </Button>
           </Link>
