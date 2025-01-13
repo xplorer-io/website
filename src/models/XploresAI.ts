@@ -16,6 +16,7 @@ export interface XplorersAIChatBoxProps {
 export interface FileUploadEvent extends ChangeEvent<HTMLInputElement> {
   target: HTMLInputElement;
 }
+
 export interface ChatMessage {
   role: "user" | "system";
   content: string;

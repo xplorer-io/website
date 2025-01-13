@@ -1,12 +1,9 @@
 "use client";
-import { ChatMessage, XplorersAIChatBoxProps } from "@/interface";
-import React, { useEffect, useRef } from "react";
-import { marked } from "marked";
-import DOMPurify from "dompurify";
 
-export function sanitizeMarkdown(content: string): string {
-  return marked.parse(content, { async: false }) as string;
-}
+import React, { useEffect, useRef } from "react";
+import DOMPurify from "isomorphic-dompurify";
+import { sanitizeMarkdown } from "@/utils/sanitizeMarkdown";
+import { XplorersAIChatBoxProps, ChatMessage } from "@/models/XploresAI";
 
 const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
   const chatContainerRef = useRef<HTMLDivElement | null>(null);

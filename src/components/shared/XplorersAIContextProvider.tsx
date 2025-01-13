@@ -1,18 +1,10 @@
 "use client";
-import React, {
-  ChangeEvent,
-  createContext,
-  useContext,
-  useRef,
-  useState,
-  MouseEvent,
-} from "react";
-import { ChatMessage, FileUploadEvent, XploresAIType } from "@/interface";
+import React, { ChangeEvent, useRef, useState, MouseEvent } from "react";
 import { callAzureOpenAI } from "@/app/api/chat/ai";
+import { ChatMessage, FileUploadEvent } from "@/models/XploresAI";
+import { XplorersAIContext } from "@/context/XplorersAIContext";
 
-const XplorersAIContext = createContext<XploresAIType | undefined>(undefined);
-
-export const XplorersAIContextProvider: React.FC<{
+const XplorersAIContextProvider: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   const [value, setValue] = useState<string>("");
@@ -34,7 +26,7 @@ export const XplorersAIContextProvider: React.FC<{
   const handleFileUpload = (e: FileUploadEvent) => {
     const file = e.target.files ? e.target.files[0] : null;
     if (file) {
-      console.log("File uploaded:", file);
+      console.debug("File uploaded:", file);
     }
   };
   const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
@@ -64,7 +56,7 @@ export const XplorersAIContextProvider: React.FC<{
 
       setLoading(false);
     } catch (error) {
-      console.log("AI Call Failed", error);
+      console.debug("AI Call Failed", error);
     }
   };
 
@@ -86,13 +78,4 @@ export const XplorersAIContextProvider: React.FC<{
   );
 };
 
-// Custom Hook to Access Context
-export const useXplorersAIContext = () => {
-  const context = useContext(XplorersAIContext);
-  if (!context) {
-    throw new Error(
-      "useXplorersAIContext must be used within XplorersAIContextProvider",
-    );
-  }
-  return context;
-};
+export default XplorersAIContextProvider;

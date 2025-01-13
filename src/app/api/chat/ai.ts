@@ -1,9 +1,14 @@
-import { ChatMessage } from "@/interface";
-import  { AzureOpenAI } from "openai";
+import { ChatMessage } from "@/models/XploresAI";
+import { AzureOpenAI } from "openai";
+
 export const callAzureOpenAI = async (messages: ChatMessage[]) => {
   const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
   const apiKey = process.env.AZURE_OPENAI_API_KEY;
   const apiVersion = process.env.AZURE_OPENAI_VERSION;
+
+  if (!endpoint || !apiKey || !apiVersion) {
+    throw new Error("Missing required Azure OpenAI configuration");
+  }
 
   const client = new AzureOpenAI({
     endpoint,

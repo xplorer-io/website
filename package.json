@@ -1,7 +1,6 @@
 {
   "name": "website",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -28,8 +27,6 @@
     "axios": "^1.7.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "dompurify": "^3.2.3",
-    "force": "^0.0.3",
     "isomorphic-dompurify": "^2.20.0",
     "lodash-es": "^4.17.21",
     "lucide-react": "^0.383.0",
@@ -39,7 +36,6 @@
     "openai": "^4.78.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-query": "^3.39.3",
     "react-quill": "^2.0.0",
     "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",

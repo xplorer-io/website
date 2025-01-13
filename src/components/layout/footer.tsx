@@ -29,7 +29,7 @@ const SocialLink = ({
 
 const Footer = React.memo(() => {
   return (
-    <footer className="z-20 mt-auto bg-[#283E70] p-10">
+    <footer className="mt-auto bg-[#283E70] p-10">
       <div className="container mx-auto">
         <div className="flex flex-wrap items-center justify-center gap-1 text-center md:justify-between">
           <div>

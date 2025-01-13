@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import attachmentIcon from "@public/icons/attachment.svg";
@@ -9,6 +10,7 @@ import { useXplorersAIContext } from "@/context/XplorersAIContext";
 const XplorersAISearch: React.FC = () => {
   const { value, loading, handleInputChange, handleSubmit, handleFileUpload } =
     useXplorersAIContext();
+
   return (
     <div className="relative m-3 flex items-end">
       <div className="mr-3 p-1">
@@ -19,6 +21,8 @@ const XplorersAISearch: React.FC = () => {
           id="file-upload"
           type="file"
           className="hidden"
+          accept=".txt,.pdf,.doc,.docx"
+          maxLength={5242880} // 5MB
           onChange={handleFileUpload}
         />
       </div>

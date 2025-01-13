@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { XPLORERS_AI_LOGO } from "@/constants/links";
+import { xplorersAiLogo } from "@/constants/links";
 
 const XplorersAIHero = () => {
   return (
     <div className="grid grid-cols-2">
       <Image
-        src={XPLORERS_AI_LOGO}
+        src={xplorersAiLogo}
         alt="Xplorers AI Logo"
         width={160}
         height={160}
