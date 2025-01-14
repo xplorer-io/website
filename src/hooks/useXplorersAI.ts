@@ -7,6 +7,8 @@ const useXplorersAI = () => {
   const { enqueueSnackbar } = useSnackbar();
   const [value, setValue] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const [file, setFile] = useState<File>();
+
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   const [messages, setMessages] = useState<ChatMessage[]>([
@@ -24,9 +26,31 @@ const useXplorersAI = () => {
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files ? e.target.files[0] : null;
+    const file = e.target.files ? e.target.files[0] : undefined;
+
     if (file) {
       console.debug("File uploaded:", file);
+
+      if (file.size > 5 * 1024 * 1024) {
+        throw new Error("File size exceeds 5MB limit");
+      }
+
+      if (!["text/plain", "application/pdf"].includes(file.type)) {
+        throw new Error("Unsupported file type");
+      }
+
+      try {
+        setLoading(true);
+        setFile(file);
+      } catch (error) {
+        console.error("File upload failed:", error);
+        enqueueSnackbar({
+          message: "Something went wrong! Please try again later.",
+          variant: "error",
+        });
+      } finally {
+        setLoading(false);
+      }
     }
   };
 

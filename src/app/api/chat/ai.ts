@@ -30,11 +30,14 @@ export const callAzureOpenAI = async (messages: ChatMessage[]) => {
     });
 
     for await (const chunk of response) {
-      chunk?.choices?.forEach((choice) => {
-        if (choice.delta.content) {
-          fullResponse += choice.delta.content;
+      if (!chunk?.choices?.length) continue;
+
+      for (const choice of chunk.choices) {
+        const content = choice.delta?.content;
+        if (typeof content === "string") {
+          fullResponse += content;
         }
-      });
+      }
     }
   } catch (error) {
     console.error("Error calling Azure OpenAI:", error);

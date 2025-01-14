@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import DOMPurify from "isomorphic-dompurify";
 import { sanitizeMarkdown } from "@/utils/sanitizeMarkdown";
 import { XplorersAIChatBoxProps, ChatMessage } from "@/models/XploresAI";
 
@@ -32,9 +31,7 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
               >
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: DOMPurify.sanitize(
-                      sanitizeMarkdown(message.content),
-                    ),
+                    __html: sanitizeMarkdown(message.content),
                   }}
                 />
               </div>
