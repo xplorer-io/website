@@ -7,6 +7,7 @@ import { XplorersAIChatBoxProps, ChatMessage } from "@/models/XploresAI";
 
 const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
   const chatContainerRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
     if (chatContainerRef.current) {
       chatContainerRef.current.scrollTop =
@@ -35,7 +36,7 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
                       sanitizeMarkdown(message.content),
                     ),
                   }}
-                ></span>
+                />
               </div>
             )}
           </div>

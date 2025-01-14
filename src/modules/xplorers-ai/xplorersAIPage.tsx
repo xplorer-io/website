@@ -3,7 +3,7 @@ import XplorersAIBody from "./xplorersAIBody";
 import PagesWrapper from "@/components/layout/PagesWrapper";
 import Image from "next/image";
 import { xplorersAiBackground } from "@/constants/links";
-import XplorersAIContextProvider from "@/components/shared/XplorersAIContextProvider";
+import XplorersAIContextProvider from "@/context/XplorersAIContext";
 
 const XplorersAIPage = () => {
   return (

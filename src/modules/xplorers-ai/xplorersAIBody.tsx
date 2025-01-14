@@ -2,11 +2,10 @@
 
 import XplorersAISearch from "./xplorersAISearch";
 import XplorersAIChatBox from "./xplorersAIChatBox";
-import { useXplorersAIContext } from "@/context/XplorersAIContext";
+import useXplorersAI from "@/hooks/useXplorersAI";
 
 const XplorersAIBody = () => {
-  const { getMessages } = useXplorersAIContext();
-  const messages = getMessages();
+  const { messages } = useXplorersAI();
 
   return (
     <div className="pt-8">
