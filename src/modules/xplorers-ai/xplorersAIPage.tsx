@@ -7,8 +7,8 @@ import XplorersAIContextProvider from "@/context/XplorersAIContext";
 
 const XplorersAIPage = () => {
   return (
-    <div className="relative flex h-screen w-screen flex-col">
-      <div className="absolute inset-0 -z-10">
+    <div className="relative flex w-screen flex-col">
+      <div className="absolute inset-0">
         <Image
           src={xplorersAiBackground}
           alt="Background"
@@ -18,7 +18,7 @@ const XplorersAIPage = () => {
           className="opacity-20"
         />
       </div>
-      <div className="relative z-10 flex-grow">
+      <div className="relative flex-grow">
         <PagesWrapper>
           <XplorersAIContextProvider>
             <XplorersAIHero />

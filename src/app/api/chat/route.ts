@@ -1,14 +1,18 @@
 import { ChatMessage } from "@/models/XploresAI";
+import { NextResponse } from "next/server";
 import { AzureOpenAI } from "openai";
 
-export const callAzureOpenAI = async (messages: ChatMessage[]) => {
+export async function POST(request: Request) {
+  const body = await request.json();
+  const messages: ChatMessage[] = body?.messages;
+
+  if (!messages.length) {
+    return NextResponse.json({ error: "No message provided" }, { status: 400 });
+  }
+
   const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
   const apiKey = process.env.AZURE_OPENAI_API_KEY;
   const apiVersion = process.env.AZURE_OPENAI_VERSION;
-
-  if (!endpoint || !apiKey || !apiVersion) {
-    throw new Error("Missing required Azure OpenAI configuration");
-  }
 
   const client = new AzureOpenAI({
     endpoint,
@@ -17,11 +21,10 @@ export const callAzureOpenAI = async (messages: ChatMessage[]) => {
     dangerouslyAllowBrowser: true,
   });
 
-  const model = "gpt4o";
-  let fullResponse = "";
-
   try {
-    // Call the model
+    const model = "gpt4o";
+    let fullResponse = "";
+
     const response = await client.chat.completions.create({
       messages,
       model,
@@ -39,9 +42,14 @@ export const callAzureOpenAI = async (messages: ChatMessage[]) => {
         }
       }
     }
+
+    return NextResponse.json(fullResponse, { status: 200 });
   } catch (error) {
     console.error("Error calling Azure OpenAI:", error);
-  }
 
-  return fullResponse;
-};
+    return NextResponse.json(
+      { error: "Something went wrong.", details: error },
+      { status: 500 },
+    );
+  }
+}

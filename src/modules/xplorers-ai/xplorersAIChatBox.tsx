@@ -8,9 +8,9 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
   const chatContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    // scroll to top
     if (chatContainerRef.current) {
-      chatContainerRef.current.scrollTop =
-        chatContainerRef.current.scrollHeight;
+      chatContainerRef.current.scrollTop = 0;
     }
   }, [messages]);
 
@@ -20,14 +20,23 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
       role="log"
       aria-label="chat messages"
       aria-live="polite"
-      className="chat-content flex max-h-[58vh] flex-col space-y-4 overflow-auto rounded-xl bg-white bg-opacity-50 p-3 shadow-md"
+      className="chat-content flex max-h-[65vh] flex-col space-y-4 overflow-auto rounded-xl bg-white bg-opacity-50 p-3 shadow-md"
     >
       <div className="flex flex-col space-y-4">
         {messages?.map((message: ChatMessage, index: number) => (
-          <div key={index}>
+          <div
+            key={index}
+            className={`flex ${
+              message.role === "user" ? "justify-end" : "justify-start"
+            }`}
+          >
             {message.content && (
               <div
-                className={`rounded p-2 ${message.role === "user" ? "bg-blue-200" : "bg-white"}`}
+                className={`max-w-[75%] rounded p-2 ${
+                  message.role === "user"
+                    ? "bg-blue-200 text-right"
+                    : "bg-white text-left"
+                }`}
               >
                 <span
                   dangerouslySetInnerHTML={{

@@ -15,10 +15,10 @@ const XplorersAIHero = () => {
           Welcome to Xplorer&apos;s Hub
         </h2>
         <p className="text-gray-500 md:mt-4">
-          Discover the power of GPT-4 with Xplore! Here, you&apos;ll find tools
-          for content creation, customer interaction, data analysis, and more.
-          Dive in to see how Xplore&apos;s AI can transform your work and spark
-          innovation
+          Discover the power of GPT-4 with Xplorers! Here, you&apos;ll find
+          tools for content creation, customer interaction, data analysis, and
+          more. Dive in to see how Xplorer&apos;s AI can transform your work and
+          spark innovation
         </p>
       </div>
     </div>

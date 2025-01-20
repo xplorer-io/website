@@ -1,5 +1,5 @@
-import { callAzureOpenAI } from "@/app/api/chat/ai";
 import { ChatMessage } from "@/models/XploresAI";
+import axios from "axios";
 import { useSnackbar } from "notistack";
 import { ChangeEvent, useRef, useState } from "react";
 
@@ -71,11 +71,13 @@ const useXplorersAI = () => {
     setMessages((prev) => [...prev, userMessage]);
 
     try {
-      const res = await callAzureOpenAI(messages);
+      const response = await axios.post(`/api/chat`, {
+        messages,
+      });
 
       const systemMessage: ChatMessage = {
         role: "system",
-        content: res,
+        content: response.data,
       };
 
       setMessages((prev) => [...prev, systemMessage]);
