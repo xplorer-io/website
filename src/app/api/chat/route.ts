@@ -25,7 +25,6 @@ export async function POST(request: Request) {
     endpoint,
     apiKey,
     apiVersion,
-    dangerouslyAllowBrowser: true,
   });
 
   try {
@@ -55,7 +54,7 @@ export async function POST(request: Request) {
     console.error("Error calling Azure OpenAI:", error);
 
     return NextResponse.json(
-      { error: "Something went wrong.", details: error },
+      { error: "Something went wrong." },
       { status: 500 },
     );
   }

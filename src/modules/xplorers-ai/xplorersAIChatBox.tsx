@@ -8,9 +8,9 @@ const XplorersAIChatBox: React.FC<XplorersAIChatBoxProps> = ({ messages }) => {
   const chatContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // scroll to top
     if (chatContainerRef.current) {
-      chatContainerRef.current.scrollTop = 0;
+      chatContainerRef.current.scrollTop =
+        chatContainerRef.current.scrollHeight;
     }
   }, [messages]);
 
