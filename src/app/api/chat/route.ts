@@ -14,6 +14,13 @@ export async function POST(request: Request) {
   const apiKey = process.env.AZURE_OPENAI_API_KEY;
   const apiVersion = process.env.AZURE_OPENAI_VERSION;
 
+  if (!endpoint || !apiKey || !apiVersion) {
+    return NextResponse.json(
+      { error: "Missing required environment variables" },
+      { status: 500 },
+    );
+  }
+
   const client = new AzureOpenAI({
     endpoint,
     apiKey,
