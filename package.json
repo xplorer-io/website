@@ -31,7 +31,7 @@
     "lodash-es": "^4.17.21",
     "lucide-react": "^0.383.0",
     "marked": "^15.0.6",
-    "next": "14.2.3",
+    "next": "^14.2.21",
     "next-cloudinary": "^6.16.0",
     "notistack": "^3.0.1",
     "openai": "^4.78.1",
