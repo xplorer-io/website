@@ -41,6 +41,8 @@ const config = {
           "950": "#4F0910",
           DEFAULT: "#CB1629",
         },
+        "custom-yellow": "#FFBD59",
+        "cv-template-background": "#283E70",
       },
       keyframes: {
         "accordion-down": {
