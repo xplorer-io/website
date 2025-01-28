@@ -1,5 +1,5 @@
 "use client";
-import { CldImage } from "next-cloudinary";
+
 import Image from "next/image";
 type RightSideProps = {
   title: string;

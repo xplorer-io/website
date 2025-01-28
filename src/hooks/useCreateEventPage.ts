@@ -39,12 +39,10 @@ const useCreateEventPage = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(formData);
   };
 
   return {
     formData,
-
     setFormData,
     selectedOption,
     setSelectedOption,

@@ -65,6 +65,33 @@ h6 {
     }
   }
 }
+
+/* Xplorers AI Page */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.typing-text {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40) 1s forwards;
+}
+
+.chat-content::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: darkgray;
+  border-radius: 5px;
+}
+
+.chat-content {
+  scrollbar-width: thin;
+  scrollbar-color: darkgray transparent;
+}
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -72,4 +99,20 @@ h6 {
   to {
     transform: translateX(calc(-100% - 1.6rem));
   }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    /* filter: hue-rotate(0deg); */
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  animation: spin 1.5s linear infinite;
 }
