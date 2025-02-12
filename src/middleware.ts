@@ -6,5 +6,6 @@ export const config = {
     "/api/protected/:path*",
     "/pathway-to-success/:path*",
     "/xplorers-ai/:path*",
+    "/accolades/:path*",
   ],
 };
