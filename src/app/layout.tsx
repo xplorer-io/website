@@ -6,7 +6,7 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { font_body, font_heading } from "./fonts";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { authOptions } from "@/auth.config";
 
 export const metadata: Metadata = {
   title: "Xplorers - Learn share and grow",
