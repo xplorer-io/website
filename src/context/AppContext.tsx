@@ -1,17 +1,23 @@
 import React, { useContext } from "react";
-import { useAuth, useUser } from "@clerk/nextjs";
+import { useSession } from "next-auth/react";
 import useSlackUserStatus from "@/hooks/useSlackUserStatus";
 
 type AppContext = {
   isLoggedIn: boolean;
   isLoading: boolean;
   isActiveSlackUser: boolean;
+  user?: {
+    email?: string | null;
+    name?: string | null;
+    image?: string | null;
+  };
 };
 
 const AppContext = React.createContext<AppContext | undefined>({
   isActiveSlackUser: false,
   isLoggedIn: false,
   isLoading: false,
+  user: undefined,
 });
 
 export const AppContextProvider = ({
@@ -19,19 +25,17 @@ export const AppContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const { isLoaded: isAuthLoaded, userId } = useAuth();
-  const { user, isLoaded: isUserLoaded } = useUser();
-  const { data, isLoading: isSlackLoading } = useSlackUserStatus(
-    user?.primaryEmailAddress?.emailAddress,
-  );
-  const isLoading = !isAuthLoaded || !isUserLoaded || isSlackLoading;
+  const { data: session, status } = useSession();
+  const { data, isLoading: isSlackLoading } = useSlackUserStatus();
+  const isLoading = status === "loading" || isSlackLoading;
 
   return (
     <AppContext.Provider
       value={{
-        isLoggedIn: !!userId,
+        isLoggedIn: !!session,
         isLoading,
         isActiveSlackUser: data?.isActive ?? false,
+        user: session?.user,
       }}
     >
       {children}

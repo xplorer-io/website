@@ -1,5 +1,4 @@
 "use client";
-
 import PagesWrapper from "@/components/layout/PagesWrapper";
 import ButtonLink from "@/components/ui/buttons/ButtonLink";
 import { Checkbox } from "@/components/ui/checkbox";
