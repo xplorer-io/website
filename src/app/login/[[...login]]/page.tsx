@@ -79,7 +79,9 @@ export default function Page() {
                       Enterprise Security
                     </h3>
                     <div className="mt-2 text-sm text-blue-700">
-                      <p>Access is managed through Okta's Identity Provider</p>
+                      <p>
+                        Access is managed through Okta&apos;s Identity Provider
+                      </p>
                     </div>
                   </div>
                 </div>
