@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useUser } from "@clerk/nextjs";
+import { useSession } from "next-auth/react";
 import { CheckedState } from "@radix-ui/react-checkbox";
 
 type FormData = {
@@ -10,17 +10,17 @@ type FormData = {
 
 // TODO Fix needed when we have BE ready
 export const useCreateAccolades = () => {
-  const { isLoaded, isSignedIn, user } = useUser();
+  const { data: session } = useSession();
 
   const [fullName, setFullName] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [isAnonymous, setIsAnonymous] = useState<boolean>(false);
 
   useEffect(() => {
-    if (isLoaded && isSignedIn) {
-      setFullName(user?.fullName || "");
+    if (session?.user?.name) {
+      setFullName(session.user.name);
     }
-  }, [isLoaded, isSignedIn, user]);
+  }, [session?.user?.name]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
