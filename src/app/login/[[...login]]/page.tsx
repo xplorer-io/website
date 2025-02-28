@@ -7,21 +7,24 @@ import logo from "@public/logos/xplorer_logo.svg";
 import Image from "next/image";
 import Loading from "@/app/loading";
 import { useAppContext } from "@/context/AppContext";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 export default function Page() {
   const { isLoading: isSessionLoading } = useAppContext();
   const [isSigningIn, setIsSigningIn] = useState(false);
 
-  const handleSignIn = async () => {
+  const handleSignIn = useCallback(async () => {
+    if (isSigningIn) return;
     setIsSigningIn(true);
+
     try {
       await signIn("okta", { callbackUrl: "/" });
     } catch (error) {
       console.error("Sign in error:", error);
+    } finally {
       setIsSigningIn(false);
     }
-  };
+  }, [isSigningIn]);
 
   const isLoading = isSigningIn || isSessionLoading;
   return (
@@ -39,7 +42,7 @@ export default function Page() {
         </h2>
 
         <p className="mt-2 text-center text-sm text-gray-600">
-          If you are a member of our Slack Workspace, please login in
+          If you are a member of our Slack Workspace, please log in
         </p>
       </div>
       <Card className="mt-8 py-4 shadow sm:mx-auto sm:w-full sm:max-w-md">
