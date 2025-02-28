@@ -2,7 +2,6 @@ import React from "react";
 import clsx from "clsx";
 import { menus } from "../helper";
 import MobileNavLinkItem from "./MobileNavLinkItem";
-import { useAppContext } from "@/context/AppContext";
 
 export interface MobileNavProps {
   isMobileMenuOpen: boolean;
@@ -15,8 +14,6 @@ const MobileNav: React.FC<MobileNavProps> = ({
   isMobileMenuOpen,
   pathname,
 }) => {
-  const { isActiveSlackUser = false } = useAppContext();
-
   return (
     <div
       className={clsx(
@@ -29,18 +26,16 @@ const MobileNav: React.FC<MobileNavProps> = ({
     >
       <nav aria-label="Mobile Global" className="p-2 text-sm">
         <ul className="flex h-screen w-full flex-col items-center justify-center gap-4 p-3">
-          {menus.map(
-            ({ name, href, isProtected }) =>
-              (!isProtected || isActiveSlackUser) && (
-                <MobileNavLinkItem
-                  href={href}
-                  name={name}
-                  key={name}
-                  toggleMobileMenu={toggleMobileMenu}
-                  pathname={pathname}
-                />
-              ),
-          )}
+          {menus.map(({ name, href, isProtected }) => (
+            <MobileNavLinkItem
+              href={href}
+              name={name}
+              isProtected={isProtected}
+              key={name}
+              toggleMobileMenu={toggleMobileMenu}
+              pathname={pathname}
+            />
+          ))}
         </ul>
       </nav>
     </div>

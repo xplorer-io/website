@@ -1,0 +1,16 @@
+import type { AuthOptions } from "next-auth";
+import Okta from "next-auth/providers/okta";
+
+export const authOptions: AuthOptions = {
+  providers: [
+    Okta({
+      clientId: process.env.OKTA_CLIENT_ID as string,
+      clientSecret: process.env.OKTA_CLIENT_SECRET as string,
+      issuer: process.env.OKTA_OAUTH2_ISSUER as string,
+    }),
+  ],
+  pages: {
+    signIn: "/login",
+  },
+  secret: process.env.AUTH_SECRET as string,
+};
