@@ -15,7 +15,7 @@
     "node": "^18.20.3"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.5.5",
+    "@clerk/nextjs": "^6.21.0",
     "@cloudinary/react": "^1.13.1",
     "@cloudinary/url-gen": "^1.21.0",
     "@next/env": "^15.0.2",
