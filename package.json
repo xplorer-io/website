@@ -12,7 +12,7 @@
     "ts-quality": "tsc --noEmit --skipLibCheck"
   },
   "engines": {
-    "node": "^18.20.3"
+    "node": "^22.14.0"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.5.5",
